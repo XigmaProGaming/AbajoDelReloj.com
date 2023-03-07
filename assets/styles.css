@@ -1,0 +1,77 @@
+body{
+  background-color: #DDDDDD; 
+}
+
+.div-logo{
+  /* display: block;
+  align-items: center;
+  align-content: center;
+  text-align: center; */
+}
+
+#logo {  
+  min-width: auto;
+  max-width: auto;
+}
+
+.container{
+  padding: 5em;
+}
+
+.div-links-redes{
+  display: contents;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+}
+
+.div-link-redes{
+  padding: 2em;
+}
+
+.iconos-redes{
+  min-width: 30%;
+  max-width: 20%;
+  padding-bottom: 2em;
+}
+
+a{
+  text-decoration: none;
+}
+
+#formulario{
+  margin-top: 2em;
+  padding: 2em;
+  background-color: #ffff;
+  min-width: 10em;
+  max-width : 50em;
+}
+#div-nombre{
+  padding-top: 1em;
+}
+#nombre{
+  min-width: 2em;
+  max-width : 30em;
+}
+#telefono{
+  min-width: 1em;
+  max-width : 15em;
+}
+#mail{
+  min-width: 2em;
+  max-width : 30em;
+}
+#mensaje{
+  min-height: 10em;
+  max-height: 10em;
+}
+#enviar{
+  margin: 1em; 
+  background-color: #4C75DF;
+}
+
+.footer{
+  text-align: center;
+  color: white;
+  background-color: #000839;
+}

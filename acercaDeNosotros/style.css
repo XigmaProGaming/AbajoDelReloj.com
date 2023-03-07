@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600;700&display=swap');
+
+/* #centrar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* min-height: 100vh; 
+} */
+
+h1{
+  font-family: 'Quicksand', sans-serif;
+  font-weight:600;
+}
+
+p{
+  font-family: 'Quicksand', sans-serif;
+  font-weight:400;
+}
+
+.botonesRedes{
+  padding: 1em;
+  font-family: 'Quicksand', sans-serif;
+  font-weight:400;
+}
+
+.acercaImg{
+  width: 20em;
+  padding: 1em;
+}
+
+.espacio{
+  padding: 2em;
+}
+.background{
+  background-color: #DDDDDD;
+}

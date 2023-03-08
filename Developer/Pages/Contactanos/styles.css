@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600;700&display=swap');
+
 body{
   background-color: #DDDDDD; 
 }
@@ -7,17 +9,18 @@ h1{
   font-weight:600;
 }
 
-.tittle{
-  padding-bottom: 3em;
-}
-
-#logo {  
-  min-width: auto;
-  max-width: auto;
+p{
+  font-family: 'Quicksand', sans-serif;
+  font-weight:400;
 }
 
 .container{
   padding: 5em;
+}
+
+#logo {  
+  min-width: auto;
+  max-width: 30em;
 }
 
 .div-links-redes{

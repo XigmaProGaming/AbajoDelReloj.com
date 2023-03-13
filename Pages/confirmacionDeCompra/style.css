@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600;700&display=swap');
+
+h1, h3{
+    font-family: 'Quicksand', sans-serif;
+    font-weight:600;
+}
+  
+p{
+    font-family: 'Quicksand', sans-serif;
+    font-weight:400;
+}
+
+.container {
+    display: grid;
+}
+
+.footer{
+    text-align: center;
+    color: white;
+    background-color: #000839;
+  }

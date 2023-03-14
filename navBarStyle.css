@@ -43,3 +43,9 @@ body{
  #navContainer{
     width: 100%;
 } 
+
+.footer{
+    text-align: center;
+    color: white;
+    background-color: #000839;
+}

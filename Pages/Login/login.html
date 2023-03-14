@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Contactanos</title>
+    <title>Login</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" 
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="/Pages/Login/style.css">
@@ -34,10 +34,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mx-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="#">Iniciar Sesión</a>
+              <a class="nav-link" style="color: white;" href="/Pages/Login/login.html">Iniciar Sesión</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Registrarse</a>
+              <a class="nav-link" href="/Pages/Registrarse/registrarse.html">Registrarse</a>
             </li>
           </ul>
         </div>
@@ -59,7 +59,7 @@
               <a class="nav-link" href="/index.html">Página Principal</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" style="color: white;" href="/Pages/Contactanos/contactenos.html">Contáctenos</a>
+              <a class="nav-link" href="/Pages/Contactanos/contactenos.html">Contáctenos</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/Pages/acercaDeNosotros/aboutUs.html">Acerca de Nosotros</a>
@@ -106,11 +106,31 @@
     </div>
   </div>
 
-  <div class="tittle">
+  <!-- Contenido Formulario Login -->
+
+  <div class="container form">
     <div class="row">
-        <div class="text-center" style="background-color: #fff;">
-            <h1> Login </h1>
+      <div class="inputs-center">
+        <h1 class="title-iniciarSesion">Iniciar Sesión</h1>
+        <div class="mb-1 row">
+          <label for="inputMail" >Correo electrónico</label>
         </div>
+        <div class="mb-5 row">
+          <input type="email" class="form-control input-email" id="inputMail" placeholder="Email" required>
+        </div>
+        <div class="mb-1 row">
+          <label for="inputPassword">Contraseña</label>
+        </div>
+        <div class="mb-5 row">
+          <input type="password" class="form-control input-password" id="inputPassword" placeholder="Contraseña" required>
+        </div>
+      </div>
+      <div class="d-grid gap-2 d-md-flex justify-content-md-end boton-content" >
+        <button class="btn btn-primary me-md-2 boton" type="button">Entrar</button>
+      </div>
+      <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <a href="/Pages/Registrarse/registrarse.html" class="link-Registrarse"><b>Registrarse</b></a>
+      </div>
     </div>
   </div>
 

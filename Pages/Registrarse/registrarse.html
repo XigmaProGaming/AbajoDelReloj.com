@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Contactanos</title>
+    <title>Registrarse</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" 
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="/Pages/Registrarse/style.css">
@@ -34,10 +34,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mx-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="#">Iniciar Sesión</a>
+              <a class="nav-link"  href="/Pages/Login/login.html">Iniciar Sesión</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Registrarse</a>
+              <a class="nav-link" style="color: white;" href="/Pages/Registrarse/registrarse.html">Registrarse</a>
             </li>
           </ul>
         </div>
@@ -59,7 +59,7 @@
               <a class="nav-link" href="/index.html">Página Principal</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" style="color: white;" href="/Pages/Contactanos/contactenos.html">Contáctenos</a>
+              <a class="nav-link" href="/Pages/Contactanos/contactenos.html">Contáctenos</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/Pages/acercaDeNosotros/aboutUs.html">Acerca de Nosotros</a>
@@ -106,11 +106,84 @@
     </div>
   </div>
 
-  <div class="tittle">
+  <!-- Contenido Formulario Login -->
+
+  <div class="container form">
     <div class="row">
-        <div class="text-center" style="background-color: #fff;">
-            <h1> Registrarse </h1>
+      <div class="inputs-center">
+        <h1 class="title-iniciarSesion">Crear cuenta</h1>
+
+        <div class="row">
+          <div class="col-12"></div>
+          </div>
+          <div class="input-group mb-4 row">
+            <div class="col-1"></div>
+            <div class="col-4" style="padding: 0;">
+              <div class="form-floating">
+                <input type="text" class="form-control" id="inputName" placeholder="Nombre">
+                <label for="inputName">Nombre</label>
+              </div>
+            </div>
+            <div class="col-1"></div>
+            <div class="col-4">
+              <div class="form-floating">
+                <input type="text" class="form-control" id="inputApellidos" placeholder="Apellidos">
+                <label for="inputApellidos">Apellido</label>
+              </div>
+            </div>
+          </div>
         </div>
+        
+        <div class="input-group mb-4 row">
+          <div class="col-1"></div>
+          <div class="col-4">
+            <div class="form-floating">
+            <input type="text" class="form-control" id="inputUsername" placeholder="Username">
+            <label for="inputUsername">Username</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="input-group mb-4 row">
+          <div class="col-1"></div>
+          <div class="col-5">
+            <div class="form-floating">
+              <input type="email" class="form-control" id="inputMail" placeholder="Correo electrónico">
+              <label for="inputMail">Correo electrónico</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="input-group mb-4 row">
+          <div class="col-1"></div>
+          <div class="col-4">
+            <div class="form-floating">
+              <input type="password" class="form-control " id="inputPassword" placeholder="Contraseña">
+              <label for="inputPassword">Contraseña</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="input-group mb-4 row">
+          <div class="col-1"></div>
+          <div class="col-4">
+            <div class="form-floating">
+              <input type="number" class="form-control " id="inputTelefono" placeholder="Teléfono">
+              <label for="inputTelefono">Teléfono</label>
+            </div>
+          </div>
+        </div>
+
+      <div class="row">
+        <div class="col-2">
+          <a href="/Pages/Login/login.html" class="link-IniciarSesion"><b>Iniciar Sesión</b></a>
+        </div>
+        <div class="col-6"></div>
+        <div class="col-4">
+          <button class="btn btn-primary me-md-2 boton" type="button">Entrar</button>
+        </div>
+      </div>
+
     </div>
   </div>
 

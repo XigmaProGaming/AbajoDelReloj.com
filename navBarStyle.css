@@ -4,6 +4,10 @@ html {
 
 body{
     background-color: #DDDDDD;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 34c3fa3a46096dededae728f7eea745e68d363e0
 }
 
 #bottom-offcanvas{
@@ -42,4 +46,25 @@ body{
 
  #navContainer{
     width: 100%;
+<<<<<<< HEAD
 } 
+=======
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+} 
+
+.navbarTextClass{
+    font-weight: 700;
+    color: white;
+}
+
+.currentTab{
+    background-color: rgb(255, 178, 34);
+    border-radius: 1.5em;
+    font-weight: bolder;
+    text-decoration: underline;
+}
+
+.material-icons.md-light { color: rgba(255, 255, 255, 1); font-weight: bolder; }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+>>>>>>> 34c3fa3a46096dededae728f7eea745e68d363e0

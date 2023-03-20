@@ -1,4 +1,3 @@
-console.log("prueba");
 
 let productsCard = [
   {
@@ -180,91 +179,7 @@ let productsCard = [
       visibility: true,
 
       },
-  {
-      id: 11,
-      name: "test",
-      description: "Lorem ipsum dolor sit amet, consectetur",
-      category: ["category1", "category2"],
-      brand: "Adidas",
-      price: 199.99,
-      img: ["url1","url2", "url3"],
-      rating: 4.5,
-      publicationDate: "2023-03-13-11:05:05",
-      inventory: 45,
-      sellerID: 78426, //id del vendedor
-      state: "usado", // usado o nuevo
-      sku: 123456789,
-      visibility: true,
-
-  },
-  {
-      id: 12,
-      name: "test",
-      description: "Lorem ipsum dolor sit amet, consectetur",
-      category: ["category1", "category2"],
-      brand: "Adidas",
-      price: 199.99,
-      img: ["url1","url2", "url3"],
-      rating: 4.5,
-      publicationDate: "2023-03-13-11:05:05",
-      inventory: 45,
-      sellerID: 78426, //id del vendedor
-      state: "usado", // usado o nuevo
-      sku: 123456789,
-      visibility: true,
-
-  },
-  {
-      id: 13,
-      name: "test",
-      description: "Lorem ipsum dolor sit amet, consectetur",
-      category: ["category1", "category2"],
-      brand: "Adidas",
-      price: 199.99,
-      img: ["url1","url2", "url3"],
-      rating: 4.5,
-      publicationDate: "2023-03-13-11:05:05",
-      inventory: 45,
-      sellerID: 78426, //id del vendedor
-      state: "usado", // usado o nuevo
-      sku: 123456789,
-      visibility: true,
-
-  },
-  {
-      id: 14,
-      name: "test",
-      description: "Lorem ipsum dolor sit amet, consectetur",
-      category: ["category1", "category2"],
-      brand: "Adidas",
-      price: 199.99,
-      img: ["url1","url2", "url3"],
-      rating: 4.5,
-      publicationDate: "2023-03-13-11:05:05",
-      inventory: 45,
-      sellerID: 78426, //id del vendedor
-      state: "usado", // usado o nuevo
-      sku: 123456789,
-      visibility: true,
-
-  },
-  {
-      id: 15,
-      name: "test",
-      description: "Lorem ipsum dolor sit amet, consectetur",
-      category: ["category1", "category2"],
-      brand: "Adidas",
-      price: 199.99,
-      img: ["url1","url2", "url3"],
-      rating: 4.5,
-      publicationDate: "2023-03-13-11:05:05",
-      inventory: 45,
-      sellerID: 78426, //id del vendedor
-      state: "usado", // usado o nuevo
-      sku: 123456789,
-      visibility: true,
-
-  },
+  
   /////////////Ernesto
   {
       id: 16,
@@ -351,9 +266,131 @@ let productsCard = [
       visibility: true,
 
   },
-  ///////////////////
+
   {
       id: 21,
+      name: "CAZADORA BOMBER EFECTO ANTE ",
+      description: "Cazadora con cuello subido. Manga larga. Bolsillos frontales de vivo. Acabados en rib. Cierre frontal con cremallera.",
+      category: ["category1", "category2"],
+      brand: "ZARA",
+      price: 1.299,
+      img: ["https://static.zara.net/photos///2023/V/0/2/p/6318/488/707/2/w/563/6318488707_6_1_1.jpg?ts=1669129550819","https://static.zara.net/photos///2023/V/0/2/p/6318/488/707/2/w/563/6318488707_6_2_1.jpg?ts=1669129549009", "https://static.zara.net/photos///2023/V/0/2/p/6318/488/707/2/w/563/6318488707_6_3_1.jpg?ts=1669129558285"],
+      rating: 4.0,
+      publicationDate: "2023-03-13-11:05:05",
+      invetory: 20,
+      sellerID: 89654, //id del vendedor
+      state: "Nuevo", // usado o nuevo
+      sku: 123456712,
+      visibility: true,
+  
+  },
+  {
+      id: 22,
+      name: "Vestido texturizado",
+      description: "Vestido corto de punto texturizado. Modelo con escote de corazón, mangas abombadas cortas y sección superior entallada. Elástico estrecho sobre los hombros y en el borde de las mangas. Costura en la cintura y falda con ligero vuelo.",
+      category: ["category1", "category2"],
+      brand: "H&M",
+      price: 349.00,
+      img: ["https://lp2.hm.com/hmgoepprod?set=format%5Bwebp%5D%2Cquality%5B79%5D%2Csource%5B%2F21%2F27%2F2127302cbeace058f267931a80179afb23a4c58e.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B2%5D&call=url%5Bfile%3A%2Fproduct%2Fmain%5D","https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F19%2F52%2F1952c3643862d5e9370526e0ff7d5db6dd875711.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]", "url3"],
+      rating: 3.9,
+      publicationDate: "2023-03-13-11:05:05",
+      invetory: 15,
+      sellerID: 987426, //id del vendedor
+      state: "Nuevo", // usado o nuevo
+      sku: 123456123,
+      visibility: true,
+  
+  },
+  {
+      id: 23,
+      name: "Jeans skinny super high waist",
+      description: "Exterior, 71% algodón, 27% poliéster, 2% elastano",
+      category: ["category1", "category2"],
+      brand: "Bershka",
+      price: 399.99,
+      img: ["https://static.bershka.net/4/photos2/2023/V/0/1/p/0006/888/461/c679834ae7cb1124fb433d438c029315-0006888461_2_4_0.jpg?imwidth=850&impolicy=bershka-itxmediumhigh&imformat=chrome","https://static.bershka.net/4/photos2/2023/V/0/1/p/0006/888/461/c0e4a434b460782925ef83f546414636-0006888461_2_24_0.jpg?imwidth=850&impolicy=bershka-itxmediumhigh&imformat=chrome", "url"],
+      rating: 4.5,
+      publicationDate: "2023-03-13-11:05:05",
+      invetory: 30,
+      sellerID: 78426, //id del vendedor
+      state: "usado", // usado o nuevo
+      sku: 123456789,
+      visibility: true,
+  
+  },
+  {
+      id: 24,
+      name: "Jeans super skinny",
+      description: "Exterior, 68% algodón, 27% poliéster, 3% otras fibras, 2% elastano",
+      category: ["category1", "category2"],
+      brand: "Bershka",
+      price: 599.99,
+      img: ["https://static.bershka.net/4/photos2/2023/V/0/2/p/0305/666/428/eb54b8603b36b16bb8f8c4ed7de71955-0305666428_2_4_0.jpg?imwidth=850&impolicy=bershka-itxmediumhigh&imformat=chrome","https://static.bershka.net/4/photos2/2023/V/0/2/p/0305/666/428/1fd4b1e42a620b07b514d7b02fdf9e8b-0305666428_2_24_0.jpg?imwidth=850&impolicy=bershka-itxmediumhigh&imformat=chrome", "url3"],
+      rating: 3.5,
+      publicationDate: "2023-03-13-11:05:05",
+      invetory: 30,
+      sellerID: 987456, //id del vendedor
+      state: "Nuevo", // usado o nuevo
+      sku: 123451234,
+      visibility: true,
+  
+  },
+  {
+      id: 25,
+      name: "Top de tirantes con estampado floral ",
+      description: "Color:	Multicolor, Estilo:	Bohemio, Tipo de Estampado:	Floral, todo estampado",
+      category: ["category1", "category2"],
+      brand: "Shein",
+      price: 299.99,
+      img: ["https://img.ltwebstatic.com/images3_pi/2022/01/18/1642501044aa9f51b56a0fb7965f0fcbea3a2468f5_thumbnail_600x.webp","https://img.ltwebstatic.com/images3_pi/2022/01/18/1642501046b3be8583a01acd40b3b8ec20afcdc644_thumbnail_600x.webp", "url3"],
+      rating: 4.5,
+      publicationDate: "2023-03-13-11:05:05",
+      invetory: 35,
+      sellerID: 9874561, //id del vendedor
+      state: "usado", // usado o nuevo
+      sku: 123412345,
+      visibility: true,
+  
+  },
+  
+  {
+      id: 26,
+      name: "Amayya | Bolsos artesanal, yute premium, bolso de mano para dama, modelo Sandy bambu ",
+      description: "Jute Bolso elaborado de forma Artesanal hecho 100% en Mexico, Útil para llevar a cualquier parte y ser el centro de atención",
+      category: ["category1", "category2"],
+      brand: "Shein",
+      price: 299.99,
+      img: ["https://m.media-amazon.com/images/I/71r7HskvwAL._AC_SX679_.jpg","https://m.media-amazon.com/images/I/71k4-G5IfzL._AC_SX679_.jpg", "url3"],
+      rating: 5.0,
+      publicationDate: "2023-03-13-11:05:05",
+      invetory: 35,
+      sellerID: 9874512, //id del vendedor
+      state: "uevo", // usado o nuevo
+      sku: 1232312345,
+      visibility: true,
+  
+  },
+  
+  {
+      id: 27,
+      name: "Amayya | Bolsos artesanal, yute premium, bolso de mano para dama, modelo Sandy bambu ",
+      description: "Jute Bolso elaborado de forma Artesanal hecho 100% en Mexico, Útil para llevar a cualquier parte y ser el centro de atención",
+      category: ["category1", "category2"],
+      brand: "Shein",
+      price: 299.99,
+      img: ["https://m.media-amazon.com/images/I/71r7HskvwAL._AC_SX679_.jpg","https://m.media-amazon.com/images/I/71k4-G5IfzL._AC_SX679_.jpg", "url3"],
+      rating: 5.0,
+      publicationDate: "2023-03-13-11:05:05",
+      invetory: 35,
+      sellerID: 9874512, //id del vendedor
+      state: "uevo", // usado o nuevo
+      sku: 1232312345,
+      visibility: true,
+  
+  },
+  ///////////////////
+  {
+      id: 28,
       name: `Lenovo IdeaPad 3i`,
       description: `Procesador: alimentado por el último procesador Intel Core i3-1115G4 de 11ª generación (caché de 6 m, hasta 4.1 GHz) para multitarea avanzada, computación exigente, juegos fluidos, navegación de múltiples pestañas y tareas diarias.`,
       category: ["tecnologia", "laptop", "computadora"],
@@ -370,7 +407,7 @@ let productsCard = [
 
   },
   {
-      id: 22,
+      id: 29,
       name: "Acer Aspire 5 A515-45-R74Z Slim Laptop",
       description: `15.6" Full HD IPS | AMD Ryzen 5 5500U Hexa-Core Mobile Processor | AMD Radeon Graphics | 8GB DDR4 | 256GB NVMe SSD | WiFi 6 | Backlit KB | Windows 11 Home`,
       category: ["tecnologia", "laptop", "computadora"],
@@ -387,7 +424,7 @@ let productsCard = [
 
   },
   {
-      id: 23,
+      id: 30,
       name: "Asus TUF Gaming F15 Gaming Laptop",
       description: `15.6” 144Hz FHD IPS-Type Display, Intel Core i5-10300H Processor, GeForce GTX 1650, 8GB DDR4 RAM, 512GB PCIe SSD, Wi-Fi 6, Windows 11 Home, FX506LH-AS51`,
       category: ["laptop", "tecnologia", "gaming", "computadora"],
@@ -404,7 +441,7 @@ let productsCard = [
 
   },
   {
-      id: 24,
+      id: 31,
       name: "HP Laptop 14-dq0500la",
       description: `Intel® Celeron™, 4GB RAM , 128GB SSD, HD 14", Windows 11 Home, Color Negro`,
       category: ["tecnologia", "laptop", "computadora"],
@@ -421,7 +458,7 @@ let productsCard = [
 
   },
   {
-      id: 25,
+      id: 32,
       name: "Asus ROG Strix G15 PC",
       description: `Computadora para Juegos, Intel Core i7-12700F, GeForce RTX 3060 12GB, 16GB DDR4 RAM, 1TB PCIe 4.0 SSD, Windows 11 Home, G15CF-AB766`,
       category: ["pc gamer", "tecnologia","computadora","gamer"],
@@ -438,7 +475,7 @@ let productsCard = [
 
   },
   {
-      id: 26,
+      id: 33,
       name: "Mochila Artesanal Mexicana Grande 22l Resistente C/ahorcador",
       description: `Mochila Artesanal Mexicana Grande de 22 litros, para mujeres u hombres que quieran llevar una gran cantidad de cosas, ideal para llevar a todos lados. Cabe una laptop de 17" sin problemas. Es ultra resistente hecho artesanalmente con la mejor calidad y ojo, se puede lavar en lavadora.`,
       category: ["artesania", "mochila","equipaje","bolsas"],
@@ -455,7 +492,7 @@ let productsCard = [
 
   },
   {
-      id: 27,
+      id: 34,
       name: "5 Pzas. Jabón Artesanal Arroz Y Rosas Aclarante Natural ",
       description: `ACLARA TU PIEL GRADUALMENTE DE FORMA NATURAL!!
       SÓLO LAVA TODAS LAS NOCHES TU ROSTRO DEJA ACTUAR LA ESPUMA POR UN PAR DE MINUTOS Y ENJUAGA.
@@ -477,27 +514,28 @@ let productsCard = [
 
 ];
 
-
-
 let card = document.getElementById("tarjetas");
 
      productsCard.map((x) => {
 
     card.innerHTML +=`<div class=" col-lg-4 col-md-6 col-xs-12">
-    <div class="card mx-auto" style="max-width: 18rem;">
-        <img src="${x.img}" class="card-img-top" alt="${x.name}.">
-        <div class="card-body">
-          <h5 class="card-title">${x.name}</h5>
-          <p class="card-text">${x.description}/p>
+    
+       <div class="card h-100 border-warning mb-3" style="max-width: 18rem; ">
+   
+        <img src="${x.img}" class="card-img-top" alt="${x.name}"  ">
+        <h5 class="card-title">${x.name}</h5>
+        <p class="card-text-start ocultarDescripcionLarga ">${x.description} </p>
           <p class="card-text">${x.category}</p>        
-            <p class="card-text">${x.brand}</p>
-
-
-
+          <p class="card-text">${x. price}</p>
+          <p class="card-text">${x.rating}</p> 
+         
+  
+            <div class="card-body">
+           
+            </div>
           <a href="#" class="btn btn-primary">Comprar</a>
-          <br><br>
-          <a href="#" class="btn btn-primary">Agregar al carrito</a>
-        
+          
+       
          
         </div>
       </div>

@@ -26,3 +26,10 @@
 .boton{
   width: 8em;
 }
+
+.InputImagenes{
+  max-width: 12em;
+  min-width: 5em;
+  margin-bottom: 1em;
+  margin-right: 1em;
+}

@@ -120,12 +120,11 @@
           </div>
           <div class="mb-2 row">
             <div class="input-group mb-3">
-              <input type="file" class="form-control" id="inputImagenes" multiple required>
+              <input type="file" class="form-control" accept="image/jpeg" id="inputImagenes" onchange="cargaImagenes(event)" multiple required>
             </div>
           </div>
 
-          <div>
-            <img id="img">
+          <div id="previewImagenes">
           </div>
         </div>
         

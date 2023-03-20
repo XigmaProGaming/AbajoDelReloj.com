@@ -1,16 +1,30 @@
+
+var cargaImagenes = function(event) {
+  // funcion utilizada para insertar en el html las imagenes cargadas en el input files
+  var output = document.getElementById('previewImagenes'); // posicion o elemento div para ingresar elementos hijos
+
+  if(event.target.files.length != 1){ //  Validacion por si son mas de 1 imagen
+    for(let i=0; i < event.target.files.length; i++){
+      let element = document.createElement("img");
+//      element.id= `img${i}`
+      element.className = "InputImagenes"; // Clase del css
+      element.src = URL.createObjectURL(event.target.files[i]); // transformar la ubicacion local de la imagen
+      output.appendChild(element);                              //  a una url utilizable
+    }
+  }
+  else{ //  Si solo se inserto 1 imagen en el input
+    let element = document.createElement("img");
+      element.className = "InputImagenes";
+      element.src = URL.createObjectURL(event.target.files[0]);
+      output.appendChild(element);
+  }
+  
+  output.onload = function() {  //  Librerar espacio de memoria que se utilizo para las imagenes
+    URL.revokeObjectURL(output.src) // Liberacion de memoria
+  }
+}
+
 const validar = () =>{
-
-  // Imagen
-
-  // Nombre
-  // Descripcion  Texto + num
-  // Categoria
-  // Marca
-
-  // Estado     Este seleccionada una opcion
-
-  // Precio       n > 0
-  // Cantidad     n > 0
 
   let nombre = document.getElementById("inputName").value;
   let descripcion = document.getElementById("inputDescription").value; 
@@ -18,27 +32,9 @@ const validar = () =>{
   let marca = document.getElementById("inputBrand").value;
   let precio = document.getElementById("inputPrecio").value;
   let cantidad = document.getElementById("inputInventario").value; 
-  let imagenes = document.getElementById("inputImagenes").value;
-
-  console.log(imagenes);
-  let div = document.getElementById('alert');
-  let divimg = document.getElementById('img');
   
-  // const archivos = imagenes.files;
-  // // Si no hay archivos salimos de la función y quitamos la imagen
-
-  // // Ahora tomamos el primer archivo, el cual vamos a previsualizar
-  // const primerArchivo = archivos[0];
-  // // Lo convertimos a un objeto de tipo objectURL
-  // const objectURL = URL.createObjectURL(primerArchivo);
-  // // Y a la fuente de la imagen le ponemos el objectURL
-  // divimg.src = objectURL;
-
-  // divimg.innerHTML = '<embed src="'+imagenes.value+'" width="100" height="100" />';
-  divimg.width="100"; 
-  divimg.height="100";
-  divimg.src = `${imagenes.value}`;
-
+  let div = document.getElementById('alert');
+  
   let erText = /[ A-Z Ññ a-z á é í ó ú Á É Í Ó Ú 0-9 ]+/;
 
   if(div.innerHTML != ""){

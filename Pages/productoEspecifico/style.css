@@ -22,14 +22,36 @@ body {
   }
 
   .simulationHeight{
-    min-height: 200px;
-    background-color: red;
+   /*  min-height: 200px; */
+    background-color: white;
   }
 
   #precioCantidad{
     justify-content: center;
   }
 
-#bodyContainer{
-    height: 1200px;
+.carousel-item{
+  background-color: white;
 }
+
+.carousel-item img{
+  object-fit: scale-down;
+  height: 450px;
+}
+
+#previewPics a{
+  cursor: pointer;
+}
+
+#testButton{
+  border: none;
+  background: green;
+}
+
+.reviewContainer{
+  background: white;
+  border-radius: 15px;
+  box-sizing: border-box;
+  padding: 15px;
+}
+

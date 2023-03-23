@@ -4,7 +4,6 @@ html {
 
 body{
     background-color: #DDDDDD;
-
 }
 
 #bottom-offcanvas{
@@ -38,20 +37,11 @@ body{
 }
 
 .navbarBackground{
-    background-color: orange;
+    background-color: #FF861C;
 }
 
  #navContainer{
     width: 100%;
-<<<<<<< HEAD
-} 
-
-.footer{
-    text-align: center;
-    color: white;
-    background-color: #000839;
-}
-=======
     font-family: 'Quicksand', sans-serif;
     font-weight: 400;
 } 
@@ -69,5 +59,4 @@ body{
 }
 
 .material-icons.md-light { color: rgba(255, 255, 255, 1); font-weight: bolder; }
-.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
->>>>>>> develop
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3) }

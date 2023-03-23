@@ -1,12 +1,12 @@
 const navbarLocation = document.querySelector("#navbarLocation");
-
+const footer = document.querySelector("#footer")
 
 navbarLocation.innerHTML = `<!-- Barra de navegacion arriba y abajo -->
 <div class="sticky-top" id="navContainer">
   <!-- Barra de navegacion arriba-->
   <nav class="navbar navbar-expand-lg navbarBackground">
     <div class="container-fluid">
-      <a class="navbar-brand collapse navbar-collapse" href="/Pages/productoEspecifico/productoEspecifico.html" style="width: 150px;">
+      <a class="navbar-brand collapse navbar-collapse" href="#" style="width: 150px;">
         <img class="mx-auto" src="/Assets/logoAbajodelReloj.png" alt="Logo Abajo del Reloj" width="150px">
       </a>
 
@@ -23,10 +23,10 @@ navbarLocation.innerHTML = `<!-- Barra de navegacion arriba y abajo -->
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mx-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link navbarTextClass" href="#">Iniciar Sesión</a>
+            <a class="nav-link navbarTextClass" href="/Pages/Login/login.html">Iniciar Sesión</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link navbarTextClass" href="#">Registrarse</a>
+            <a class="nav-link navbarTextClass" href="/Pages/Registrarse/registrarse.html">Registrarse</a>
           </li>
         </ul>
       </div>
@@ -45,7 +45,7 @@ navbarLocation.innerHTML = `<!-- Barra de navegacion arriba y abajo -->
       <div class="collapse navbar-collapse mx-auto" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link navbarTextClass" href="./index.html">Página Principal</a>
+            <a class="nav-link navbarTextClass" href="/index.html">Página Principal</a>
           </li>
           <li class="nav-item">
             <a class="nav-link navbarTextClass" href="/Pages/Contactanos/contactenos.html">Contáctenos</a>
@@ -89,12 +89,19 @@ navbarLocation.innerHTML = `<!-- Barra de navegacion arriba y abajo -->
         </li>
       </ul>
       <ul class="navbar-nav" id="bottom-offcanvas">
-        <a class="nav-link navbarTextClass" href="#">Iniciar Sesión</a>
-        <a class="nav-link navbarTextClass" href="#">Registrarse</a>
+        <a class="nav-link navbarTextClass" href="/Pages/Login/login.html">Iniciar Sesión</a>
+        <a class="nav-link navbarTextClass" href="/Pages/Registrarse/registrarse.html">Registrarse</a>
     </ul>
     </div>
   </div>`;
 
+footer.innerHTML = `<div class="card footer" >
+<div class="card-body">
+  <blockquote class="blockquote mb-0" >
+    <footer ><cite title="Source Title">Copyright by @AbajoDelReloj.com</cite></footer>
+  </blockquote>
+</div>
+</div>`;
 
   /* Opcion 1 Revisar si usuario tiene la sesion iniciada
   
@@ -103,5 +110,3 @@ navbarLocation.innerHTML = `<!-- Barra de navegacion arriba y abajo -->
   -Agregar Boton Cerrar Sesion
   
   */
-
- 

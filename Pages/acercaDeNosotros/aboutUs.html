@@ -11,104 +11,15 @@
     <link rel="stylesheet" href="/Pages/acercaDeNosotros/style.css">
     <link rel="stylesheet" href="/navBarStyle.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600;700&display=swap" rel="stylesheet">
     
 </head>
-
 <body class="background">
   
-  <!-- Barra de navegacion arriba y abajo -->
-  <div class="sticky-top" id="navContainer">
-    <!-- Barra de navegacion arriba-->
-    <nav class="navbar navbar-expand-lg navbarBackground">
-      <div class="container-fluid">
-        <a class="navbar-brand collapse navbar-collapse" href="#" style="width: 150px;">
-          <img class="mx-auto" src="/Assets/logoAbajodelReloj.png" alt="Logo Abajo del Reloj" width="150px">
-        </a>
-
-        <!-- Boton hamburguesa -->
-        <a href="#" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#offcanvasShop" aria-controls="offcanvasShop" aria-expanded="false" aria-label="Toggle navigation"   id="navbarToggler">
-          <span class="material-symbols-outlined" id="burgerIcon">
-          menu
-          </span>
-        </a>
-        <form class="d-flex col-sm-6 col-md-6 col-lg-6" role="search">
-          <input class="form-control me-0" type="search" placeholder="Search" aria-label="Search" id="search-bar">
-          <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
-        </form>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mx-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Iniciar Sesión</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Registrarse</a>
-            </li>
-          </ul>
-        </div>
-        <a href="/" style="color: black;">
-          <span class="material-symbols-outlined">
-          shopping_cart
-          </span>
-        </a>
-      </div>
-    </nav>
-
-  <!-- Barra de navegacion abajo-->
-    <nav class="navbar navbar-expand-lg  navbarBackground">
-      <div class="container-fluid">
-          <a class="navbar-brand collapse navbar-collapse" href="#"> </a>       
-        <div class="collapse navbar-collapse mx-auto" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" href="/index.html">Página Principal</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/Pages/Contactanos/contactenos.html">Contáctenos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" style="color: white;" href="/Pages/acercaDeNosotros/index.html">Acerca de Nosotros</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Pedidos</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </div>
-
-  <!-- Offcanvas -->
-  <div class="offcanvas offcanvas-start navbarBackground" tabindex="-1" id="offcanvasShop" aria-labelledby="offcanvasShopLabel">
-    <div class="offcanvas-header">
-      <a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasShop" aria-controls="offcanvasShop" aria-expanded="false" aria-label="Toggle navigation"  style="color: black;">
-        <span class="material-symbols-outlined">
-        menu
-        </span>
-      </a>
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body" id="offcanvas-body-container">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" href="/index.html">Página Principal</a>
-        </li>
-        <!-- <li class="nav-item" data-bs-toggle="offcanvas" data-bs-target="#offcanvasShop"  por si quieremos cerrar el offcanvas al hacer click en cada link> -->
-        <li class="nav-item">
-          <a class="nav-link"  href="/Pages/Contactanos/contactenos.html">Contáctenos</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link"  style="color: white;" href="/Pages/acercaDeNosotros/aboutUs.html">Acerca de Nosotros</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pedidos</a>
-        </li>
-      </ul>
-      <ul class="navbar-nav" id="bottom-offcanvas">
-        <a class="nav-link" href="#">Iniciar Sesión</a>
-        <a class="nav-link" href="#">Registrarse</a>
-    </ul>
-    </div>
-  </div>
+  <!-- Ubicacion para insertar barra de navegacion -->
+  <div id="navbarLocation"></div>
 
   <!-- Contenido principal -->
 
@@ -156,24 +67,20 @@
           <!-- Sección de cada participante del equipo -->
           <div class="col-xl-6 col-sm-12 col-md-12 justify-content-center espacio"  style="background-color: #fff;">
               <div class="col-xl-12 col-sm-12 col-md-12" style="background-color: #fff;" >
-                  <img src="/Pages/acercaDeNosotros/assets/FotosEquipo/AlexisRangel.png" class="img-fluid mx-auto d-block acercaImg" alt="...">
+                  <img src="https://cdn.pixabay.com/photo/2017/11/10/05/48/user-2935527_640.png" style="border-radius: 50%;" class="img-fluid mx-auto d-block acercaImg" alt="...">
               </div>
               <!-- Nombre del integrante del equipo -->
-              <h1 class="text-center">Alexis Rangel</h1>    
+              <h1 class="text-center">Aqui podrías estar tú</h1>    
               <!-- Descripción del integrante del equipo -->
-              <p class="text-center">Me destaco por mi pasión por la tecnología y mi capacidad para aprender rápidamente nuevas 
-                herramientas y lenguajes de programación, me considero una persona comprometida, responsable y con habilidades para 
-                el trabajo en equipo. Puedo aportar a una empresa mi conocimiento en tecnologías básicas de programación, y disfruto 
-                de colaborar en equipo. Estoy dispuesto a aprender y crecer profesionalmente en el ámbito de la programación, para poder
-                aportar cada vez más valor a la empresa.</p>
+              <p class="text-center"></p>
               
               <!-- Boton a GitHub y LinkedIn -->
               <div class="botonesRedes">
-
-                  <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <!-- Comentados hasta que exista alguien que ingresar en esta parte -->
+                  <!-- <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                       <a class="btn btn-primary" href="https://github.com/arm9310/" role="button" target="_blank">Ir a Github</a>
                       <a class="btn btn-primary" href="https://linkedin.com/" role="button" target="_blank">Ir a LinkedIn</a>
-                  </div>
+                  </div> -->
               </div>
                   
           </div>
@@ -249,22 +156,19 @@
           <!-- Sección de cada participante del equipo -->
           <div class="col-xl-6 col-sm-12 col-md-12 justify-content-center espacio"  style="background-color: #fff;">
               <div class="col-xl-12 col-sm-12 col-md-12" style="background-color: #fff;">
-                  <img src="/Pages/acercaDeNosotros/assets/FotosEquipo/Alan.png" class="img-fluid mx-auto d-block acercaImg" alt="...">
+                  <img src="https://cdn.pixabay.com/photo/2017/11/10/05/48/user-2935527_640.png" style="border-radius: 50%;" class="img-fluid mx-auto d-block acercaImg" alt="...">
               </div>
               <!-- Nombre del integrante del equipo -->
-              <h1 class="text-center">Alan Pastrana</h1>    
+              <h1 class="text-center">Aquí podrías estar tú</h1>
               <!-- Descripción del integrante del equipo -->
-              <p class="text-center">Tengo habilidades técnicas específicas como docente en el idioma inglés, 
-                así como en la creación curricular de contenidos y en la administración y coordinación de proyectos, 
-                específicamente en el área académica. Actualmente me encuentro incursionando en el área de TI como 
-                Desarrollador Java Full Stack.</p>
+              <p class="text-center"></p>
               
               <!-- Boton a GitHub -->
-              <div class="botonesRedes">
-                  <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+              <!-- Comentados hasta que exista alguien que ingresar en esta parte -->
+                  <!-- <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                       <a class="btn btn-primary" href="https://github.com/aPastranx" role="button" target="_blank">Ir a Github</a>
                       <a class="btn btn-primary" href="https://www.linkedin.com/in/alan-gpastrana/" role="button" target="_blank">Ir a LinkedIn</a>
-                  </div>
+                  </div> -->
               </div>
               
           </div>
@@ -274,15 +178,10 @@
   </div>
 
   <!-- Contenedor Footer -->
-  <div class="card footer">
-    <div class="card-body">
-      <blockquote class="blockquote mb-0" >
-        <footer ><cite title="Source Title">Copyright by @AbajoDelReloj.com</cite></footer>
-      </blockquote>
-    </div>
-  </div>
+  <div id="footer"></div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-
+<!-- Script para agregar currentPage a navbar  o script de index.js-->
+  <script src="/navbar.js" defer></script>    
 </body>
 </html>

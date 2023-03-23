@@ -1,0 +1,44 @@
+.title-iniciarSesion{
+  padding-bottom: 1em;
+}
+
+.form{
+  margin-top: 2em;
+  margin-bottom: 2em;
+  padding: 2em;
+  padding-bottom: 2em;
+  background-color: white;
+  text-align: center;
+}
+
+.inputs-center{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+}
+
+.input-email{
+  text-align: center;
+  width: 30em;
+}
+
+.input-password{
+  text-align: center;
+  width: 20em;
+}
+
+.boton-content{
+  margin-top: .8em;
+}
+
+.boton{
+  width: 8em;
+}
+
+.link-Registrarse{
+  margin-top: 1em;
+  margin-right: 1.5em;
+  text-decoration: none;
+  color: black;
+}

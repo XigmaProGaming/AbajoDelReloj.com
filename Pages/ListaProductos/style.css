@@ -1,0 +1,94 @@
+body {
+  background-color: #dddddd;
+}
+
+header {
+  background-color: #ff861c;
+}
+
+.articulos {
+  text-align: center;
+  font-size: 5rem;
+}
+
+.container {
+  background-color: #dddddd;
+}
+
+.footer {
+  text-align: center;
+  color: white;
+  background-color: #000839;
+}
+
+
+  
+
+img {
+
+  width: 100%;
+  display: block;
+}
+h5 {
+  text-align: center;
+}
+
+.card {
+  width: 100%;
+  margin: 20px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+
+  box-shadow: 0px 1px 10px rgb(0, 0, 0, 0.2);
+  cursor: default;
+  transition: all 400ms ease;
+}
+.ocultarDescripcionLarga {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-height: 150px;
+
+}
+.card:hover {
+  box-shadow: 5px 5px 20px rgb(0, 0, 0, 0.4);
+  transform: translateY(-3%);
+}
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: scale-down;
+}
+.card .container {
+  border-top: 1px solid rgb (230, 230, 230);
+  padding: 1em;
+  display: flex;
+  flex-flow: column;
+}
+
+.card * + * {
+  margin-bottom: 1em;
+}
+
+.precio {
+  text-align: center;
+  font-size: 1.5em;
+}
+.categoria {
+  text-align: justify;
+  font-size: 1em;
+}
+.calificacion {
+  opacity: 0;
+}
+
+.boton{
+
+  max-width: 200px;
+  
+  display: block;
+  margin-right: 50px;
+  margin-left: 50px;
+  text-align: center;
+
+}

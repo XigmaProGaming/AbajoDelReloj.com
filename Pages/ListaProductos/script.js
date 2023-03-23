@@ -7,7 +7,7 @@ let productsCard = [
     category: ["Juguetes", "funko"],
     brand: "Funko",
     price: 399.99,
-    img: ["https://media.s-bol.com/NP5yQn7vmzK/550x377.jpg",
+    img: ["https://http2.mlstatic.com/D_NQ_NP_907568-MLM53563929148_022023-V.webp",
     "https://media.s-bol.com/KMJ9My1lBLl/831x1200.jpg", 
     "https://www.raccoongames.es/img/productos/2017/02/23/popwalkingdead_neganblood_raccoongames.jpg"],
     rating: 4.5,
@@ -79,7 +79,7 @@ let productsCard = [
     category: ["Juguetes", "Papalote"],
     brand: "N/a",
     price: 99.99,
-    img: ["https://www.promoopcion.com/media/catalog/product/cache/4c3f0d3c766e4a6b2825d11d3373d3aa/G/M/GM-005-R.jpg",
+    img: ["https://http2.mlstatic.com/D_NQ_NP_889275-MLM51363349729_082022-V.webp",
     "https://promoroca.mx/product/images/gm-005-papalote-diamond-rojo-rojo_13076", 
     "https://2.bp.blogspot.com/-kGoREnhdOBM/VmtqU0M9uSI/AAAAAAAAG9I/_2cjfONqaZs/s1600/4267748492_8d2e979275_o.jpg"],
     rating: 2,
@@ -274,7 +274,7 @@ let productsCard = [
       category: ["category1", "category2"],
       brand: "ZARA",
       price: 1.299,
-      img: ["https://static.zara.net/photos///2023/V/0/2/p/6318/488/707/2/w/563/6318488707_6_1_1.jpg?ts=1669129550819","https://static.zara.net/photos///2023/V/0/2/p/6318/488/707/2/w/563/6318488707_6_2_1.jpg?ts=1669129549009", "https://static.zara.net/photos///2023/V/0/2/p/6318/488/707/2/w/563/6318488707_6_3_1.jpg?ts=1669129558285"],
+      img: ["https://http2.mlstatic.com/D_NQ_NP_655314-MLM53047686941_122022-W.webp","https://static.zara.net/photos///2023/V/0/2/p/6318/488/707/2/w/563/6318488707_6_2_1.jpg?ts=1669129549009", "https://static.zara.net/photos///2023/V/0/2/p/6318/488/707/2/w/563/6318488707_6_3_1.jpg?ts=1669129558285"],
       rating: 4.0,
       publicationDate: "2023-03-13-11:05:05",
       invetory: 20,
@@ -291,7 +291,7 @@ let productsCard = [
       category: ["category1", "category2"],
       brand: "H&M",
       price: 349.00,
-      img: ["https://lp2.hm.com/hmgoepprod?set=format%5Bwebp%5D%2Cquality%5B79%5D%2Csource%5B%2F21%2F27%2F2127302cbeace058f267931a80179afb23a4c58e.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B2%5D&call=url%5Bfile%3A%2Fproduct%2Fmain%5D","https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F19%2F52%2F1952c3643862d5e9370526e0ff7d5db6dd875711.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]", "url3"],
+      img: ["https://http2.mlstatic.com/D_NQ_NP_902959-MLM49057595829_022022-O.webp","https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F19%2F52%2F1952c3643862d5e9370526e0ff7d5db6dd875711.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]", "url3"],
       rating: 3.9,
       publicationDate: "2023-03-13-11:05:05",
       invetory: 15,
@@ -342,7 +342,7 @@ let productsCard = [
       category: ["category1", "category2"],
       brand: "Shein",
       price: 299.99,
-      img: ["https://img.ltwebstatic.com/images3_pi/2022/01/18/1642501044aa9f51b56a0fb7965f0fcbea3a2468f5_thumbnail_600x.webp","https://img.ltwebstatic.com/images3_pi/2022/01/18/1642501046b3be8583a01acd40b3b8ec20afcdc644_thumbnail_600x.webp", "url3"],
+      img: ["https://http2.mlstatic.com/D_NQ_NP_980663-MLM53473271264_012023-W.webp","https://img.ltwebstatic.com/images3_pi/2022/01/18/1642501046b3be8583a01acd40b3b8ec20afcdc644_thumbnail_600x.webp", "url3"],
       rating: 4.5,
       publicationDate: "2023-03-13-11:05:05",
       invetory: 35,
@@ -360,25 +360,7 @@ let productsCard = [
       category: ["category1", "category2"],
       brand: "Shein",
       price: 299.99,
-      img: ["https://m.media-amazon.com/images/I/71r7HskvwAL._AC_SX679_.jpg","https://m.media-amazon.com/images/I/71k4-G5IfzL._AC_SX679_.jpg", "url3"],
-      rating: 5.0,
-      publicationDate: "2023-03-13-11:05:05",
-      invetory: 35,
-      sellerID: 9874512, //id del vendedor
-      state: "uevo", // usado o nuevo
-      sku: 1232312345,
-      visibility: true,
-  
-  },
-  
-  {
-      id: 27,
-      name: "Amayya | Bolsos artesanal, yute premium, bolso de mano para dama, modelo Sandy bambu ",
-      description: "Jute Bolso elaborado de forma Artesanal hecho 100% en Mexico, Útil para llevar a cualquier parte y ser el centro de atención",
-      category: ["category1", "category2"],
-      brand: "Shein",
-      price: 299.99,
-      img: ["https://m.media-amazon.com/images/I/71r7HskvwAL._AC_SX679_.jpg","https://m.media-amazon.com/images/I/71k4-G5IfzL._AC_SX679_.jpg", "url3"],
+      img: ["https://http2.mlstatic.com/D_NQ_NP_964032-MLM52084982691_102022-W.webp","https://m.media-amazon.com/images/I/71k4-G5IfzL._AC_SX679_.jpg", "url3"],
       rating: 5.0,
       publicationDate: "2023-03-13-11:05:05",
       invetory: 35,
@@ -521,19 +503,19 @@ let card = document.getElementById("tarjetas");
     card.innerHTML +=`<div class=" col-lg-4 col-md-6 col-xs-12">
     
        <div class="card h-100 border-warning mb-3" style="max-width: 18rem; ">
-   
-        <img src="${x.img}" class="card-img-top" alt="${x.name}"  ">
-        <h5 class="card-title">${x.name}</h5>
+       
+        <img src="${x.img}" class="card-img-top"  alt="${x.name}"  ">
+        <h5 class="card-title">${x.name}</h5>s
         <p class="card-text-start ocultarDescripcionLarga ">${x.description} </p>
-          <p class="card-text">${x.category}</p>        
-          <p class="card-text">${x. price}</p>
-          <p class="card-text">${x.rating}</p> 
+          <p class="card-text" categoria>${x.category}</p>        
+          <p class="card-text precio">$ ${x. price}</p>
+          <p class="card-text">Calificación: ${x.rating}</p> 
          
   
             <div class="card-body">
            
             </div>
-          <a href="#" class="btn btn-primary">Comprar</a>
+          <a href="#" class="btn btn-primary  boton">Comprar</a>
           
        
          

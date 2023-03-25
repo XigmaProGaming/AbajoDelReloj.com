@@ -10,12 +10,29 @@ p{
     font-weight:400;
 }
 
-.container {
-    display: grid;
+.datos{
+    background-color: #fff;
 }
 
-.footer{
-    text-align: center;
-    color: white;
-    background-color: #000839;
-  }
+.title{
+    margin-top: 1em;
+}
+
+.imagen{
+    min-width: 1%;
+    max-width: 100%;
+}
+
+.divNombre{
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.boton{
+    margin-bottom: 1em;
+}

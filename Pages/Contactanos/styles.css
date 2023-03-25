@@ -4,6 +4,10 @@ body{
   background-color: #DDDDDD; 
 }
 
+.tittle{
+  background-color: #fff;
+}
+
 h1{
   font-family: 'Quicksand', sans-serif;
   font-weight:600;
@@ -28,13 +32,11 @@ p{
   align-items: center;
   align-content: center;
   text-align: center;
-}
-
-.div-link-redes{
   padding: 2em;
 }
 
 .iconos-redes{
+  margin-top: 1em;
   min-width: 30%;
   max-width: 20%;
   padding-bottom: 2em;
@@ -73,10 +75,4 @@ a{
 #enviar{
   margin: 1em; 
   background-color: #4C75DF;
-}
-
-.footer{
-  text-align: center;
-  color: white;
-  background-color: #000839;
 }

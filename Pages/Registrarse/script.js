@@ -1,6 +1,5 @@
 var usuariosNuevos = [];
 
-
 const validar = () =>{
 
   let nombre = document.getElementById("inputName").value;

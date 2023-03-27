@@ -27,5 +27,5 @@ const validar = () =>{
     localStorage.setItem("usuario",usuarioJSON);
     //alert("Completaste correctamente los campos");// campos ready 
   }
-  console.log(usuario);
+  //console.log(usuario);
 }

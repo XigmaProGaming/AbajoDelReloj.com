@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Producto especifico</title>
+    <title>Checkout</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" 
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <!-- Link a la hoja de estilos de la pagina actual -->
@@ -66,8 +66,8 @@
             <!-- Direccion de entrega -->
             <div class="row sectionBody">
                 <div class="col-12 text-center">
-                    <h4>Direccion de entrega</h4>
-                    <form action="">
+                    <h4>Dirección de entrega</h4>
+                    <!-- <form action="">
                         <label for="calle">Calle</label>
                         <input type="text" name="calle" id="calle">
                         <br>
@@ -84,15 +84,73 @@
                         <br>
                         <textarea name="instruccionesEntrega" id="instruccionesEntrega" cols="30" rows="5"></textarea>
 
-                    </form>
+                    </form> -->
+                    <!-- Calle -->
+                    <div class="input-group mb-4 row">
+                        <div class="col-3"></div>
+                        <div class="col-6 mx'auto">
+                          <div class="form-floating">
+                          <input type="text" class="form-control" id="inputStreet" placeholder="Calle">
+                          <label for="inputStreet">Calle</label>
+                          </div>
+                        </div>
+                        <div class="col-3"></div>
+                    </div>
+                    <!-- Colonia -->
+                    <div class="input-group mb-4 row">
+                        <div class="col-3"></div>
+                        <div class="col-6 mx'auto">
+                          <div class="form-floating">
+                          <input type="text" class="form-control" id="inputArea" placeholder="Colonia">
+                          <label for="inputArea">Colonia</label>
+                          </div>
+                        </div>
+                        <div class="col-3"></div>
+                    </div>
+                    <!-- Ciudad -->
+                    <div class="input-group mb-4 row">
+                        <div class="col-3"></div>
+                        <div class="col-6 mx'auto">
+                          <div class="form-floating">
+                          <input type="text" class="form-control" id="inputCity" placeholder="Ciudad">
+                          <label for="inputCity">Ciudad</label>
+                          </div>
+                        </div>
+                        <div class="col-3"></div>
+                    </div>
+                    <!-- Telefono -->
+                    <div class="input-group mb-4 row">
+                        <div class="col-3"></div>
+                        <div class="col-6">
+                            <div class="form-floating">
+                              <input type="number" class="form-control " id="inputTelefono" placeholder="Teléfono">
+                              <label for="inputTelefono">Teléfono</label>
+                            </div>
+                          </div>
+                        <div class="col-3"></div>
+                    </div>
+                    <!-- Instrucciones de entrega -->
+                    <div class="input-group mb-4 row">
+                        <div class="col-3"></div>
+                        <div class="col-6">
+                            <div class="form-floating">
+                                <textarea class="form-control" id="inputInstructions" rows="3"></textarea>
+                                <label for="inputInstructions">Instrucciones de entrega (opcional)</label>
+                            </div>
+                        </div>
+                        
+                        <div class="col-3"></div>
+                    </div>
                 </div>
             </div>
-            
+            <!-- Froma de pago -->
             <h5 class="text-center">Agregar tarjeta</h5>
             <!-- Tarjeta de credito  -->
             <div class="row sectionBody">
                 <div class="col-12 text-center">
-                    <form action="">
+                    <!-- Aqui se aplicara una API externa para verificar y hacer el cobro a la tarjeta -->
+                    <h2>API externa</h2>
+                    <!-- <form action="">
                         <label for="nombreTarjeta">Nombre de la tarjeta</label>
                         <input type="text" name="nombreTarjeta" id="nombreTarjeta">
                         <br>
@@ -140,7 +198,7 @@
                         </span>
                         <br>
                         <button>Confirmar pago</button>
-                    </form>
+                    </form> -->
                 </div>
             </div>
         </div>

@@ -2,36 +2,39 @@
 const btnEditarcontrasena = document.getElementById('btn-editar-contrasena');
 let valorOriginalNombre;
 let valorOriginalEmail;
-
-
-
+let valorOriginalApellido;
+let valorOriginalTelefono;
+let valorOriginalContasenaC;
 
 btnEditarcontrasena.addEventListener('click', (e) => {
   e.preventDefault();
   console.log("toy vivo");
   const inputNombre = document.getElementById('inputNombre');
-  const inputEmail = document.getElementById('inputEmail');
-  //const inputUniversidad = document.getElementById('inputUniversidad');
+  const inputApellido = document.getElementById('inputApellido');
+  const inputTelefono = document.getElementById('inputTel');
   const inputContrasena = document.getElementById('inputContrasena');
   const btnEditarcontrasena = document.getElementById('btn-editar-contrasena');
 
   if (inputContrasena.readOnly == true) {
     console.log(inputContrasena.value);
+
     valorOriginalNombre = inputNombre.value;
     inputNombre.readOnly = false;
 
-    valorOriginalEmail = inputEmail.value;
-    inputEmail.readOnly = false;
+    valorOriginalApellido = inputApellido.value;
+    inputApellido.readOnly = false;
 
-    // valorOriginalUniversidad = inputUniversidad.value;
-    // inputUniversidad.readOnly = false;
+    valorOriginalTelefono = inputTelefono.value;
+    inputTelefono.readOnly = false;
 
 
     originalValue = inputContrasena.value;
     inputContrasena.readOnly = false;
-    //inputContrasena.style.backgroundColor = "#fff";
 
-    btnEditarcontrasena.innerHTML = "Guardar";
+
+    
+
+    btnEditarcontrasena.innerHTML = "Guardar"; // Alert de gaurdado con exito
   } else {
 
     inputNombre.readOnly = true;
@@ -41,7 +44,7 @@ btnEditarcontrasena.addEventListener('click', (e) => {
 
     console.log(inputContrasena.value);
     inputContrasena.readOnly = true;
-    //inputContrasena.style.backgroundColor = "#eee";
+
     btnEditarcontrasena.innerHTML = "Editar";
 
     var newValue = inputContrasena.value;
@@ -49,6 +52,7 @@ btnEditarcontrasena.addEventListener('click', (e) => {
     // Aquí podrías guardar los cambios en tu base de datos
 
     if (newValue !== originalValue) {
+      alert("Guardado con exito");
       // Aquí podrías mostrar una confirmación al usuario de que los cambios se han guardado
     }
   }

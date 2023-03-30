@@ -17,14 +17,14 @@
   <div id="navbarLocation"></div>
 
   <!-- Perfil del vendedor -->
-  <div class="container-fluid">    
+  <div class="container container-userdata">    
     <div class="row">
         <div class="col-xl-4 col-md-4 col-sm-12 container-form">
             <div class="d-flex align-items-center mb-3 pb-1 container-tittle">
                 <img src="/Assets/logoAbajodelReloj.png" alt="Logo de Abajo del Reloj">
-                <!-- <h1 class="title">Mis datos</h1>                     -->
+                <!-- <h1 class="title">Mis datos</h1>                     -->                
             </div>
-            <h2 class="description">Datos de cuenta</h2>              
+            <h2 class="description">Datos de cuenta</h2>          
         </div>
         <div class="col-xl-4 col-md-12 col-sm-12 container-datosVendedor">           
             <form action="" method="POST" id="formRegistro" class="formulario">
@@ -33,31 +33,32 @@
                 </div>
                 <!-- inyectar con datos de BD -->
                 <input type="text" placeholder="Nombre" id="inputNombre" class="form-control input-text" name="nombre" autocomplete="off" readonly>        
-                <input type="text" placeholder="Correo electronico" class="form-control input-text" id="inputEmail" name="correo" autocomplete="off" readonly>
-                <input type="tel" placeholder="Telefono" class="form-control input-text" name="telefono"autocomplete="off">
+                <input type="text" placeholder="Apellido" id="inputApellido" class="form-control input-text" name="apellido" autocomplete="off" readonly>
+                <input type="text" placeholder="User name" id="inputUser" class="form-control input-text" name="username" autocomplete="off" readonly>
+                <input type="number" placeholder="Telefono" id="inputTel" class="form-control input-text" name="telefono"autocomplete="off" readonly>                
+                <input type="text" placeholder="Correo electronico" class="form-control input-text" id="inputEmail" name="correo" autocomplete="off" readonly>                
                 <div class="grupo-input">
                     <input type="password" placeholder="Contraseña" name="password" class="form-control input-text clave" id="inputContrasena" readonly>                     
                     <!-- <button type="button" class="icono fas fa-eye mostrarClave"></button>                      -->
-                </div>
-                <input type="password" placeholder="Confirmar contraseña" name="password" class="form-control input-text clave" readonly>                     
+                </div>                                 
           
 
                 <!-----------------Botón editar---------->
                 <div class="col-4">
                     <div class="mb-3">
-                        <button class="btn btn-primary" type="reset" id="btn-editar-contrasena" >
+                        <button class="btn btn-primary ic-Edit" type="reset" id="btn-editar-contrasena" >
                             <img class="iconos" id="iconoEditar" src="./Assets/editar.png" alt="">
                         </button>
                     </div>
                 </div>
             </form>
         </div>
-        <div class="col-xl-6 col-md-12 col-sm-12">
+        <div class="col-xl-6 col-md-12 col-sm-12 container-sales">
             <div id="container-HistorialCompras">
-                <h2 id="tittle-HistorialCompras">Historial De Compras</h2>
+                <!-- <h2 id="tittle-HistorialCompras">Historial De Compras</h2> -->
                 <!-- <img class="divisor" id="divisorHC" src="../assets/img/divisor.png" alt="divisor"> -->
                 <div class="row">
-                    <div class="col-2">
+                    <div class="col-3">
                         <h4>Nombre</h4>
                     </div>
                     <div class="col-3">
@@ -66,15 +67,9 @@
                     <div class="col-3">
                         <h4>Descripcion</h4>
                     </div>
-                    <div class="col-2">
+                    <div class="col-3">
                         <h4>Vendedor</h4>
-                    </div>
-                    <div class="col-1">
-                        <!-- <img class="iconos" src="../assets/img/archivo.png" alt=""> -->
-                    </div>
-                    <div class="col-1">
-                        <!-- <img class="iconos"  src="../assets/img/bote-de-basura.png" alt=""> -->
-                    </div>
+                    </div>                                      
                 </div>
                 <div class="row">
                     <div class="col-2"></div>

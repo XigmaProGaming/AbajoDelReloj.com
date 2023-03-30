@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600;700&display=swap');
+
+.container-form{
+    width:100%;
+    padding: 90px 20px 20px 20px; 
+}
+.container-tittle{
+    display: flex;
+    justify-content: center;
+}
+.formulario .input-text{
+    padding: 14px 20px;
+    border: 1px solid #4C75DF;
+    //background: #C98474;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    width: 100%;
+    outline: 0;
+    font-size: 20px;
+    color: #000000;
+}
+#iconoEditar{
+    max-width: 20px;
+}

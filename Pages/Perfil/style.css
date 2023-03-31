@@ -33,7 +33,7 @@
     border: 1px solid #4C75DF;
     //background: #C98474;
     margin-bottom: 20px;
-    border-radius: 3px;
+    border-radius: 4px;
     width: 100%;
     outline: 0;
     font-size: 20px;
@@ -55,4 +55,20 @@
 .img-1{
     width: 30%;
     heigth: auto;
+}
+.img-js{
+    width: 60%;
+    heigth: auto;
+}
+.td-js{
+    width: 10em;
+    heigth: auto;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+a:hover{
+    color: #4C75DF;
+    text-decoration: underline;
 }

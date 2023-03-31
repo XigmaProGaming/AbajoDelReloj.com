@@ -1,12 +1,14 @@
 
-const btnEditarcontrasena = document.getElementById('btn-editar-contrasena');
+const btnEditar = document.getElementById('btn-editar-contrasena');
+const btnGuardar = document.getElementById('btn-guardar');
+
 let valorOriginalNombre;
 let valorOriginalEmail;
 let valorOriginalApellido;
 let valorOriginalTelefono;
 let valorOriginalContasenaC;
 
-btnEditarcontrasena.addEventListener('click', (e) => {
+btnEditar.addEventListener('click', (e) => {
   e.preventDefault();
   console.log("toy vivo");
   const inputNombre = document.getElementById('inputNombre');
@@ -15,47 +17,49 @@ btnEditarcontrasena.addEventListener('click', (e) => {
   const inputContrasena = document.getElementById('inputContrasena');
   const btnEditarcontrasena = document.getElementById('btn-editar-contrasena');
 
-  if (inputContrasena.readOnly == true) {
-    console.log(inputContrasena.value);
+  
+  console.log(inputContrasena.value);
 
-    valorOriginalNombre = inputNombre.value;
-    inputNombre.readOnly = false;
+  valorOriginalNombre = inputNombre.value;
+  inputNombre.readOnly = false;
 
-    valorOriginalApellido = inputApellido.value;
-    inputApellido.readOnly = false;
+  valorOriginalApellido = inputApellido.value;
+  inputApellido.readOnly = false;
 
-    valorOriginalTelefono = inputTelefono.value;
-    inputTelefono.readOnly = false;
-
-
-    originalValue = inputContrasena.value;
-    inputContrasena.readOnly = false;
+  valorOriginalTelefono = inputTelefono.value;
+  inputTelefono.readOnly = false;
 
 
-    
+  originalValue = inputContrasena.value;
+  inputContrasena.readOnly = false;
 
-    btnEditarcontrasena.innerHTML = "Guardar"; // Alert de gaurdado con exito
-  } else {
+});
 
-    inputNombre.readOnly = true;
+btnGuardar.addEventListener('click', (e) => {
+  e.preventDefault();
+  inputNombre.readOnly = true;
+  inputEmail.readOnly = true;
+  console.log(inputContrasena.value);
+  inputContrasena.readOnly = true;
+  btnEditarcontrasena.innerHTML = "Guardar";
+  var newValue = inputContrasena.value;
 
-    inputEmail.readOnly = true;
-
-
-    console.log(inputContrasena.value);
-    inputContrasena.readOnly = true;
-
-    btnEditarcontrasena.innerHTML = "Editar";
-
-    var newValue = inputContrasena.value;
-
-    // Aquí podrías guardar los cambios en tu base de datos
-
-    if (newValue !== originalValue) {
-      alert("Guardado con exito");
-      // Aquí podrías mostrar una confirmación al usuario de que los cambios se han guardado
-    }
+  if (newValue !== originalValue || valorOriginalTelefono !== inputTelefono.value ||  valorOriginalNombre !== inputNombre.value || valorOriginalApellido !== inputApellido) {
+    alert("Guardado con exito");
+    // Aquí podrías mostrar una confirmación al usuario de que los cambios se han guardado
   }
 });
-var originalValue;
+
+/* ---------------- METODOS PARA VISIBILIDAD DE PRODUCTOS ---------*/
+$(document).ready(function() {
+  $('#visibility').change(function() {
+      if ($(this).is(':checked')) {
+          $('#product-container').addClass('grayed-out');
+      } else {
+          $('#product-container').removeClass('grayed-out');
+      }
+  });
+});
+
+
 

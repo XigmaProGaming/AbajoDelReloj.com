@@ -76,54 +76,115 @@
             </form>
         </div>
         <div class="col-xl-1"></div>
-        <div class="col-xl-7 col-md-12 col-sm-12 ">            
-            <div id="container-HistorialCompras">                                
-                <h2 id="tittle-HistorialCompras">Productos publicados</h2>
-                <div class="row container-sales" id="sales">                         
-                    <div class="col-6">
-                        <h4 class="title">Imagen</h4>
-                        <img src="/Assets/Products/Laptop.jpg" alt="" class="img-1">                                         
-                    </div>               
-                    
-                    <div class="col-6 products">
-                        <h4 class="title">Nombre</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                    </div>
-                    <div class="col-1">
-                            <div class="mb-3 buttons">
-                                <button class="btn btn-primary ic-Products" type="reset" id="btn-editar-contrasena" >
-                                    <img class="iconos" id="iconoEditar" src="./Assets/editar.png" alt="">
-                                </button>
-                                <button class="btn btn-primary ic-Products" data-bs-toggle="modal" data-bs-target="#staticBackdrop" type="reset" id="btn-guardar">
-                                    <img class="iconos" id="iconoGuardar" src="./Assets/save.png" alt="">                            
-                                </button>                                
-                            </div>
-                        </div> 
-                    <label for="visibility">Visibilidad</label>
-                    <input type="checkbox" name="visibility" id="visibility">               
-                    <!-- <div class="col-3">
-                        <h4>Descripcion</h4>
-                        <p>asjdaskdnajskndjaskdjn</p>
-                    </div> -->
-                    <!-- <div class="col-3">
-                        <h4>Vendedor</h4>
-                        <p>dasdsakjdkasdsz</p>
-                    </div>                                       -->
+
+        <!-- HISTORIAL DE PRODUCTOS DEL USUARIO -->
+
+        <div class="col-xl-7 col-md-12 col-sm-12 ">                        
+            <h2 id="tittle-HistorialCompras">Productos publicados</h2>
+                <div class="row container-sales">                 
+                    <!-- Aqui comienza la tabla para visualizar productos -->
+                    <div class="table-responsive">
+                        <table class="table table-striped text-successtable-border border-light">
+                          <thead>
+                            <tr>
+                              <th scope="col" hidden>ID</th>
+                              <th scope="col">Imagen</th>
+                              <th scope="col">Nombre</th>                              
+                              <th scope="col">Precio</th>
+                              <th scope="col">Editar</th>
+                              <th scope="col">Eliminar</th>
+                            </tr>
+                          </thead>
+                          <tbody id="tablaProductos"></tbody>
+                        </table>
+                    </div>                    
                 </div>
-                <!-- <div class="row">
-                    <div class="col-2"></div>
-                    <div class="col-3"></div>
-                    <div class="col-3"></div>
-                    <div class="col-2"></div>
-                    <div class="col-1">
-                        <img class="iconos" src="../assets/img/archivo.png" alt="">
+          
+                <!-- Modal ProductoNuevo-->
+                <div class="modal" tabindex="-1" role="dialog" id="modalProductoNuevo" >
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">                      
+                      <div class="modal-body">
+                        <form id="formularioNuevoProducto" method="get">
+                          <div class="form-group">
+                            <label for="imagenProducto">Imagen del producto</label>
+                            <input
+                              class="form-control"
+                              type="file"
+                              id="imagenProducto"
+                              disabled
+                            />
+                            <label for="nombreProducto">Nombre del producto</label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="nombreProducto"
+                              placeholder="Nombre del producto"
+                              required
+                            />                           
+                            <label for="precioProducto">Precio del producto (MXN)</label>
+                            <input
+                              type="number"
+                              class="form-control"
+                              id="precioProducto"
+                              placeholder="Precio del producto"
+                              required
+                            />                                                                                                               
+                          </div>          
+                        </form>
+                      </div>
                     </div>
-                    <div class="col-1">
-                        <img class="iconos" src="../assets/img/bote-de-basura.png" alt="">
+                  </div>
+                </div>
+                          
+                <!-- Modal EditarProducto-->
+                <div class="modal" tabindex="-1" role="dialog" id="modalEditarProducto">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title">Editando un producto</h5>
+                          <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+                        <div class="modal-body">
+                          <form id="formularioNuevoProducto" method="post">
+                            <div class="form-group">
+                            <label for="imagenProducto">Imagen del producto</label>
+                              <input
+                                class="form-control"
+                                type="file"
+                                id="imagenProducto"
+                                required
+                              />
+                              <label for="nombreProducto">Nombre del producto</label>
+                              <input
+                                type="text"
+                                class="form-control"
+                                id="editarNombreProducto"
+                                placeholder="Nombre del producto"
+                                required
+                              />
+                              
+                              <label for="precioProducto">Precio del producto (MXN)</label>
+                              <input
+                                type="number"
+                                class="form-control"
+                                id="editarPrecioProducto"
+                                placeholder="Precio del producto"
+                                required
+                              />                                                           
+                              
+                            </div>            
+                            </div>
+                          </form>
+                        </div>
+                      </div>
                     </div>
-                </div> -->
-            </div>
-            
+                </div>
         </div>
     </div>
   </div>

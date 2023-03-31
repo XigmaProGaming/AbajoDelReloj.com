@@ -1,13 +1,16 @@
-#pedido{
-    width: 80%;
-    
 
+
+.card{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 80%;
+    align-content: center;
 }
 
 .card-img{
-    margin-top: 2em;
+    margin-top: 2rem;
     align-self: center;
-    width: 30%;
+    width: 20%;
     border-radius: 20%;
 }
 

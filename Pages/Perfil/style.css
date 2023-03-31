@@ -18,11 +18,13 @@
     //margin-left: 30px;
     margin-bottom: 50px;
 }
-.ic-Edit{
-    margin-top:50px;
-    width:100%;
-    height: auto;
+
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    aling-items: center;
 }
+
 #iconoEditar{
     max-width: 20px;
 }
@@ -36,4 +38,21 @@
     outline: 0;
     font-size: 20px;
     color: #000000;
+}
+.input-text:not([readonly]) {
+    border: 2px solid #320D6D;
+    background-color: #fff;
+}
+
+/* Estilos productos publicados */
+#product-container {
+    background-color: #ccc;
+    color: #fff;
+}
+.title{
+    text-align: center;
+}
+.img-1{
+    width: 30%;
+    heigth: auto;
 }

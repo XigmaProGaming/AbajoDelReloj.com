@@ -1,0 +1,34 @@
+.title-iniciarSesion{
+  padding-bottom: 1em;
+}
+
+.form{
+  margin-top: 2em;
+  margin-bottom: 2em;
+  padding: 2em;
+  padding-bottom: 2em;
+  background-color: white;
+  text-align: center;
+  font-size: large;
+}
+
+.inputs-center{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+}
+
+
+.boton{
+  width: 8em;
+}
+
+.link-IniciarSesion{
+  text-decoration: none;
+  color: black;
+}
+
+.user{
+  width: 10em;
+}

@@ -37,26 +37,15 @@ body{
 }
 
 .navbarBackground{
-    background-color: #FF861C;
+    background-color: orange;
 }
 
  #navContainer{
     width: 100%;
-    font-family: 'Quicksand', sans-serif;
-    font-weight: 400;
 } 
 
-.navbarTextClass{
-    font-weight: 700;
+.footer{
+    text-align: center;
     color: white;
+    background-color: #000839;
 }
-
-.currentTab{
-    background-color: rgb(255, 178, 34);
-    border-radius: 1.5em;
-    font-weight: bolder;
-    text-decoration: underline;
-}
-
-.material-icons.md-light { color: rgba(255, 255, 255, 1); font-weight: bolder; }
-.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3) }

@@ -34,122 +34,68 @@
             <h6 id="orderUsername">Enviar a nombre-de-usuario</h6>
             <!-- Detalles del pedido -->
             <div class="row sectionBody">
-                <div class="col-12 text-center">
-                    <!-- Row para cada articulo del carrito -->
-                    <div class="row gy-2">
-                        <!-- Columna imagen -->
-                        <div class="col-xs-1 col-sm-4 col-md-2 col-lg-2 imgColumn">
-                            <img src="https://m.media-amazon.com/images/I/41QpAd39IeL._AC_SL1000_.jpg" class="img-thumbnail imgCheckout" alt="...">
-                        </div>
-                        <!-- Columna informacion -->
-                        <div class="col-xs-11 col-sm-8 col-md-10 col-lg-10 infoColumn">
-                            <div class="row">
-                                <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 ">
-                                    <div>Nombre del articulo 2</div>
-                                </div>
-                                <div class="col-xs-6 col-sm-6 col-md-2 col-lg-2 ">
-                                    <div>Cantidad: 1</div>
-                                </div>
-                                <div class="col-xs-6 col-sm-6 col-md-2 col-lg-2 ">Subtotal: $15.55</div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Row para cada articulo del carrito -->
-                    <div class="row gy-2">
-                        <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 imgColumn">
-                            <img src="https://m.media-amazon.com/images/I/41QpAd39IeL._AC_SL1000_.jpg" class="img-thumbnail imgCheckout" alt="...">
-                        </div>
-                        <div class="col-xs-8 col-sm-8 col-md-10 col-lg-10 infoColumn">
-                            <div class="row">
-                                <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 ">
-                                    <div>Nombre del articulo 2</div>
-                                </div>
-                                <div class="col-xs-6 col-sm-6 col-md-2 col-lg-2 ">
-                                    <div>Cantidad: 1</div>
-                                </div>
-                                <div class="col-xs-6 col-sm-6 col-md-2 col-lg-2 ">Subtotal: $15.55</div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="col-12 text-center" id="checkoutItems">
                 </div>
             </div>
             <!-- Direccion de entrega -->
             <div class="row sectionBody">
                 <div class="col-12 text-center">
                     <h4>Dirección de entrega</h4>
-                    <!-- <form action="">
-                        <label for="calle">Calle</label>
-                        <input type="text" name="calle" id="calle">
-                        <br>
-                        <label for="colonia">Colonia</label>
-                        <input type="text" name="colonia" id="colonia">
-                        <br>
-                        <label for="ciudad">Ciudad</label>
-                        <input type="text" name="ciudad" id="ciudad">
-                        <br>
-                        <label for="telefono">Telefono</label>
-                        <input type="text" name="telefono" id="telefono">
-                        <br>
-                        <label for="instruccionesEntrega">Instrucciones de entrega (opcional)</label>
-                        <br>
-                        <textarea name="instruccionesEntrega" id="instruccionesEntrega" cols="30" rows="5"></textarea>
-
-                    </form> -->
                     <!-- Calle -->
                     <div class="input-group mb-4 row">
-                        <div class="col-3"></div>
-                        <div class="col-6 mx'auto">
+                        <div class="col-1"></div>
+                        <div class="col-10 mx'auto">
                           <div class="form-floating">
                           <input type="text" class="form-control" id="inputStreet" placeholder="Calle">
                           <label for="inputStreet">Calle</label>
                           </div>
                         </div>
-                        <div class="col-3"></div>
+                        <div class="col-1"></div>
                     </div>
                     <!-- Colonia -->
                     <div class="input-group mb-4 row">
-                        <div class="col-3"></div>
-                        <div class="col-6 mx'auto">
+                        <div class="col-1"></div>
+                        <div class="col-10 mx'auto">
                           <div class="form-floating">
                           <input type="text" class="form-control" id="inputArea" placeholder="Colonia">
                           <label for="inputArea">Colonia</label>
                           </div>
                         </div>
-                        <div class="col-3"></div>
+                        <div class="col-1"></div>
                     </div>
                     <!-- Ciudad -->
                     <div class="input-group mb-4 row">
-                        <div class="col-3"></div>
-                        <div class="col-6 mx'auto">
+                        <div class="col-1"></div>
+                        <div class="col-10 mx'auto">
                           <div class="form-floating">
                           <input type="text" class="form-control" id="inputCity" placeholder="Ciudad">
                           <label for="inputCity">Ciudad</label>
                           </div>
                         </div>
-                        <div class="col-3"></div>
+                        <div class="col-1"></div>
                     </div>
                     <!-- Telefono -->
                     <div class="input-group mb-4 row">
-                        <div class="col-3"></div>
-                        <div class="col-6">
+                        <div class="col-1"></div>
+                        <div class="col-10">
                             <div class="form-floating">
                               <input type="number" class="form-control " id="inputTelefono" placeholder="Teléfono">
                               <label for="inputTelefono">Teléfono</label>
                             </div>
                           </div>
-                        <div class="col-3"></div>
+                        <div class="col-1"></div>
                     </div>
                     <!-- Instrucciones de entrega -->
                     <div class="input-group mb-4 row">
-                        <div class="col-3"></div>
-                        <div class="col-6">
+                        <div class="col-1"></div>
+                        <div class="col-10">
                             <div class="form-floating">
-                                <textarea class="form-control" id="inputInstructions" rows="3"></textarea>
+                                <textarea class="form-control" id="inputInstructions" rows="5"></textarea>
                                 <label for="inputInstructions">Instrucciones de entrega (opcional)</label>
                             </div>
                         </div>
                         
-                        <div class="col-3"></div>
+                        <div class="col-1"></div>
                     </div>
                     <button class="btn btn-primary me-md-2 boton" onclick="validar()" type="button">Confirmar pago</button>
                 </div>

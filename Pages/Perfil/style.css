@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600;700&display=swap');
+
+.container-userdata{
+    //margin-bottom:80px;
+    //margin-left:50px;
+}
+.container-form{
+    width:100%;
+    padding: 90px 20px 20px 20px;
+    margin-bottom: 20px; 
+}
+.container-tittle{
+    display: flex;
+    justify-content: center;
+}
+.container-sales{
+    background: #fff;
+    //margin-left: 30px;
+    margin-bottom: 50px;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    aling-items: center;
+}
+
+#iconoEditar{
+    max-width: 20px;
+}
+.input-text{
+    padding: 14px 20px;
+    border: 1px solid #4C75DF;
+    //background: #C98474;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    width: 100%;
+    outline: 0;
+    font-size: 20px;
+    color: #000000;
+}
+.input-text:not([readonly]) {
+    border: 2px solid #320D6D;
+    background-color: #fff;
+}
+
+/* Estilos productos publicados */
+#product-container {
+    background-color: #ccc;
+    color: #fff;
+}
+th{
+    text-align: center;
+}
+.title{
+    text-align: center;
+}
+.img-1{
+    width: 30%;
+    heigth: auto;
+}
+.img-js{
+    width: 60%;
+    heigth: auto;
+}
+.td-js{
+    width: 10em;
+    heigth: auto;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+a:hover{
+    color: #4C75DF;
+    text-decoration: underline;
+}
+input[type="text"]:disabled {
+  background: #ccc;  
+}
+.checked{  
+  margin-right: 10px; /* opcional: agrega un margen a la derecha para separar el texto del checkbox */
+}
+.red-column {
+  background-color: red;
+}

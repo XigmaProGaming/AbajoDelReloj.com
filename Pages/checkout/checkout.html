@@ -36,30 +36,40 @@
             <div class="row sectionBody">
                 <div class="col-12 text-center">
                     <!-- Row para cada articulo del carrito -->
-                    <div class="row d-flex align-items-center articulo">
-                        <div class="col-2">
+                    <div class="row gy-2">
+                        <!-- Columna imagen -->
+                        <div class="col-xs-1 col-sm-4 col-md-2 col-lg-2 imgColumn">
                             <img src="https://m.media-amazon.com/images/I/41QpAd39IeL._AC_SL1000_.jpg" class="img-thumbnail imgCheckout" alt="...">
                         </div>
-                        <div class="col-6">
-                            <div>Nombre del articulo</div>
+                        <!-- Columna informacion -->
+                        <div class="col-xs-11 col-sm-8 col-md-10 col-lg-10 infoColumn">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 ">
+                                    <div>Nombre del articulo 2</div>
+                                </div>
+                                <div class="col-xs-6 col-sm-6 col-md-2 col-lg-2 ">
+                                    <div>Cantidad: 1</div>
+                                </div>
+                                <div class="col-xs-6 col-sm-6 col-md-2 col-lg-2 ">Subtotal: $15.55</div>
+                            </div>
                         </div>
-                        <div class="col-2">
-                            <div>Cantidad: 5</div>
-                        </div>
-                        <div class="col-2">$123,456.00</div>
                     </div>
                     <!-- Row para cada articulo del carrito -->
-                    <div class="row d-flex align-items-center articulo">
-                        <div class="col-2">
+                    <div class="row gy-2">
+                        <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 imgColumn">
                             <img src="https://m.media-amazon.com/images/I/41QpAd39IeL._AC_SL1000_.jpg" class="img-thumbnail imgCheckout" alt="...">
                         </div>
-                        <div class="col-6">
-                            <div>Nombre del articulo 2</div>
+                        <div class="col-xs-8 col-sm-8 col-md-10 col-lg-10 infoColumn">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 ">
+                                    <div>Nombre del articulo 2</div>
+                                </div>
+                                <div class="col-xs-6 col-sm-6 col-md-2 col-lg-2 ">
+                                    <div>Cantidad: 1</div>
+                                </div>
+                                <div class="col-xs-6 col-sm-6 col-md-2 col-lg-2 ">Subtotal: $15.55</div>
+                            </div>
                         </div>
-                        <div class="col-2">
-                            <div>Cantidad: 1</div>
-                        </div>
-                        <div class="col-2">$15.55</div>
                     </div>
                 </div>
             </div>
@@ -141,16 +151,16 @@
                         
                         <div class="col-3"></div>
                     </div>
+                    <button class="btn btn-primary me-md-2 boton" onclick="validar()" type="button">Confirmar pago</button>
                 </div>
             </div>
             <!-- Froma de pago -->
-            <h5 class="text-center">Agregar tarjeta</h5>
             <!-- Tarjeta de credito  -->
-            <div class="row sectionBody">
+            <!-- <h5 class="text-center">Agregar tarjeta</h5> -->
+            <!-- <div class="row sectionBody">
                 <div class="col-12 text-center">
-                    <!-- Aqui se aplicara una API externa para verificar y hacer el cobro a la tarjeta -->
-                    <h2>API externa</h2>
-                    <!-- <form action="">
+                     Aqui se aplicara una API externa para verificar y hacer el cobro a la tarjeta
+                    <form action="">
                         <label for="nombreTarjeta">Nombre de la tarjeta</label>
                         <input type="text" name="nombreTarjeta" id="nombreTarjeta">
                         <br>
@@ -198,9 +208,10 @@
                         </span>
                         <br>
                         <button>Confirmar pago</button>
-                    </form> -->
+                    </form>
+                    <button class="btn btn-primary me-md-2 boton" onclick="validar()" type="button">Confirmar pago</button>
                 </div>
-            </div>
+            </div> -->
         </div>
 
     </div>
@@ -215,5 +226,6 @@
   integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <!-- Script para agregar currentPage a navbar  o script de index.js-->
     <script src="/navbar.js"></script>
+    <script src="/Pages/checkout/script.js"></script>
 </body>
 </html>

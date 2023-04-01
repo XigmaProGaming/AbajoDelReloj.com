@@ -28,6 +28,7 @@ body {
 .sectionBody{
     background-color: white;
     margin: 10px 0px;
+    padding: 10px 0 10px 0;
 }
 
 .imgCheckout{
@@ -36,5 +37,13 @@ body {
 
 .articulo{
   margin-bottom: 5px;
-  border: solid 1px red;
+  /* borddfasder: solid 1px red; */
 }
+
+/* .imgColumn{
+  background-color: red;
+}
+
+.infoColumn{
+  background-color: blueviolet;
+} */

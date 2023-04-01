@@ -87,23 +87,53 @@ function mostrarProductos(productos){
         <td hidden>${producto.id}</td>
       
         <td class="td-js"><a href="/Pages/productoEspecifico/productoEspecifico.html"><img src="${producto.rutaImagen}" class="img-js"></a></td>
-        <td><a href="/Pages/productoEspecifico/productoEspecifico.html">${producto.nombre}</a></td> 
-      
-        <td>${producto.precio}</td>
-      <td><button class="btn btn-warning btn-sm editar" data-id="${producto.id}">Editar</button></td>
-      <td><button class="btn btn-danger btn-sm eliminar" data-id="${producto.id}">Eliminar</button></td>
-    `;
-    tabla.appendChild(fila);
-    
-    // Imagen del producto.
-    // let celdaImagen = fila.insertCell(1);
-    // let imagen = document.createElement("img");
-    // imagen.src = producto.rutaImagen;
-    // imagen.width = 100;
-    // celdaImagen.appendChild(imagen);
-    
-  });
+        <td class="td-js"><a href="/Pages/productoEspecifico/productoEspecifico.html">${producto.nombre}</a></td>       
+        <td class="td-js">${producto.precio}</td>      
+        <td class="td-js">
+          <button class="btn btn-primary ic-Edit " type="reset" id="btn-editar-producto"  onclick="showModal('modalEditarProducto')">
+              <img class="iconos" id="iconoEditar" src="./Assets/editar.png" alt="">
+          </button>
+        </td>      
+        <td class="td-js red-column">
+          <input class="checked" type="checkbox" id="billing-checkbox" checked>
+        </td>
+        <tbody id="tablaProductos"></tbody>                                                  
+
+    `;       
+    tabla.appendChild(fila);  
+    const checkbox = fila.querySelector('.checked');
+    const columnaHabilitar = fila.querySelector('.red-column');
+
+    checkbox.addEventListener('change', (event) => {
+        if (event.target.checked) {
+            columnaHabilitar.classList.remove('red-column');
+        } else {
+            columnaHabilitar.classList.add('red-column');
+        }
+    });     
+  });  
 }
+
+function showModal(modalId) {
+  console.log("Toy vivo");
+  const modal = document.getElementById(modalId);
+  modal.classList.add("show");
+  modal.style.display = "block";
+  document.body.classList.add("modal-open");
+}
+ 
+function closeModal(modalId) {
+  console.log("Toy vivo Cerrar");
+  const modal = document.getElementById(modalId);
+  modal.classList.remove("show");
+  modal.style.display = "none";
+  document.body.classList.remove("modal-open");
+}
+
+// Evento por si se desactiva el checked
+
+
+
 
 
 

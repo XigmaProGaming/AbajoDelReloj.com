@@ -49,6 +49,9 @@
     background-color: #ccc;
     color: #fff;
 }
+th{
+    text-align: center;
+}
 .title{
     text-align: center;
 }
@@ -63,6 +66,7 @@
 .td-js{
     width: 10em;
     heigth: auto;
+    text-align: center;
 }
 a{
     text-decoration: none;
@@ -71,4 +75,13 @@ a{
 a:hover{
     color: #4C75DF;
     text-decoration: underline;
+}
+input[type="text"]:disabled {
+  background: #ccc;  
+}
+.checked{  
+  margin-right: 10px; /* opcional: agrega un margen a la derecha para separar el texto del checkbox */
+}
+.red-column {
+  background-color: red;
 }

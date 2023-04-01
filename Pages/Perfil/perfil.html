@@ -75,38 +75,37 @@
                 
             </form>
         </div>
+        
         <div class="col-xl-1"></div>
 
         <!-- HISTORIAL DE PRODUCTOS DEL USUARIO -->
 
         <div class="col-xl-7 col-md-12 col-sm-12 ">                        
             <h2 id="tittle-HistorialCompras">Productos publicados</h2>
-                <div class="row container-sales">                 
-                    <!-- Aqui comienza la tabla para visualizar productos -->
-                    <div class="table-responsive">
-                        <table class="table table-striped text-successtable-border border-light">
-                          <thead>
-                            <tr>
-                              <th scope="col" hidden>ID</th>
-                              <th scope="col">Imagen</th>
-                              <th scope="col">Nombre</th>                              
-                              <th scope="col">Precio</th>
-                              <th scope="col">Editar</th>
-                              <th scope="col">Eliminar</th>
-                            </tr>
-                          </thead>
-                          <tbody id="tablaProductos"></tbody>
-                        </table>
-                    </div>                    
-                </div>
-          
-                <!-- Modal ProductoNuevo-->
-                <div class="modal" tabindex="-1" role="dialog" id="modalProductoNuevo" >
-                  <div class="modal-dialog" role="document">
-                    <div class="modal-content">                      
-                      <div class="modal-body">
-                        <form id="formularioNuevoProducto" method="get">
-                          <div class="form-group">
+            <div class="row container-sales">                 
+            <!-- Aqui comienza la tabla para visualizar productos -->
+              <div class="table-responsive">
+                  <table class="table table-striped text-successtable-border border-light">
+                    <thead>
+                      <tr>
+                        <th scope="col" hidden>ID</th>
+                        <th scope="col" class="th-table">Imagen</th>
+                        <th scope="col" class="th-table">Nombre</th>                              
+                        <th scope="col" class="th-table">Precio</th>
+                        <th scope="col" class="th-table">Editar</th>
+                        <th scope="col" class="th-table">Habilitar</th>                              
+                      </tr>
+                    </thead>
+                    <tbody id="tablaProductos"></tbody>                                                  
+                  </table>                        
+              </div>                                        
+              <!-- Modal ProductoNuevo-->
+              <!-- <div class="modal" tabindex="-1" role="dialog" id="modalProductoNuevo" >
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">                      
+                    <div class="modal-body">
+                      <form id="formularioNuevoProducto" method="get">
+                          <div class="form-group"> 
                             <label for="imagenProducto">Imagen del producto</label>
                             <input
                               class="form-control"
@@ -135,59 +134,63 @@
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> -->
                           
                 <!-- Modal EditarProducto-->
-                <div class="modal" tabindex="-1" role="dialog" id="modalEditarProducto">
-                    <div class="modal-dialog" role="document">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h5 class="modal-title">Editando un producto</h5>
-                          <button
-                            type="button"
-                            class="btn-close"
-                            data-bs-dismiss="modal"
-                            aria-label="Close"
-                          ></button>
-                        </div>
-                        <div class="modal-body">
-                          <form id="formularioNuevoProducto" method="post">
-                            <div class="form-group">
+              <div class="modal" tabindex="-1" role="dialog" id="modalEditarProducto">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Editando un producto</h5>
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                        ></button>
+                    </div>
+                      <div class="modal-body">
+                        <form id="formularioNuevoProducto" method="post">
+                          <div class="form-group">
                             <label for="imagenProducto">Imagen del producto</label>
                               <input
                                 class="form-control"
                                 type="file"
                                 id="imagenProducto"
                                 required
-                              />
-                              <label for="nombreProducto">Nombre del producto</label>
+                            />
+                            <label for="nombreProducto">Nombre del producto</label>
                               <input
                                 type="text"
                                 class="form-control"
                                 id="editarNombreProducto"
                                 placeholder="Nombre del producto"
                                 required
-                              />
-                              
-                              <label for="precioProducto">Precio del producto (MXN)</label>
+                            />                              
+                            <label for="precioProducto">Precio del producto (MXN)</label>
                               <input
                                 type="number"
                                 class="form-control"
                                 id="editarPrecioProducto"
                                 placeholder="Precio del producto"
                                 required
-                              />                                                           
-                              
-                            </div>            
-                            </div>
-                          </form>
-                        </div>
+                            />                                                                                         
+                          </div>                                    
+                        </form>
                       </div>
-                    </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" onclick="closeModal('modalEditarProducto')">Cancelar</button>
+                        <button type="button" class="btn btn-primary">Guardar cambios</button>
+                      </div>
+                  </div>                    
                 </div>
+              </div>
+          </div>
         </div>
     </div>
   </div>
+
+
    <!-- Contenedor Footer -->
   <div id="footer"></div>
 

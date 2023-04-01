@@ -54,7 +54,7 @@ let productos = JSON.parse(localStorage.getItem('productos'));
 
 // SI esta vacio obtenemos datos del JSON
 if(productos != null){// mando a llmar quiero saber que tiene
-    fetch('./vendedor-test/vendedor.json')
+    fetch('/Pages/template/templateProductos.json')
       .then(response => response.json())      
       .then(data=>{
         console.log(data);
@@ -86,9 +86,9 @@ function mostrarProductos(productos){
       
         <td hidden>${producto.id}</td>
       
-        <td class="td-js"><a href="/Pages/productoEspecifico/productoEspecifico.html"><img src="${producto.rutaImagen}" class="img-js"></a></td>
-        <td class="td-js"><a href="/Pages/productoEspecifico/productoEspecifico.html">${producto.nombre}</a></td>       
-        <td class="td-js">${producto.precio}</td>      
+        <td class="td-js"><a href="/Pages/productoEspecifico/productoEspecifico.html"><img src="${producto.img}" class="img-js"></a></td>
+        <td class="td-js"><a href="/Pages/productoEspecifico/productoEspecifico.html">${producto.name}</a></td>       
+        <td class="td-js">${producto.price}</td>      
         <td class="td-js">
           <button class="btn btn-primary ic-Edit " type="reset" id="btn-editar-producto"  onclick="showModal('modalEditarProducto')">
               <img class="iconos" id="iconoEditar" src="./Assets/editar.png" alt="">

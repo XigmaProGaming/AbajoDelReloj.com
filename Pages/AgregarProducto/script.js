@@ -1,3 +1,4 @@
+var articuloEnVenta = [];
 
 var cargaImagenes = function(event) {
   // funcion utilizada para insertar en el html las imagenes cargadas en el input files
@@ -49,35 +50,43 @@ const validar = () =>{
       div.role="alert";
       div.innerHTML = `Algunos campos obligatorios estan vacios!`;
     }
-  
-    if(!erText.test(nombre)){
+    else if(!erText.test(nombre)){
       div.className="alert alert-primary";
       div.role="alert";
       div.innerHTML = `Nombre inválido`;
     }
-  
-    if(!erText.test(categoria)){
+    else if(!erText.test(categoria)){
       div.className="alert alert-primary";
       div.role="alert";
       div.innerHTML = `Ingresa una categoría válida, no ingreses números o carácteres especiales`;
     }
-  
-    if(!erText.test(marca)){
+    else if(!erText.test(marca)){
       div.className="alert alert-primary";
       div.role="alert";
       div.innerHTML = `Ingresa una marca válida`;
     }
-  
-    if(precio<1){
+    else if(precio<1){
       div.className="alert alert-primary";
       div.role="alert";
       div.innerHTML = `El precio no puede ser menor a 1`;
     }
- 
-    if(cantidad<1){
+    else if(cantidad<1){
       div.className="alert alert-primary";
       div.role="alert";
       div.innerHTML = `La cantidad no puede ser menor a 1`;
-    }  
+    }
+    else{
+      alert("Completaste correctamente los campos");
+      let nuevaPublicacion = {
+        nombre: nombre,
+        descripcion: descripcion,
+        categoria: categoria,
+        marca: marca,
+        precio: precio,
+        cantidad: cantidad
+      };
+      console.log(nuevaPublicacion); 
+      articuloEnVenta.push(nuevaPublicacion);  
+    }
   }
 }

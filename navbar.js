@@ -30,7 +30,7 @@ navbarLocation.innerHTML = `<!-- Barra de navegacion arriba y abajo -->
           </li>
         </ul>
       </div>
-      <a href="/" style="color: black;">
+      <a href="/Pages/CarritoCompras/CarritoCompras.html" style="color: black;">
         <span class="material-symbols-outlined material-icons md-light">
         shopping_cart
         </span>
@@ -54,7 +54,7 @@ navbarLocation.innerHTML = `<!-- Barra de navegacion arriba y abajo -->
             <a class="nav-link navbarTextClass" href="/Pages/acercaDeNosotros/aboutUs.html">Acerca de Nosotros</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link navbarTextClass" href="#">Pedidos</a>
+            <a class="nav-link navbarTextClass" href="/Pages/pedidos/pedidos.html">Pedidos</a>
           </li>
         </ul>
       </div>
@@ -102,11 +102,3 @@ footer.innerHTML = `<div class="card footer" >
   </blockquote>
 </div>
 </div>`;
-
-  /* Opcion 1 Revisar si usuario tiene la sesion iniciada
-  
-  const id = document.queryselector("#iniciarSesion")
-  -sustituir "Iniciar Sesion" por "Hola, ${usuario}"
-  -Agregar Boton Cerrar Sesion
-  
-  */

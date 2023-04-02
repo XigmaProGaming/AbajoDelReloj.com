@@ -1,17 +1,17 @@
-.container-fluid{
+#cont1, #cont2, #cont3{
     width: fit-content;
     margin: auto;
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
 
-.card-img-top{
+#imgP1, #imgP2, #imgP3{
     width: 30%;
     align-self: center;
     margin-top: 2rem;
     border-radius: 20%;
 }
 
-.btn{
+#btn1, #btn2, #btn3{
     margin-bottom: 2rem;
 }

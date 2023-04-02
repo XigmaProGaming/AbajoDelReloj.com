@@ -53,7 +53,9 @@ let tabla = document.getElementById("tablaProductos");
 let productos = JSON.parse(localStorage.getItem('productos'));
 
 // SI esta vacio obtenemos datos del JSON
+
 if(productos === null){// mando a llmar quiero saber que tiene
+
     fetch('/Pages/template/templateProductos.json')
       .then(response => response.json())      
       .then(data=>{

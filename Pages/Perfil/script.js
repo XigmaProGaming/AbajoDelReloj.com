@@ -72,9 +72,9 @@ if(productos != null){// mando a llmar quiero saber que tiene
       });
 }else{
     // si hay productos en el almacenamiento local, obtener los primeros 5 productos
-    const primerosProductos = productos.slice(0, 5);
+    //const primerosProductos = productos.slice(0, 5);
     // muestra los productos en la tabla
-    mostrarProductos(primerosProductos);
+    //mostrarProductos(primerosProductos);
 }
 
 function mostrarProductos(productos){

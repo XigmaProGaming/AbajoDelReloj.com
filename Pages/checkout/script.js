@@ -54,14 +54,14 @@ function crearElementos(data){
                     <div class="col-xs-6 col-sm-6 col-md-2 col-lg-2 ">
                         <div>Cantidad: ${cantidad}</div>
                     </div>
-                    <div class="col-xs-6 col-sm-6 col-md-2 col-lg-2 ">Subtotal: $${data[product_id-1].price*cantidad}</div>
+                    <div class="col-xs-6 col-sm-6 col-md-2 col-lg-2 ">Subtotal: $${(data[product_id-1].price*cantidad).toLocaleString()}</div>
                 </div>
             </div>
         </div>
         <br>
         `;
     }
-    precioTotal.innerHTML=`<h6>Precio total: $${precioTotalAcumulado}</h6>`;
+    precioTotal.innerHTML=`<h6>Precio total: $${(precioTotalAcumulado).toLocaleString()}</h6>`;
 }
 
 

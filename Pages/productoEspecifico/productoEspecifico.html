@@ -17,9 +17,87 @@
   <div id="navbarLocation"></div>
 
   <!-- Body -->
-
+  
   <div class="container" id="bodyContainer">
-  </div>
+    <!------------- Fotos, descripcion, precio ------------------>
+    <div class="row">
+  
+      <!-- Imagenes -->
+      <div class="col-sm-12 col-md-6 col-lg-6 mx-auto  simulationHeight ">
+        <div class="row  gy-2" id="testCarrusel">
+          <!-- Botones con previews de imagenes -->
+          <div class="col-2 d-none d-md-block" id="previewPics">
+          </div>
+          <!-- Carrusel -->
+          <div id="carouselExampleIndicators" class="col-md-10 col-xs-12 col-sm-12 carousel slide" data-bs-touch="true">
+            <!-- Indicadores de carrusel -->
+            <div class="carousel-indicators" id="carouselIndicators">
+            </div>
+            <!-- Carousel interior -->
+            <div class="carousel-inner" id="carouselInner">
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+  
+        </div>
+      </div>
+      <!-- Nombre y descripcion -->
+      <div class="col-sm-12 col-md-6 col-lg-3  mx-auto simulationHeight" id="nombreDescripcion">
+        <h3>${productsCard[0].name}</h3>
+        <h5>Calificación: ${productsCard[0].rating}</h5>
+        <p>${productsCard[0].description}</p>
+        <p>Estado: ${productsCard[0].state}</p>
+      </div>
+  
+      <!-- Precio, cantidad para carrito, detalles vendedor -->
+      <div class="col-sm-12 col-md-12 col-lg-3  simulationHeight" id="precioCantidad">
+        <div class="row">
+          <div class="col-12">
+            <h3 id="idPrecio"></h3>
+            <form action="">
+              <label>Cantidad: </label>
+              <select id="cantidad">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+              <button class="btn btn-primary" type="submit" id="agregarCarrito">Agregar al carrito</button>
+            </form>
+          </div>
+          <div class="col-12" id="infoVendedor">
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!---------------- Reviews ------------------------------------->
+    <div class="row">
+      <div class="col-sm-12 col-md-6 col-lg-6 reviewContainer">
+        <h3>"Muy buen producto!"</h3>
+        <h4>⭐⭐⭐⭐⭐</h4>
+        <p class="bodyReview">Esta es una reseña escrita por otro usuario. Lorem ipsum dolor sit amet, consectetur
+          adipisicing elit. Voluptates culpa accusamus beatae, ad deserunt nam animi quis repellendus deleniti consequatur
+          maxime dolor exercitationem, amet placeat vel sapiente illum saepe laudantium.</p>
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-6 reviewContainer">
+        <h3>"Muy buen producto!"</h3>
+        <h4>⭐⭐⭐⭐⭐</h4>
+        <p class="bodyReview">Esta es una reseña escrita por otro usuario. Lorem ipsum dolor sit amet, consectetur
+          adipisicing elit. Voluptates culpa accusamus beatae, ad deserunt nam animi quis repellendus deleniti consequatur
+          maxime dolor exercitationem, amet placeat vel sapiente illum saepe laudantium.</p>
+      </div>
+    </div>
+  </div> <!-- Fin body container -->
 
   <!-- Contenedor Footer -->
   <div id="footer"></div>

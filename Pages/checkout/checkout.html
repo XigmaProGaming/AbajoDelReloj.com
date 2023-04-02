@@ -30,18 +30,21 @@
         </div>
 
         <!-- Contenedor de Checkout -->
-        <div class="container px-4">
+        <div class="container">
             <h6 id="orderUsername">Enviar a nombre-de-usuario</h6>
             <!-- Detalles del pedido -->
             <div class="row sectionBody">
                 <div class="col-12 text-center" id="checkoutItems">
+                </div>
+                <div class="col-12 text-end" id="precioTotal">
+                    
                 </div>
             </div>
             <!-- Direccion de entrega -->
             <div class="row sectionBody">
                 <div class="col-12 text-center">
                     <h4>Dirección de entrega</h4>
-                    <!-- Calle -->
+                    <!-- Calle-->
                     <div class="input-group mb-4 row">
                         <div class="col-1"></div>
                         <div class="col-10 mx'auto">
@@ -52,15 +55,38 @@
                         </div>
                         <div class="col-1"></div>
                     </div>
-                    <!-- Colonia -->
+                    <!-- Numero exterior e interior-->
                     <div class="input-group mb-4 row">
                         <div class="col-1"></div>
-                        <div class="col-10 mx'auto">
+                        <div class="col-5 mx'auto">
+                            <div class="form-floating">
+                            <input type="text" class="form-control" id="inputStreetNumberExt" placeholder="Numero exterior">
+                            <label for="inputStreetNumberExt">Numero exterior</label>
+                            </div>
+                        </div>
+                        <div class="col-5 mx'auto">
+                            <div class="form-floating">
+                            <input type="text" class="form-control" id="inputStreetNumberInt" placeholder="Numero interior">
+                            <label for="inputStreetNumberInt">Numero interior</label>
+                            </div>
+                        </div>
+                        <div class="col-1"></div>
+                    </div>
+                    <!-- Colonia y codigo postal -->
+                    <div class="input-group mb-4 row">
+                        <div class="col-1"></div>
+                        <div class="col-6 mx'auto">
                           <div class="form-floating">
                           <input type="text" class="form-control" id="inputArea" placeholder="Colonia">
                           <label for="inputArea">Colonia</label>
                           </div>
                         </div>
+                        <div class="col-4 mx'auto">
+                            <div class="form-floating">
+                            <input type="number" class="form-control" id="inputAreaCode" placeholder="Codigo postal">
+                            <label for="inputAreaCode">CP.</label>
+                            </div>
+                          </div>
                         <div class="col-1"></div>
                     </div>
                     <!-- Ciudad -->

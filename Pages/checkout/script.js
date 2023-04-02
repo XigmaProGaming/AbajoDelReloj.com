@@ -23,6 +23,8 @@ if(localStorage.length > 0){
 
 //Ubicacion de donde se insertan cada articulo
 const checkoutItems = document.querySelector("#checkoutItems");
+const precioTotal = document.querySelector("#precioTotal");
+let precioTotalAcumulado = 0;
 
 function crearElementos(data){
     //Se revisa cada elemento guardado en el local storage
@@ -36,6 +38,7 @@ function crearElementos(data){
         let cantidad = (localStorage.getItem(i).split(","))[1];
         console.log("Cantidad: "+ cantidad);
     
+        precioTotalAcumulado += data[product_id-1].price*cantidad;
         //Creacion de los elementos
         checkoutItems.innerHTML+=`
         <!-- Row para cada articulo del carrito -->
@@ -58,6 +61,62 @@ function crearElementos(data){
         <br>
         `;
     }
+    precioTotal.innerHTML=`<h6>Precio total: $${precioTotalAcumulado}</h6>`;
 }
 
+
+//Validacion de entradas para la direccion
+const validar = () =>{
+
+    /* 
+    
+    calle - que no este vacia
+    numeros - numeros y letras
+    colonia - numeros y letras
+    cp - numeros de 5 digitos
+    ciudad - letras, erText
+    telefono - exactamente 10 digitos
+    
+    */
+
+    let calle = document.querySelector("#inputStreet").value;
+    let numExt = document.querySelector("#inputStreetNumberExt").value;
+    let numInt = document.querySelector("#inputStreetNumberInt").value;
+    let colonia = document.querySelector("#inputArea").value;
+    let codigoPostal = document.querySelector("#inputAreaCode").value;
+    let ciudad = document.querySelector("#inputCity").value;
+    let tel = document.getElementById("inputTelefono").value;
+  
+    let erColonia = /[a-zA-Z0-9]/;
+    let erNumero = /[a-zA-Z0-9]/;
+    let erCodigoPostal = /[0-9]{5}/;
+    let erText = /[ A-Z Ññ a-z á é í ó ú Á É Í Ó Ú]+/;
+  
+    if(calle=="" || numExt=="" || colonia=="" || codigoPostal=="" || ciudad=="" || tel=="" ){
+      alert("Algunos campos obligatorios estan vacios!")
+    }
+    else if(!erNumero.test(numExt)){
+      alert("Ingresa un número exterior válido");
+    }
+    else if(!erNumero.test(numInt)){
+      alert("Ingresa un número interior válido");
+    }
+    else if(!erColonia.test(colonia)){
+      alert("Ingresa una colonia válida, no ingreses carácteres especiales");
+    }
+    else if(!erCodigoPostal.test(codigoPostal)||codigoPostal.length!=5){
+      alert("El codigo postal debe estar conformado por un número de 5 digitos.");
+    }
+    else if(!erText.test(ciudad)){
+      alert("Ingresa una ciudad valida, no ingreses números o carácteres especiales");
+    }
+    else if(tel.length< 10 || tel.length > 10){
+      alert("El número de telefono tiene que tener 10 dígitos");
+    }
+    else{
+      alert("Completaste correctamente los campos");
+      
+    }
+    console.log(calle,numExt,numInt,colonia,codigoPostal,ciudad,tel)
+  }
 

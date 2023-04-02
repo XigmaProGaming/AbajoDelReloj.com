@@ -21,14 +21,20 @@ body {
     background-color: #000839;
   }
   
-#bodyContainer{
+/* #bodyContainer{
     min-height: 1000px;
-}
+} */
 
 .sectionBody{
     background-color: white;
     margin: 10px 0px;
     padding: 10px 0 10px 0;
+    border-radius: 15px;
+    box-shadow: 11px 10px 15px -3px rgba(0,0,0,0.1);
+}
+
+.boxShadow{
+  box-shadow: 11px 10px 15px -3px rgba(0,0,0,0.1);
 }
 
 .imgCheckout{

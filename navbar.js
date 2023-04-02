@@ -6,7 +6,7 @@ navbarLocation.innerHTML = `<!-- Barra de navegacion arriba y abajo -->
   <!-- Barra de navegacion arriba-->
   <nav class="navbar navbar-expand-lg navbarBackground">
     <div class="container-fluid">
-      <a class="navbar-brand collapse navbar-collapse" href="#" style="width: 150px;">
+      <a class="navbar-brand collapse navbar-collapse" href="/index.html" style="width: 150px;">
         <img class="mx-auto" src="/Assets/logoAbajodelReloj.png" alt="Logo Abajo del Reloj" width="150px">
       </a>
 
@@ -30,7 +30,7 @@ navbarLocation.innerHTML = `<!-- Barra de navegacion arriba y abajo -->
           </li>
         </ul>
       </div>
-      <a href="/" style="color: black;">
+      <a href="/Pages/CarritoCompras/CarritoCompras.html" style="color: black;">
         <span class="material-symbols-outlined material-icons md-light">
         shopping_cart
         </span>
@@ -54,7 +54,7 @@ navbarLocation.innerHTML = `<!-- Barra de navegacion arriba y abajo -->
             <a class="nav-link navbarTextClass" href="/Pages/acercaDeNosotros/aboutUs.html">Acerca de Nosotros</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link navbarTextClass" href="#">Pedidos</a>
+            <a class="nav-link navbarTextClass" href="/Pages/pedidos/pedidos.html">Pedidos</a>
           </li>
         </ul>
       </div>
@@ -85,7 +85,7 @@ navbarLocation.innerHTML = `<!-- Barra de navegacion arriba y abajo -->
           <a class="nav-link navbarTextClass" href="/Pages/acercaDeNosotros/aboutUs.html">Acerca de Nosotros</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link navbarTextClass" href="#">Pedidos</a>
+          <a class="nav-link navbarTextClass" href="/Pages/pedidos/pedidos.html">Pedidos</a>
         </li>
       </ul>
       <ul class="navbar-nav" id="bottom-offcanvas">
@@ -102,11 +102,3 @@ footer.innerHTML = `<div class="card footer" >
   </blockquote>
 </div>
 </div>`;
-
-  /* Opcion 1 Revisar si usuario tiene la sesion iniciada
-  
-  const id = document.queryselector("#iniciarSesion")
-  -sustituir "Iniciar Sesion" por "Hola, ${usuario}"
-  -Agregar Boton Cerrar Sesion
-  
-  */

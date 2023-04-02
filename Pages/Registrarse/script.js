@@ -1,3 +1,5 @@
+var usuariosNuevos = [];
+
 const validar = () =>{
 
   let nombre = document.getElementById("inputName").value;
@@ -36,5 +38,15 @@ const validar = () =>{
   else{
     alert("Completaste correctamente los campos");
     
+    let nuevoUsuario = {
+        nombre: nombre,
+        apellidos: apellidos,
+        username: username,
+        mail: mail,
+        password: password,
+        tel: tel
+    };
+    console.log(nuevoUsuario); 
+    usuariosNuevos.push(nuevoUsuario);    
   }
 }

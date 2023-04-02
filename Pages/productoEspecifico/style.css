@@ -48,10 +48,11 @@ body {
   background: green;
 }
 
-.reviewContainer{
-  background: white;
-  border-radius: 15px;
-  box-sizing: border-box;
+#bodyContainer{
+  background-color: white;
+  margin-top: 25px;
+  margin-bottom: 25px;
   padding: 15px;
+  border-radius: 15px;
+  box-shadow: 11px 10px 15px -3px rgba(0,0,0,0.1);
 }
-

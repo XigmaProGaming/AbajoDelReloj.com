@@ -271,7 +271,7 @@ let productsCard = [
       id: 21,
       name: "CAZADORA BOMBER EFECTO ANTE ",
       description: "Cazadora con cuello subido. Manga larga. Bolsillos frontales de vivo. Acabados en rib. Cierre frontal con cremallera.",
-      category: ["category1", "category2"],
+      category: ["Moda"],
       brand: "ZARA",
       price: 1.299,
       img: ["https://http2.mlstatic.com/D_NQ_NP_655314-MLM53047686941_122022-W.webp","https://static.zara.net/photos///2023/V/0/2/p/6318/488/707/2/w/563/6318488707_6_2_1.jpg?ts=1669129549009", "https://static.zara.net/photos///2023/V/0/2/p/6318/488/707/2/w/563/6318488707_6_3_1.jpg?ts=1669129558285"],
@@ -288,7 +288,7 @@ let productsCard = [
       id: 22,
       name: "Vestido texturizado",
       description: "Vestido corto de punto texturizado. Modelo con escote de corazón, mangas abombadas cortas y sección superior entallada. Elástico estrecho sobre los hombros y en el borde de las mangas. Costura en la cintura y falda con ligero vuelo.",
-      category: ["category1", "category2"],
+      category: ["Moda"],
       brand: "H&M",
       price: 349.00,
       img: ["https://http2.mlstatic.com/D_NQ_NP_902959-MLM49057595829_022022-O.webp","https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F19%2F52%2F1952c3643862d5e9370526e0ff7d5db6dd875711.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]", "url3"],
@@ -305,7 +305,7 @@ let productsCard = [
       id: 23,
       name: "Jeans skinny super high waist",
       description: "Exterior, 71% algodón, 27% poliéster, 2% elastano",
-      category: ["category1", "category2"],
+      category: ["Moda"],
       brand: "Bershka",
       price: 399.99,
       img: ["https://static.bershka.net/4/photos2/2023/V/0/1/p/0006/888/461/c679834ae7cb1124fb433d438c029315-0006888461_2_4_0.jpg?imwidth=850&impolicy=bershka-itxmediumhigh&imformat=chrome","https://static.bershka.net/4/photos2/2023/V/0/1/p/0006/888/461/c0e4a434b460782925ef83f546414636-0006888461_2_24_0.jpg?imwidth=850&impolicy=bershka-itxmediumhigh&imformat=chrome", "url"],
@@ -322,7 +322,7 @@ let productsCard = [
       id: 24,
       name: "Jeans super skinny",
       description: "Exterior, 68% algodón, 27% poliéster, 3% otras fibras, 2% elastano",
-      category: ["category1", "category2"],
+      category: ["Moda"],
       brand: "Bershka",
       price: 599.99,
       img: ["https://static.bershka.net/4/photos2/2023/V/0/2/p/0305/666/428/eb54b8603b36b16bb8f8c4ed7de71955-0305666428_2_4_0.jpg?imwidth=850&impolicy=bershka-itxmediumhigh&imformat=chrome","https://static.bershka.net/4/photos2/2023/V/0/2/p/0305/666/428/1fd4b1e42a620b07b514d7b02fdf9e8b-0305666428_2_24_0.jpg?imwidth=850&impolicy=bershka-itxmediumhigh&imformat=chrome", "url3"],
@@ -339,7 +339,7 @@ let productsCard = [
       id: 25,
       name: "Top de tirantes con estampado floral ",
       description: "Color:	Multicolor, Estilo:	Bohemio, Tipo de Estampado:	Floral, todo estampado",
-      category: ["category1", "category2"],
+      category: ["Moda"],
       brand: "Shein",
       price: 299.99,
       img: ["https://http2.mlstatic.com/D_NQ_NP_980663-MLM53473271264_012023-W.webp","https://img.ltwebstatic.com/images3_pi/2022/01/18/1642501046b3be8583a01acd40b3b8ec20afcdc644_thumbnail_600x.webp", "url3"],
@@ -355,9 +355,9 @@ let productsCard = [
   
   {
       id: 26,
-      name: "Amayya | Bolsos artesanal, yute premium, bolso de mano para dama, modelo Sandy bambu ",
+      name: "Amayya | Bolsos artesanal, yute premium,  modelo Sandy bambu ",
       description: "Jute Bolso elaborado de forma Artesanal hecho 100% en Mexico, Útil para llevar a cualquier parte y ser el centro de atención",
-      category: ["category1", "category2"],
+      category: ["Artesanía"],
       brand: "Shein",
       price: 299.99,
       img: ["https://http2.mlstatic.com/D_NQ_NP_964032-MLM52084982691_102022-W.webp","https://m.media-amazon.com/images/I/71k4-G5IfzL._AC_SX679_.jpg", "url3"],
@@ -500,30 +500,25 @@ let card = document.getElementById("tarjetas");
 
      productsCard.map((x) => {
 
-    card.innerHTML +=`<div class=" col-lg-4 col-md-6 col-xs-12">
+    card.innerHTML +=`
+    <div class=" col-lg-4 col-md-6 col-xs-12">
     
-       <div class="card h-100 border-warning mb-3" style="max-width: 18rem; ">
-       
+       <div class="card h-100  mb-3" style="max-width: 18rem; ">
         <img src="${x.img}" class="card-img-top"  alt="${x.name}"  ">
-        <h5 class="card-title">${x.name}</h5>s
+        <h5 class="card-title">${x.name}</h5>
         <p class="card-text-start ocultarDescripcionLarga ">${x.description} </p>
           <p class="card-text" categoria>${x.category}</p>        
           <p class="card-text precio">$ ${x. price}</p>
           <p class="card-text">Calificación: ${x.rating}</p> 
-         
-  
-            <div class="card-body">
-           
+          <h5>⭐⭐⭐⭐⭐<h5>
+          <div class="card-body">
             </div>
-          <a href="#" class="btn btn-primary  boton">Comprar</a>
-          
-       
-         
+          <a href="/Pages/productoEspecifico/productoEspecifico.html" class="btn btn-primary  boton""id="comprar-${x.id}">Ver artículo</a>
         </div>
       </div>
-</div>   `;
-
-
-
+    </div>   `; 
 });
+
+
+
 

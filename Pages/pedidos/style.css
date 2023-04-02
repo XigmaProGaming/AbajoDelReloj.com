@@ -1,20 +1,17 @@
-
-
-.card{
+.container-fluid{
+    width: fit-content;
+    margin: auto;
     margin-top: 2rem;
     margin-bottom: 2rem;
-    width: 80%;
-    align-content: center;
 }
 
-.card-img{
-    margin-top: 2rem;
+.card-img-top{
+    width: 30%;
     align-self: center;
-    width: 20%;
+    margin-top: 2rem;
     border-radius: 20%;
 }
 
 .btn{
-    margin-bottom: 1em;
-    
+    margin-bottom: 2rem;
 }

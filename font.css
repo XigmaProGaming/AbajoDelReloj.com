@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600;700&display=swap');
+
+
+h1{
+  font-family: 'Quicksand', sans-serif;
+  font-weight:700;
+}
+
+h2, h3, h4, h5, h6{
+  font-family: 'Quicksand', sans-serif;
+  font-weight:600;
+}
+
+p{
+  font-family: 'Quicksand', sans-serif;
+  font-weight:400;
+}
+
+body{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+}
+
+.card-title1{
+     font-weight: 600;
+}

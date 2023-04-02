@@ -90,7 +90,7 @@ function mostrarProductos(productos){
       
         <td class="td-js"><a href="/Pages/productoEspecifico/productoEspecifico.html"><img src="${producto.img}" class="img-js"></a></td>
         <td class="td-js"><a href="/Pages/productoEspecifico/productoEspecifico.html">${producto.name}</a></td>       
-        <td class="td-js">${producto.price}</td>      
+        <td class="td-js">$${producto.price} MXN</td>      
         <td class="td-js">
           <button class="btn btn-primary ic-Edit " type="reset" id="btn-editar-producto"  onclick="showModal('modalEditarProducto')">
               <img class="iconos" id="iconoEditar" src="./Assets/editar.png" alt="">

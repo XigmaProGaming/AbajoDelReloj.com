@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600;700&display=swap');
 
-.container-userdata{
-    //margin-bottom:80px;
-    //margin-left:50px;
-}
 .container-form{
     width:100%;
     padding: 90px 20px 20px 20px;
@@ -57,15 +53,15 @@ th{
 }
 .img-1{
     width: 30%;
-    heigth: auto;
+    height: auto;
 }
 .img-js{
     width: 60%;
-    heigth: auto;
+    height: auto;
 }
 .td-js{
     width: 10em;
-    heigth: auto;
+    height: auto;
     text-align: center;
 }
 a{

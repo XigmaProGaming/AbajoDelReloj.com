@@ -489,26 +489,34 @@ let productsCard = [
       visibility: true,
       
   }
-
+  
 ]; 
-  //Cambiar este id para verificar informacion de otros productos
-  //Desde 0 hasta 32
-  //Una vez que se implemente la API, sustituir productsCard[product_id-1] por el correcto
-  //Actualmente funciona con la posicion en el Array, por eso es que no se muestran correctamente los articulos despues del id "10"
-  //let product_id = 4;
+//Cambiar este id para verificar informacion de otros productos
+//Desde 0 hasta 32
+//Una vez que se implemente la API, sustituir productsCard[product_id-1] por el correcto
+//Actualmente funciona con la posicion en el Array, por eso es que no se muestran correctamente los articulos despues del id "10"
+//let product_id = 4;
 
 let params = new URL(document.location).searchParams; //Se revisa el URL para obtener el ID del producto que queremos mostrar
 let product_id = params.get("id"); // Se extrae especificamente el valor de id=
 console.log("id=" + product_id);
 
 const bodyContainer = document.querySelector("#bodyContainer");
-
 const previewPics = document.querySelector("#previewPics");
+const carouselIndicators = document.querySelector("#carouselIndicators");
+const carouselInner = document.querySelector("#carouselInner");
+const nombreDescripcion = document.querySelector("#nombreDescripcion");
+const idPrecio = document.querySelector("#idPrecio");
+const infoVendedor = document.querySelector("#infoVendedor");
+//Ubicacion del boton "Agregar al Carrito"
+const botonAgregarAlCarrito = document.querySelector("#agregarCarrito");
 
-//Primera imagen preview para el carrusel de fotos
+
+function crearElementos(){
+  //Primera imagen preview para el carrusel de fotos
 previewPics.innerHTML=`
 <a data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1" >
-  <img src="${productsCard[product_id-1].img[0]}" class="d-block w-100 img-thumbnail" alt="...">
+<img src="${productsCard[product_id-1].img[0]}" class="d-block w-100 img-thumbnail" alt="...">
 </a>
 `;
 
@@ -517,36 +525,34 @@ for(let i = 1; i<productsCard[product_id-1].img.length;i++){
   previewPics.innerHTML+=`
   <a data-bs-target="#carouselExampleIndicators" data-bs-slide-to="${i}" aria-label="Slide ${i+1}">
   <img src="${productsCard[product_id-1].img[i]}" class="d-block w-100 img-thumbnail" alt="...">
-</a>
+  </a>
   `;
 };
 
 //Primera indicador para el carrusel
-const carouselIndicators = document.querySelector("#carouselIndicators");
 carouselIndicators.innerHTML=`
 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
 `;
 
 //Resto de los indicadores para el carrusel
-for(let i = 1; i<productsCard[product_id-1].img.length;i++){
+for(let j = 1; j<productsCard[product_id-1].img.length;j++){
   carouselIndicators.innerHTML+=`
-  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="${i}" aria-label="Slide ${i+1}"></button>
+  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="${j}" aria-label="Slide ${j+1}"></button>
   `;
 };
 
 //Imagenes del carrusel
-const carouselInner = document.querySelector("#carouselInner");
-for(let i = 0; i<productsCard[product_id-1].img.length;i++){
-  if(i==0){
+for(let k = 0; k<productsCard[product_id-1].img.length;k++){
+  if(k==0){
     carouselInner.innerHTML+=`
     <div class="carousel-item img-fluid active">
-    <img src="${productsCard[product_id-1].img[i]}" class="d-block w-100" alt="...">
+    <img src="${productsCard[product_id-1].img[k]}" class="d-block w-100" alt="...">
     </div>
     `;
   } else{
     carouselInner.innerHTML+=`
     <div class="carousel-item img-fluid">
-    <img src="${productsCard[product_id-1].img[i]}" class="d-block w-100" alt="...">
+    <img src="${productsCard[product_id-1].img[k]}" class="d-block w-100" alt="...">
     </div>
     `;
 
@@ -554,7 +560,6 @@ for(let i = 0; i<productsCard[product_id-1].img.length;i++){
 };
 
 //Nombre, calificacion, descripcion y estaod del articulo
-const nombreDescripcion = document.querySelector("#nombreDescripcion");
 nombreDescripcion.innerHTML = `
 <h2>${productsCard[product_id-1].name}</h2>
 <h5>Calificación: ${productsCard[product_id-1].rating}</h5>
@@ -563,16 +568,17 @@ nombreDescripcion.innerHTML = `
 `;
 
 //Precio del articulo
-const idPrecio = document.querySelector("#idPrecio");
 idPrecio.innerHTML = `$${(productsCard[product_id-1].price).toLocaleString()}`;
 
 //Informacion del vendedor
-const infoVendedor = document.querySelector("#infoVendedor");
 infoVendedor.innerHTML=`
 <h4>Informacion del vendedor</h3>
 <p>ID del vendedor: ${productsCard[product_id-1].sellerID}</p>
 <p>Nombre y apellido desde BD</p>
 `;
+}
+
+crearElementos();
 
 
 
@@ -581,8 +587,6 @@ infoVendedor.innerHTML=`
 //Dentro de esta informacion se obtiene el id
 
 
-//Ubicacion del boton "Agregar al Carrito"
-const botonAgregarAlCarrito = document.querySelector("#agregarCarrito");
 
 //Se le agrega un event listener para cuando se presione, se almacena en local storage el id y la cantidad del producto
 botonAgregarAlCarrito.addEventListener('click',()=>{

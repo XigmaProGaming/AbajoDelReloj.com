@@ -16,7 +16,7 @@ let valorOriginalContasenaC;
 btnEditar.addEventListener('click', (e) => {
   e.preventDefault();
   console.log("toy vivo");  
-  
+  mostrarMensaje();
   // console.log(inputContrasena.value);
   valorOriginalNombre = inputNombre.value; // guardamos los nuevos valores
   inputNombre.readOnly = false;
@@ -27,10 +27,16 @@ btnEditar.addEventListener('click', (e) => {
   originalValue = inputContrasena.value;
   inputContrasena.readOnly = false;
 
+  
 });
-
+function mostrarMensaje() {
+  var mensaje = document.getElementById("mensaje");
+  mensaje.innerHTML = "Editar información";
+  mensaje.style.display = "block";
+}
 btnGuardar.addEventListener('click', (e) => {
   e.preventDefault();
+  ocultarMensaje();
   inputNombre.readOnly = true;
   inputApellido.readOnly = true;
   inputTelefono.readOnly = true;
@@ -46,7 +52,12 @@ btnGuardar.addEventListener('click', (e) => {
   //   // Aquí podrías mostrar una confirmación al usuario de que los cambios se han guardado
   // }
 });
-
+function ocultarMensaje() {
+  setTimeout(function() {
+    mensaje.innerHTML = "";
+    mensaje.classList.remove("resaltado");
+  }, 1000); // Ocultar el mensaje después de 1 segundo (1000 ms)
+}
 /* ---------------- METODOS PARA VISIBILIDAD DE PRODUCTOS ---------*/
 let tabla = document.getElementById("tablaProductos");
 

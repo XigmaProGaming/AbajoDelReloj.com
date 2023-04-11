@@ -102,10 +102,8 @@ th{
     color: #fff;
     width: auto;
 }
-
-
 .edit-table{
-    border-radius: 15px;
+    box-shadow: -13px 8px 31px -16px #FF861C;
 }
 th{
     text-align: center;

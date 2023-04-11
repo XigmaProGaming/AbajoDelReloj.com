@@ -53,7 +53,9 @@ let tabla = document.getElementById("tablaProductos");
 let productos = JSON.parse(localStorage.getItem('productos'));
 
 // SI esta vacio obtenemos datos del JSON
-if(productos != null){// mando a llmar quiero saber que tiene
+
+if(productos === null){// mando a llmar quiero saber que tiene
+
     fetch('/Pages/template/templateProductos.json')
       .then(response => response.json())      
       .then(data=>{
@@ -62,7 +64,7 @@ if(productos != null){// mando a llmar quiero saber que tiene
         localStorage.setItem('productos', JSON.stringify(data));
         // mostrarProductos(productos);
         //Obtenemos los primeros 5 productos      
-        productos = data.slice(0,3);
+        productos = data.slice(0,5);
         // Mostramos los datos en la tabla
         mostrarProductos(productos);
        
@@ -72,9 +74,9 @@ if(productos != null){// mando a llmar quiero saber que tiene
       });
 }else{
     // si hay productos en el almacenamiento local, obtener los primeros 5 productos
-    //const primerosProductos = productos.slice(0, 5);
+    const primerosProductos = productos.slice(0, 5);
     // muestra los productos en la tabla
-    //mostrarProductos(primerosProductos);
+    mostrarProductos(primerosProductos);
 }
 
 function mostrarProductos(productos){
@@ -88,14 +90,14 @@ function mostrarProductos(productos){
       
         <td class="td-js"><a href="/Pages/productoEspecifico/productoEspecifico.html"><img src="${producto.img}" class="img-js"></a></td>
         <td class="td-js"><a href="/Pages/productoEspecifico/productoEspecifico.html">${producto.name}</a></td>       
-        <td class="td-js">${producto.price}</td>      
+        <td class="td-js">$${producto.price} MXN</td>      
         <td class="td-js">
           <button class="btn btn-primary ic-Edit " type="reset" id="btn-editar-producto"  onclick="showModal('modalEditarProducto')">
-              <img class="iconos" id="iconoEditar" src="./Assets/editar.png" alt="">
+              <span class="material-symbols-outlined" id="iconoEditar">edit</span>
           </button>
         </td>      
         <td class="td-js red-column">
-          <input class="checked" type="checkbox" id="billing-checkbox" checked>
+          <input class="checked" type="checkbox" id="billing-checkbox">
         </td>
         <tbody id="tablaProductos"></tbody>                                                  
 

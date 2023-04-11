@@ -500,12 +500,12 @@ let card = document.getElementById("tarjetas");
 
      productsCard.map((x) => {
 
-    card.innerHTML +=`<div class=" col-lg-4 col-md-6 col-xs-12">
+    card.innerHTML +=`
+    <div class=" col-lg-4 col-md-6 col-xs-12">
     
        <div class="card h-100  mb-3" style="max-width: 18rem; ">
-       
         <img src="${x.img}" class="card-img-top"  alt="${x.name}"  ">
-        <h5 class="card-title">${x.name}</h5>s
+        <h5 class="card-title">${x.name}</h5>
         <p class="card-text-start ocultarDescripcionLarga ">${x.description} </p>
           <p class="card-text" categoria>${x.category}</p>        
           <p class="card-text precio">$ ${x. price}</p>
@@ -513,16 +513,10 @@ let card = document.getElementById("tarjetas");
           <h5>⭐⭐⭐⭐⭐<h5>
           <div class="card-body">
             </div>
-          <a href="#" class="btn btn-primary  boton""id="comprar-${x.id}">Comprar</a>
-          
-       
-         
+          <a href="/Pages/productoEspecifico/productoEspecifico.html" class="btn btn-primary  boton""id="comprar-${x.id}">Ver artículo</a>
         </div>
       </div>
-</div>   `; 
-
-
-
+    </div>   `; 
 });
 
 

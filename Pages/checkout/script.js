@@ -98,9 +98,6 @@ const validar = () =>{
     else if(!erNumero.test(numExt)){
       alert("Ingresa un número exterior válido");
     }
-    else if(!erNumero.test(numInt)){
-      alert("Ingresa un número interior válido");
-    }
     else if(!erColonia.test(colonia)){
       alert("Ingresa una colonia válida, no ingreses carácteres especiales");
     }

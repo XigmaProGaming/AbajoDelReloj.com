@@ -1,8 +1,6 @@
-
 const shopContent = document.getElementById("shopContent");
 const showCart = document.getElementById("showCart");
 const modalContainer = document.getElementById("modalContainer");
-
 
 let productsCard = [
     {
@@ -496,52 +494,45 @@ let productsCard = [
         state: "usado", // usado o nuevo
         sku: 121212126,
         visibility: true,
-        
     }
-  
   ];
-  
 
-  let contentCart = [];
+let contentCart = [];
+// con forEach( jalamos los elementos del array
+let shoppingCart = [];
+productsCard.forEach((product) =>{
+  let content = document.createElement("div")
+  content.className = "Card"
+  content.innerHTML = `
+  <div class="card h-80  mb-3 g-1" style="width: 17rem;">
+  <img src="${product.img}">
+  <div class="card-body">
+  <h5 class="name">${product.name}</h3>
+  <p class="ocultarDescripcionLarga">${product.description}</p>
+  <p class="price">$ ${product.price}</p>
+  <p>${product.category}</p>
+  <p class="brand">${product.brand}</p> 
+  <h5>⭐⭐⭐⭐⭐<h5>
+  <button class="Buttom" id="boton-${product.id}">Comprar</button>
+  </div>
+  </div>
+  `;
+  shopContent.append(content);
+   
+  //boton comprar
+  let buyProduct = document.getElementById(`boton-${product.id}`);
+   
+  buyProduct.addEventListener("click", () => {
+    contentCart.push({
+      id : product.id,
+      img : product.img,
+      name : product.name,
+      price : product.price,
+    });
 
-
-
-   // con forEach( jalamos los elementos del array
-   let shoppingCart = [];
-   productsCard.forEach((product) =>{
-   
-     let content = document.createElement("div")
-     content.className = "Card"
-     content.innerHTML = `
-     <div class="card h-80  mb-3 g-1" style="width: 17rem;">
-     <img src="${product.img}">
-     <div class="card-body">
-     <h5 class="name">${product.name}</h3>
-     <p class="ocultarDescripcionLarga">${product.description}</p>
-     <p class="price">$ ${product.price}</p>
-     <p>${product.category}</p>
-     <p class="brand">${product.brand}</p> 
-     <h5>⭐⭐⭐⭐⭐<h5>
-     <button class="Buttom" id="boton-${product.id}">Comprar</button>
-     </div>
-     </div>
-     `;
-     shopContent.append(content);
-   
-     //boton comprar
-     let buyProduct = document.getElementById(`boton-${product.id}`);
-   
-     buyProduct.addEventListener("click", () => {
-       contentCart.push({
-         id : product.id,
-         img : product.img,
-         name : product.name,
-         price : product.price,
-       });
-   
-       console.log(product);
-     });
-   });
+    console.log(product);
+  });
+});
 
 // Obtener todos los botones incrementar y decrementar
 const incrementarBotones = document.querySelectorAll('.incrementar');
@@ -587,9 +578,7 @@ decrementarBotones.forEach((boton) => {
       console.log(precio);
       precioElemento.textContent = `$${(precio /(cantidad + 1) *  cantidad).toLocaleString('en-US', {maximumFractionDigits: 2})}`;
     } 
-
     // Obtener el precio del artículo y actualizar el valor en el elemento
-  
 
     // Actualizar el total
     actualizarTotal();
@@ -611,9 +600,7 @@ function actualizarTotal() {
   totalElemento.textContent = `$${total.toLocaleString('en-US', {maximumFractionDigits: 2})}`;
 }
 
-////////////////////////////////////////////////
 // boton eliminar
-
 const botonesEliminar = document.querySelectorAll('.eliminar button');
 botonesEliminar.forEach((boton) => {
   boton.addEventListener('click', () => {
@@ -628,26 +615,4 @@ botonesEliminar.forEach((boton) => {
 
 /////boton continuar compra
 const continuarCompraBtn = document.querySelector('#continuarCompraBtn');
-continuarCompraBtn.addEventListener('click', () => {
-  window.location.href = '/Pages/checkout/checkout.html';
-});
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+continuarCompraBtn.addEventListener('click', () => {  window.location.href = '/Pages/checkout/checkout.html';});

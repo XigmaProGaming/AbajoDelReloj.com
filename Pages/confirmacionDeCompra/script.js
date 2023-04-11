@@ -11,7 +11,7 @@ const imprimirProductos = () =>{
       <img src="/Pages/confirmacionDeCompra/assets/productoLaptop.jpg" class="imagen" id="imagen" alt="Imagen del producto">
     </div>
     <div class="col-xl-9 col-sm-12 col-md-6 divNombre">
-      <p id="nombre">Laptop SELL 8gb de RAM, Memoria interna de 1 GB. EL MEJOR PRECIO</p>
+      <h4 id="nombre">Laptop SELL 8gb de RAM, Memoria interna de 1 GB. EL MEJOR PRECIO</h4>
     </div>`;
   
     divProductos.appendChild(producto[i]);

@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600;700&display=swap');
 
-.container-userdata{
-    //margin-bottom:80px;
-    //margin-left:50px;
-}
 .container-form{
     width:100%;
     padding: 90px 20px 20px 20px;
@@ -15,14 +11,14 @@
 }
 .container-sales{
     background: #fff;
-    //margin-left: 30px;
+    /* //margin-left: 30px; */
     margin-bottom: 50px;
 }
 
 .buttons{
     display: flex;
     justify-content: space-between;
-    aling-items: center;
+    align-items: center;
 }
 
 #iconoEditar{
@@ -31,7 +27,7 @@
 .input-text{
     padding: 14px 20px;
     border: 1px solid #4C75DF;
-    //background: #C98474;
+   /*  //background: #C98474; */
     margin-bottom: 20px;
     border-radius: 4px;
     width: 100%;
@@ -57,22 +53,22 @@ th{
 }
 .img-1{
     width: 30%;
-    heigth: auto;
+    height: auto;
 }
 .img-js{
     width: 60%;
-    heigth: auto;
+    height: auto;
 }
 .td-js{
     width: 10em;
-    heigth: auto;
+    height: auto;
     text-align: center;
 }
 a{
     text-decoration: none;
     color: #000;
 }
-a:hover{
+td > a:hover{
     color: #4C75DF;
     text-decoration: underline;
 }

@@ -21,12 +21,6 @@ header {
   background-color: #000839;
 }
 
-
-img {
-
-  width: 100%;
-  display: block;
-}
 h5 {
   text-align: center;
 }
@@ -88,4 +82,8 @@ h5 {
 
   background-color: #0069d9;
    
+}
+
+.cards-margin{
+  margin-bottom: 2em;
 }

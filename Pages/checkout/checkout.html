@@ -9,7 +9,13 @@
     <!-- Link a la hoja de estilos de la pagina actual -->
     <link rel="stylesheet" href="/Pages/checkout/style.css">
     <link rel="stylesheet" href="/navBarStyle.css">
+
+    <!-- Links necesarios para la fuente -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/font.css">
   </head>
 <body>
 
@@ -31,7 +37,7 @@
 
         <!-- Contenedor de Checkout -->
         <div class="container">
-            <h6 id="orderUsername">Enviar a nombre-de-usuario</h6>
+            <h6 id="orderUsername" class="sub-title">Enviar a nombre-de-usuario</h6>
             <!-- Detalles del pedido -->
             <div class="row sectionBody">
                 <div class="col-12 text-center" id="checkoutItems">
@@ -66,8 +72,8 @@
                         </div>
                         <div class="col-5 mx'auto">
                             <div class="form-floating">
-                            <input type="text" class="form-control" id="inputStreetNumberInt" placeholder="Numero interior">
-                            <label for="inputStreetNumberInt">Numero interior</label>
+                            <input type="text" class="form-control" id="inputStreetNumberInt" placeholder="Numero interior (opcional)">
+                            <label for="inputStreetNumberInt">Numero interior (opcional)</label>
                             </div>
                         </div>
                         <div class="col-1"></div>

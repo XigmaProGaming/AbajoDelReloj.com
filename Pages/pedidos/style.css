@@ -1,5 +1,5 @@
 #cont1, #cont2, #cont3{
-    width: fit-content;
+    width: 70%;
     margin: auto;
     margin-top: 2rem;
     margin-bottom: 2rem;
@@ -10,8 +10,26 @@
     align-self: center;
     margin-top: 2rem;
     border-radius: 20%;
+    box-shadow: -15px 18px 4px -3px rgba(0,0,0,0.1);
 }
 
 #btn1, #btn2, #btn3{
     margin-bottom: 2rem;
+}
+
+#pedidos{
+    width: 90%;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 3rem;
+    background-color: white;
+}
+
+.titulo{
+    text-align: center;
+}
+
+#sub{
+    margin-top: 1rem;
 }

@@ -48,6 +48,13 @@ h5 {
   max-height: 150px;
 
 }
+.precio{
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 12px;
+  text-align: center;
+}
 .card:hover {
   box-shadow: 5px 5px 20px rgb(0, 0, 0, 0.4);
   transform: translateY(-3%);

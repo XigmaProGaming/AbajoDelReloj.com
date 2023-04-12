@@ -176,17 +176,16 @@ let cardPrincipal = document.getElementById("tarjetasPrincipal");
        
         <img src="${x.img}" class="card-img-top"  alt="${x.name}"  ">
         <h5 class="card-title1">${x.name}</h5>
-        <p class="card-text-start ocultarDescripcionLarga1 ">${x.description} </p>
-          <p class="card-text1" categoria>${x.category}</p>        
+        <p class="card-text1" categoria>${x.category}</p>        
           <p class="card-text1 precio">$ ${x. price}</p>
           <p class="card-text">Calificación: ${x.rating}</p> 
           <h5>⭐⭐⭐⭐⭐<h5>
           <div class="card-body1">
             </div>
           
-          <a href="#" class="btn btn-primary  boton1">Comprar</a>
+          <a href="Pages/productoEspecifico/productoEspecifico.html" class="btn btn-primary  boton1">Comprar</a>
           
-       
+  
          
         </div>
       </div>

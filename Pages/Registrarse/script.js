@@ -39,14 +39,34 @@ const validar = () =>{
     alert("Completaste correctamente los campos");
     
     let nuevoUsuario = {
-        nombre: nombre,
-        apellidos: apellidos,
+        name: nombre,
+        last_name: apellidos,
         username: username,
-        mail: mail,
         password: password,
-        tel: tel
+        telephone: tel,
+        correo: mail,
     };
-    console.log(nuevoUsuario); 
+    console.log(nuevoUsuario);
+    registrarUsuario(nuevoUsuario)
     usuariosNuevos.push(nuevoUsuario);    
   }
+}
+
+function registrarUsuario(nuevoUsuario){
+  fetch("http://localhost:8080/adr/usuarios/",{ //hago la conexion a la URL
+    
+  //Especifico el tipo de solicitud que manejare
+  method: "POST",
+  headers: {
+      "Content-Type" : "application/json",
+  },
+  body: JSON.stringify(nuevoUsuario), //Pasamos la constante definida anteriormente como cuerpo de la solicitud
+  })
+  .then((response) => response.text())
+  .then((data)=>{
+      console.log("Usuario guardado correctamente", data);
+  })
+  .catch((error)=>{
+      console.log("No pudimos registrar al usuario", error);
+  });
 }

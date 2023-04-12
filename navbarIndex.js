@@ -7,7 +7,7 @@ navbarLocation.innerHTML = `<!-- Barra de navegacion arriba y abajo -->
   <nav class="navbar navbar-expand-lg navbarBackground">
     <div class="container-fluid">
       <a class="navbar-brand collapse navbar-collapse" href="./index.html" style="width: 150px;">
-        <img class="mx-auto" src="/Assets/logoAbajodelReloj.png" alt="Logo Abajo del Reloj" width="150px">
+        <img class="mx-auto" src="./Assets/logoAbajodelReloj.png" alt="Logo Abajo del Reloj" width="150px">
       </a>
 
       <!-- Boton hamburguesa -->

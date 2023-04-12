@@ -6,7 +6,7 @@ console.log("hello world");
 if(localStorage.length > 0){
     //Aqui seria un fetch a nuestra API para cada producto en especifico, asi evitamos descargar todos los articulos
     //Por el momento se trae a todo el json
-    fetch('/Pages/template/templateProductos.json')
+    fetch('../template/templateProductos.json')
     .then(response => response.json())      
     .then(data=>{
 

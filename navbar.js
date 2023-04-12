@@ -17,7 +17,7 @@ navbarLocation.innerHTML = `<!-- Barra de navegacion arriba y abajo -->
         </span>
       </a>
       <form class="d-flex col-sm-6 col-md-6 col-lg-6" role="search">
-        <input class="form-control me-0" type="search" placeholder="Search" aria-label="Search" id="search-bar">
+        <input class="form-control me-0" type="search" placeholder="Buscar productos" aria-label="Search" id="search-bar">
         <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
       </form>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -95,10 +95,41 @@ navbarLocation.innerHTML = `<!-- Barra de navegacion arriba y abajo -->
     </div>
   </div>`;
 
-footer.innerHTML = `<div class="card footer" >
-<div class="card-body">
-  <blockquote class="blockquote mb-0" >
-    <footer ><cite title="Source Title">Copyright by @AbajoDelReloj.com</cite></footer>
-  </blockquote>
-</div>
-</div>`;
+footer.innerHTML = `
+<div class="footer">
+      <div class="row noScroll">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3" id="logoLocation">
+          <a href="/index.html" style="width: 200px;" >
+            <img class="mx-auto" src="/Assets/logoAbajodelReloj.png" alt="Logo Abajo del Reloj" width="150px">
+          </a>
+        </div>
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-3">
+          <h5>AbajoDelReloj.com</h5>
+          <ul class="footerList">
+            <li><a href="/Pages/acercaDeNosotros/aboutUs.html">Acerca de Nosotros</a></li>
+            <li><a href="/Pages/Contactanos/contactenos.html">Contáctenos</a></li>
+            <li><a href="/Pages/ListaProductos/ListaProductos.html">Listado de Productos</a></li>
+          </ul>
+        </div>
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-3">
+          <h5>Redes Sociales</h5>
+          <ul class="footerList">
+            <li><a href="https://www.facebook.com/">Facebook</a></li>
+            <li><a href="https://twitter.com/home">Twitter</a></li>
+            <li><a href="https://www.instagram.com/">Instagram</a></li>
+          </ul>
+        </div>
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-3">
+          <h5>Mi Cuenta</h5>
+          <ul class="footerList">
+            <li><a href="/Pages/Perfil/perfil.html">Mi perfil</a></li>
+            <li><a href="/Pages/pedidos/pedidos.html">Mis pedidos</a></li>
+            <li><a href="/Pages/AgregarProducto/agregarProducto.html">Agregar un producto</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row noScroll">
+        <div class="col-12"><h6>Copyright © 2023, AbajoDelReloj.com </h6></div>
+      </div>
+    </div>
+`;

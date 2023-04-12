@@ -97,7 +97,7 @@ navbarLocation.innerHTML = `<!-- Barra de navegacion arriba y abajo -->
 
 footer.innerHTML = `
 <div class="footer">
-      <div class="row">
+      <div class="row noScroll">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3" id="logoLocation">
           <a href="/index.html" style="width: 200px;" >
             <img class="mx-auto" src="/Assets/logoAbajodelReloj.png" alt="Logo Abajo del Reloj" width="150px">
@@ -128,7 +128,7 @@ footer.innerHTML = `
           </ul>
         </div>
       </div>
-      <div class="row">
+      <div class="row noScroll">
         <div class="col-12"><h6>Copyright © 2023, AbajoDelReloj.com </h6></div>
       </div>
     </div>

@@ -67,6 +67,7 @@ body{
   color: white;
   background-color: #000839;
   padding-top: 5px;
+  margin: 0;
 }
 
 .footerList{
@@ -102,3 +103,7 @@ body{
   outline: solid #f00 1px !important;
 } 
 */
+
+.noScroll{
+  margin: 0;
+}

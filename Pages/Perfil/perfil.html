@@ -40,24 +40,30 @@
                   <span class="material-symbols-outlined">person</span>
                 </div>
                 <!-- inyectar con datos de BD -->
-                <div class="form-group">                  
-                  <input type="text" placeholder="Nombre" id="inputNombre" class="form-control input-text item" name="nombre" value="Diana" autocomplete="off" readonly>
+                <div class="form-group">  
+                  <label for="nombre" class="label">Nombre: </label>                
+                  <input type="text" placeholder="Nombre" id="inputNombre" class="form-control input-text item input" name="nombre" value="" autocomplete="off" readonly>
                 </div>    
                 <div class="form-group">
-                  <input type="text" placeholder="Apellido" id="inputApellido" class="form-control input-text item" name="apellido" value="Rodriguez" autocomplete="off" readonly>
+                  <label for="apellido" class="label">Apellido: </label>
+                  <input type="text" placeholder="Apellido" id="inputApellido" class="form-control input-text item input" name="apellido" value="" autocomplete="off" readonly>
                 </div>  
                 <div class="form-group">
-                  <input type="text" placeholder="User name" id="inputUser" class="form-control input-text item" name="username" value="DRR" autocomplete="off" readonly>
+                  <label for="username" class="label">Username: </label>
+                  <input type="text" placeholder="User name" id="inputUser" class="form-control input-text item input" name="username" value="" autocomplete="off" readonly>
                 </div>      
                 <div class="form-group">
-                  <input type="number" placeholder="Telefono" id="inputTel" class="form-control input-text item" name="telefono" value="0000000" autocomplete="off" readonly> 
+                  <label for="telefono" class="label">Teléfono: </label>
+                  <input type="number" placeholder="Telefono" id="inputTel" class="form-control input-text item input" name="telefono" value="" autocomplete="off" readonly> 
                 </div> 
                 <!-- inyectar con datos de BD --> 
                 <div class="form-group">
-                  <input type="text" placeholder="Correo electronico" class="form-control input-text item" id="inputEmail" name="correo" value="dianarey@gmail.com" autocomplete="off" readonly>                
+                  <label for="correo" class="label">Email: </label>
+                  <input type="text" placeholder="Correo electronico" class="form-control input-text item input"  id="inputEmail" name="" value="" autocomplete="off" readonly>                
                 </div>                                         
                 <div class="form-group">
-                    <input type="password" placeholder="Contraseña" name="password" class="form-control input-text item" value="Jacksonbebe12" id="inputContrasena" readonly>                     
+                    <label for="password" class="label">Contraseña: </label>
+                    <input type="password" placeholder="Contraseña" name="password" class="form-control input-text item input" value="" id="inputContrasena" readonly>                     
                     <!-- <button type="button" class="icono fas fa-eye mostrarClave"></button>                      -->
                 </div>                                           
                 <!-----------------Botón editar---------->
@@ -99,11 +105,11 @@
 
         <!-- HISTORIAL DE PRODUCTOS DEL USUARIO -->
 
-        <div class="col-xl-7 col-md-12 col-sm-12 ">                        
+        <div class="col-xl-7 col-md-12 col-sm-12 table-container">                        
             <h2 class="tittle-HistorialCompras">Productos publicados</h2>
             <div class="row">                 
             <!-- Aqui comienza la tabla para visualizar productos -->
-              <div class="table-responsive edit-table">
+              <div class="table-responsive edit-table" id="edit-table">
                   <table class="table-fluid table-striped text-successtable-border border-light">
                     <thead class="head-edit">
                       <tr>

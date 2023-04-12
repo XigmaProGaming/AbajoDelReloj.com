@@ -31,7 +31,7 @@ btnEditar.addEventListener('click', (e) => {
 });
 function mostrarMensaje() {
   var mensaje = document.getElementById("mensaje");
-  mensaje.innerHTML = "Editar información";
+  mensaje.innerHTML = "Editando información";
   mensaje.style.display = "block";
 }
 btnGuardar.addEventListener('click', (e) => {
@@ -108,7 +108,7 @@ function mostrarProductos(productos){
           </button>
         </td>      
         <td class="td-js red-column">
-          <input class="checked" type="checkbox" id="billing-checkbox">
+          <input class="checked" type="checkbox" id="billing-checkbox checked">
         </td>
         <tbody id="tablaProductos"></tbody>                                                  
 

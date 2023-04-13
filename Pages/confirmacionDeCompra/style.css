@@ -31,8 +31,13 @@ p{
 .container {
     margin-top: 2em;
     margin-bottom: 2em;
+    border-radius: 15px;
 }
 
 .boton{
     margin-bottom: 1em;
 }
+
+.boxShadow{
+    box-shadow: 11px 10px 15px -3px rgba(0,0,0,0.1);
+  }

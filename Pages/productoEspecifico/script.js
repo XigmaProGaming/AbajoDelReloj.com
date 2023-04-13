@@ -178,8 +178,6 @@ let productsCard = [
       visibility: true,
 
       },
-  
-  /////////////Ernesto
   {
       id: 16,
       name: "Pantalla Sansui SMX32T1H LED HD 32",
@@ -491,61 +489,77 @@ let productsCard = [
       visibility: true,
       
   }
-
+  
 ]; 
-  //Cambiar este id para verificar informacion de otros productos
-  //Desde 0 hasta 32
-  //Una vez que se implemente la API, sustituir productsCard[product_id-1] por el correcto
-let product_id = 4;
+//Cambiar este id para verificar informacion de otros productos
+//Desde 0 hasta 32
+//Una vez que se implemente la API, sustituir productsCard[product_id-1] por el correcto
+//Actualmente funciona con la posicion en el Array, por eso es que no se muestran correctamente los articulos despues del id "10"
+//let product_id = 4;
+
+let params = new URL(document.location).searchParams; //Se revisa el URL para obtener el ID del producto que queremos mostrar
+let product_id = params.get("id"); // Se extrae especificamente el valor de id=
+console.log("id=" + product_id);
 
 const bodyContainer = document.querySelector("#bodyContainer");
-
 const previewPics = document.querySelector("#previewPics");
+const carouselIndicators = document.querySelector("#carouselIndicators");
+const carouselInner = document.querySelector("#carouselInner");
+const nombreDescripcion = document.querySelector("#nombreDescripcion");
+const idPrecio = document.querySelector("#idPrecio");
+const infoVendedor = document.querySelector("#infoVendedor");
+//Ubicacion del boton "Agregar al Carrito"
+const botonAgregarAlCarrito = document.querySelector("#agregarCarrito");
 
+
+function crearElementos(){
+  //Primera imagen preview para el carrusel de fotos
 previewPics.innerHTML=`
 <a data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1" >
-  <img src="${productsCard[product_id-1].img[0]}" class="d-block w-100 img-thumbnail" alt="...">
+<img src="${productsCard[product_id-1].img[0]}" class="d-block w-100 img-thumbnail" alt="...">
 </a>
 `;
 
+//Resto de las imagenes previews para el carrusel
 for(let i = 1; i<productsCard[product_id-1].img.length;i++){
   previewPics.innerHTML+=`
   <a data-bs-target="#carouselExampleIndicators" data-bs-slide-to="${i}" aria-label="Slide ${i+1}">
   <img src="${productsCard[product_id-1].img[i]}" class="d-block w-100 img-thumbnail" alt="...">
-</a>
+  </a>
   `;
 };
 
-const carouselIndicators = document.querySelector("#carouselIndicators");
+//Primera indicador para el carrusel
 carouselIndicators.innerHTML=`
 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
 `;
 
-for(let i = 1; i<productsCard[product_id-1].img.length;i++){
+//Resto de los indicadores para el carrusel
+for(let j = 1; j<productsCard[product_id-1].img.length;j++){
   carouselIndicators.innerHTML+=`
-  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="${i}" aria-label="Slide ${i+1}"></button>
+  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="${j}" aria-label="Slide ${j+1}"></button>
   `;
 };
 
-const carouselInner = document.querySelector("#carouselInner");
-for(let i = 0; i<productsCard[product_id-1].img.length;i++){
-  if(i==0){
+//Imagenes del carrusel
+for(let k = 0; k<productsCard[product_id-1].img.length;k++){
+  if(k==0){
     carouselInner.innerHTML+=`
     <div class="carousel-item img-fluid active">
-    <img src="${productsCard[product_id-1].img[i]}" class="d-block w-100" alt="...">
+    <img src="${productsCard[product_id-1].img[k]}" class="d-block w-100" alt="...">
     </div>
     `;
   } else{
     carouselInner.innerHTML+=`
     <div class="carousel-item img-fluid">
-    <img src="${productsCard[product_id-1].img[i]}" class="d-block w-100" alt="...">
+    <img src="${productsCard[product_id-1].img[k]}" class="d-block w-100" alt="...">
     </div>
     `;
 
   }
 };
 
-const nombreDescripcion = document.querySelector("#nombreDescripcion");
+//Nombre, calificacion, descripcion y estaod del articulo
 nombreDescripcion.innerHTML = `
 <h2>${productsCard[product_id-1].name}</h2>
 <h5>Calificación: ${productsCard[product_id-1].rating}</h5>
@@ -553,15 +567,18 @@ nombreDescripcion.innerHTML = `
 <p>Estado: ${productsCard[product_id-1].state}</p>  
 `;
 
-const idPrecio = document.querySelector("#idPrecio");
+//Precio del articulo
 idPrecio.innerHTML = `$${(productsCard[product_id-1].price).toLocaleString()}`;
 
-const infoVendedor = document.querySelector("#infoVendedor");
+//Informacion del vendedor
 infoVendedor.innerHTML=`
 <h4>Informacion del vendedor</h3>
 <p>ID del vendedor: ${productsCard[product_id-1].sellerID}</p>
 <p>Nombre y apellido desde BD</p>
 `;
+}
+
+crearElementos();
 
 
 
@@ -570,8 +587,6 @@ infoVendedor.innerHTML=`
 //Dentro de esta informacion se obtiene el id
 
 
-//Ubicacion del boton "Agregar al Carrito"
-const botonAgregarAlCarrito = document.querySelector("#agregarCarrito");
 
 //Se le agrega un event listener para cuando se presione, se almacena en local storage el id y la cantidad del producto
 botonAgregarAlCarrito.addEventListener('click',()=>{
@@ -588,110 +603,7 @@ function almacenarIdCantidad(){
   console.log("Cantidad: " + cantidad);
   localStorage.setItem(`${nextKey}`, `${product_id},${cantidad}`);
   nextKey++;
-}
+};
 
 
-
-/* bodyContainer.innerHTML= `<!------------- Fotos, descripcion, precio ------------------>
-<div class="row">
-
-  <!-- Imagenes -->
-  <div class="col-sm-12 col-md-6 col-lg-6 mx-auto  simulationHeight ">
-      <div class="row  gy-2">
-        <div class="col-2 d-none d-md-block" id="previewPics">
-          <!-- Botones con previews de imagenes -->
-          <a data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1" >
-            <img src="${productsCard[product_id-1].img[0]}" class="d-block w-100 img-thumbnail" alt="...">
-          </a>
-          <a data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2">
-            <img src="${productsCard[product_id-1].img[1]}" class="d-block w-100 img-thumbnail" alt="...">
-          </a>
-          <a data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3">
-            <img src="${productsCard[product_id-1].img[2]}" class="d-block w-100 img-thumbnail" alt="...">
-          </a>
-          <a data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4">
-            <img src="https://http2.mlstatic.com/D_NQ_NP_2X_856749-MLA50263566680_062022-F.webp" class="d-block w-100 img-thumbnail" alt="...">
-          </a> 
-        </div>
-        <!-- Carrusel -->
-        <div id="carouselExampleIndicators" class="col-md-10 col-xs-12 col-sm-12 carousel slide" data-bs-touch="true">
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-          </div> 
-          <div class="carousel-inner">
-            <div class="carousel-item img-fluid active">
-              <img src="${productsCard[product_id-1].img[0]}" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item img-fluid">
-              <img src="${productsCard[product_id-1].img[1]}" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item img-fluid ">
-              <img src="${productsCard[product_id-1].img[2]}" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item img-fluid">
-              <img src="https://http2.mlstatic.com/D_NQ_NP_2X_856749-MLA50263566680_062022-F.webp" class="d-block w-100" alt="...">
-            </div>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
-        
-      </div>
-  </div> 
-  <!-- Nombre y descripcion -->
-  <div class="col-sm-12 col-md-6 col-lg-3  mx-auto simulationHeight">
-      <h3>${productsCard[product_id-1].name}</h3>
-      <h5>Calificación: ${productsCard[product_id-1].rating}</h5>
-      <p>${productsCard[product_id-1].description}</p>
-      <p>Estado: ${productsCard[product_id-1].state}</p>  
-    </div>
-
-  <!-- Precio, cantidad para carrito, detalles vendedor -->
-  <div class="col-sm-12 col-md-12 col-lg-3  simulationHeight" id="precioCantidad">
-      <div class="row">
-
-          <div class="col-12">
-              <h3>$${productsCard[product_id-1].price}</h3>
-              <form action="">
-                <label>Cantidad: </label>
-                <select id="cantidad">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                </select>
-                <button class="btn btn-primary" type="submit" id="agregarCarrito">Agregar al carrito</button>
-           </form>
-          </div>
-          <div class="col-12">
-              <h4>Informacion del vendedor</h3>
-                <p>ID del vendedor: ${productsCard[product_id-1].sellerID}</p>
-                <p>Nombre y apellido</p>
-          </div>
-      </div>
-  </div>
-</div>
-
-<!---------------- Reviews ------------------------------------->
-<div class="row">
-  <div class="col-sm-12 col-md-6 col-lg-6 reviewContainer">
-      <h3>"Muy buen producto!"</h3>
-      <h4>⭐⭐⭐⭐⭐</h4>
-      <p class="bodyReview" >Esta es una reseña escrita por otro usuario. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates culpa accusamus beatae, ad deserunt nam animi quis repellendus deleniti consequatur maxime dolor exercitationem, amet placeat vel sapiente illum saepe laudantium.</p>
-  </div>
-  <div class="col-sm-12 col-md-6 col-lg-6 reviewContainer">
-    <h3>"Muy buen producto!"</h3>
-    <h4>⭐⭐⭐⭐⭐</h4>
-    <p class="bodyReview" >Esta es una reseña escrita por otro usuario. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates culpa accusamus beatae, ad deserunt nam animi quis repellendus deleniti consequatur maxime dolor exercitationem, amet placeat vel sapiente illum saepe laudantium.</p>
-</div>
-</div>`; 
- */
+console.log("fin id=" + product_id);

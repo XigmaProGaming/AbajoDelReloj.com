@@ -56,3 +56,15 @@ body {
   border-radius: 15px;
   box-shadow: 11px 10px 15px -3px rgba(0,0,0,0.1);
 }
+
+
+
+.rating {
+  font-size: 25px;
+  color: orange;
+  display: inline-block;
+  overflow: hidden;
+}
+.rating::before { 
+  content: "★★★★★" 
+}

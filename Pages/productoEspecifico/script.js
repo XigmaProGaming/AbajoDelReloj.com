@@ -562,7 +562,8 @@ for(let k = 0; k<productsCard[product_id-1].img.length;k++){
 //Nombre, calificacion, descripcion y estaod del articulo
 nombreDescripcion.innerHTML = `
 <h2>${productsCard[product_id-1].name}</h2>
-<h5>Calificación: ${productsCard[product_id-1].rating}</h5>
+<h5>Calificación: (${productsCard[product_id-1].rating})</h5>
+<div id="ratingLocation" class="rating"></div>
 <p>${productsCard[product_id-1].description}</p>
 <p>Estado: ${productsCard[product_id-1].state}</p>  
 `;
@@ -601,9 +602,20 @@ let nextKey = localStorage.length;
 function almacenarIdCantidad(){
   const cantidad = document.querySelector("#cantidad").value;
   console.log("Cantidad: " + cantidad);
+ // window.parent.actualizarCantidadCarrito();
   localStorage.setItem(`${nextKey}`, `${product_id},${cantidad}`);
   nextKey++;
 };
 
 
 console.log("fin id=" + product_id);
+
+var cw = window.ratingLocation.clientWidth; // save original 100% pixel width
+
+function rating( stars ) {
+  window.ratingLocation.style.width = Math.round(cw * (stars / 5)) + 'px';
+}
+
+console.log("rating: " + productsCard[product_id-1].rating)
+rating(productsCard[product_id-1].rating);
+

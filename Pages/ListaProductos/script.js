@@ -513,7 +513,7 @@ let card = document.getElementById("tarjetas");
           <h5>⭐⭐⭐⭐⭐<h5>
           <div class="card-body">
             </div>
-          <a href="/Pages/productoEspecifico/productoEspecifico.html" class="btn btn-primary  boton""id="comprar-${x.id}">Ver artículo</a>
+          <a href="../productoEspecifico/productoEspecifico.html?id=${x.id}" class="btn btn-primary  boton""id="comprar-${x.id}">Ver artículo</a>
         </div>
       </div>
     </div>   `; 

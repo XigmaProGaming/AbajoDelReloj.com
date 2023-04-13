@@ -55,10 +55,10 @@ const validar = () =>{
       div.role="alert";
       div.innerHTML = `Nombre inválido`;
     }
-    else if(!erText.test(categoria)){
+    else if(categoria=="Seleccione una categoria"){
       div.className="alert alert-primary";
       div.role="alert";
-      div.innerHTML = `Ingresa una categoría válida, no ingreses números o carácteres especiales`;
+      div.innerHTML = `Por favor seleccione una categoria`;
     }
     else if(!erText.test(marca)){
       div.className="alert alert-primary";

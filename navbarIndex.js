@@ -99,8 +99,8 @@ footer.innerHTML = `
 <div class="footer">
       <div class="row noScroll">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3" id="logoLocation">
-          <a href="/index.html" style="width: 200px;" >
-            <img class="mx-auto" src="/Assets/logoAbajodelReloj.png" alt="Logo Abajo del Reloj" width="150px">
+          <a href="./index.html" style="width: 200px;" >
+            <img class="mx-auto" src="./Assets/logoAbajodelReloj.png" alt="Logo Abajo del Reloj" width="150px">
           </a>
         </div>
         <div class="col-xs-4 col-sm-4 col-md-4 col-lg-3">

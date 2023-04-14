@@ -53,7 +53,7 @@ const validar = () =>{
 }
 
 function registrarUsuario(nuevoUsuario){
-  fetch("http://localhost:8080/adr/usuarios/",{ //hago la conexion a la URL
+  fetch("http://localhost:8080/abdr/usuarios/",{ //hago la conexion a la URL
     
   //Especifico el tipo de solicitud que manejare
   method: "POST",

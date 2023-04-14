@@ -1,6 +1,8 @@
 const shopContent = document.getElementById("shopContent");
 const showCart = document.getElementById("showCart");
 const modalContainer = document.getElementById("modalContainer");
+const ubicacionParaEliminarTodo = document.querySelector("#ubicacionParaEliminarTodo")
+const eliminarCarritoDeCompras = document.querySelector("#eliminarCarritoDeCompras");
 
 let productsCard = [
     {
@@ -542,9 +544,71 @@ productsCard.forEach((product) =>{
     console.log(product);
 
       // almacenamos el contenido del carrito en localStorage
-  localStorage.setItem("carrito", JSON.stringify(contentCart));
+  //localStorage.setItem("carrito", JSON.stringify(contentCart));
 });
 
 
   });
 //Para mostrar los productos en el carrito de compras, 
+const ubicacionCarritoDeCompras = document.getElementById("ubicacionCarritoDeCompras");
+const precioTotal = document.querySelector("#precioTotal");
+let precioTotalAcumulado = 0;
+if(localStorage.length > 0){
+//ubicacionParaEliminarTodo.innerHTML=``;
+  console.log("local storage length: " + localStorage.length)
+  //Aqui seria un fetch a nuestra API para cada producto en especifico, asi evitamos descargar todos los articulos
+  //Por el momento se trae a todo el json
+  fetch('../template/templateProductos.json')
+  .then(response => response.json())      
+  .then(data=>{
+
+  //Se llama a la funcion para crear los elementos en el dom
+  crearElementos(data);
+});
+}
+
+function crearElementos(data){
+  //Se revisa cada elemento guardado en el local storage
+  for(let i=0;i<localStorage.length;i++){
+      //Se obtiene el id del producto
+      let product_id = (localStorage.getItem(i).split(","))[0];
+      console.log("Id: "+product_id);
+
+      /////////////////////////Aqui se haria el fetch a la api para traer solo la informacion de este producto/////////////////////////
+      //Se obtiene la cantidad que se desea ordenar de este producto
+      let cantidad = (localStorage.getItem(i).split(","))[1];
+      console.log("Cantidad: "+ cantidad);
+  
+      precioTotalAcumulado += data[product_id-1].price*cantidad;
+      //Creacion de los elementos
+      ubicacionCarritoDeCompras.innerHTML+=`
+      <!-- Row para cada articulo del carrito -->
+      <div class="row align-items-center articulo">
+          <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+              <img src="${data[product_id-1].img[0]}" class="img-thumbnail imgCheckout" alt="...">
+          </div>
+          <div class="col-xs-10 col-sm-10 col-md-10 col-lg-5">
+              <h4>${data[product_id-1].name}</h4>
+          </div>
+          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-2 cantidad">
+              <button class="btn btn-sm btn-secondary decrementar">-</button>
+               <span class="mx-2 cantidad-numero">${cantidad}</span>
+              <button class="btn btn-sm btn-secondary incrementar">+</button>
+          </div>
+          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-1 precio">$${(data[product_id-1].price*cantidad).toLocaleString()}</div>
+
+      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-2 eliminar">
+          <button class="btn btn-sm btn-danger">x</button>
+      </div>
+  </div>
+      <br>
+      `;
+  }
+  precioTotal.innerHTML=`<h6>Precio total: $${(precioTotalAcumulado).toLocaleString()}</h6>`;
+}
+
+eliminarCarritoDeCompras.addEventListener("click",()=>{
+    console.log("Carrito eliminado");
+    localStorage.clear();
+    ubicacionParaEliminarTodo.innerHTML=`<div class="col-12 mx-auto"><h4>Carrito vacio :(</h4></div>`;
+});

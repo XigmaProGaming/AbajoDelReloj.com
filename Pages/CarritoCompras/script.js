@@ -554,7 +554,7 @@ const ubicacionCarritoDeCompras = document.getElementById("ubicacionCarritoDeCom
 const precioTotal = document.querySelector("#precioTotal");
 let precioTotalAcumulado = 0;
 if(localStorage.length > 0){
-//ubicacionParaEliminarTodo.innerHTML=``;
+ubicacionCarritoDeCompras.innerHTML=``;
   console.log("local storage length: " + localStorage.length)
   //Aqui seria un fetch a nuestra API para cada producto en especifico, asi evitamos descargar todos los articulos
   //Por el momento se trae a todo el json

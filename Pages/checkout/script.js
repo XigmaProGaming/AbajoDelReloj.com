@@ -66,7 +66,14 @@ function crearElementos(data){
 
 
 //Validacion de entradas para la direccion
+const botonValidar = document.querySelector("#botonValidar");
+botonValidar.addEventListener("click",(e)=>{
+  e.preventDefault();
+  validar();
+})
+
 const validar = () =>{
+
 
     /* 
     
@@ -85,7 +92,10 @@ const validar = () =>{
     let colonia = document.querySelector("#inputArea").value;
     let codigoPostal = document.querySelector("#inputAreaCode").value;
     let ciudad = document.querySelector("#inputCity").value;
+    let inputAlcaldia = document.querySelector("#inputAlcaldia").value;
     let tel = document.getElementById("inputTelefono").value;
+    let inputInstructions = document.getElementById("inputInstructions").value;
+
   
     let erColonia = /[a-zA-Z0-9]/;
     let erNumero = /[a-zA-Z0-9]/;
@@ -112,8 +122,44 @@ const validar = () =>{
     }
     else{
       alert("Completaste correctamente los campos");
-      
+      //Hacer fetch post  de la informacion
+
+      let informacionPedido = {
+        order_Amount: 158.00,
+        order_Ship_Name: "Rafael Encinas",
+        order_Ship_Street: calle,
+        order_Number_Outdoor: numExt,
+        order_Number_Interior: numInt,
+        order_Colonia: colonia,
+        order_Zip: parseInt(codigoPostal),
+        order_Alcaldia: inputAlcaldia,
+        order_Phone: tel,
+        order_Instruction: inputInstructions,
+        products_idproducts: 19
+      }
+      console.log(JSON.stringify(informacionPedido))
+      registrarPedido(informacionPedido);
     }
-    console.log(calle,numExt,numInt,colonia,codigoPostal,ciudad,tel)
+    //console.log(calle,numExt,numInt,colonia,codigoPostal,ciudad,tel)
   }
 
+
+  function registrarPedido(informacionPedido){
+    fetch("http://localhost:8080/abdr/ordenes/",{ //hago la conexion a la URL
+      
+    //Especifico el tipo de solicitud que manejare
+    method: "POST",
+    headers: {
+        "Content-Type" : "application/json",
+    },
+    body: JSON.stringify(informacionPedido), //Pasamos la constante definida anteriormente como cuerpo de la solicitud
+    })
+    .then((response) => response.text())
+    .then((data)=>{
+        console.log("Usuario guardado correctamente", data)
+        window.location.replace("../confirmacionDeCompra/confirmacionDeCompra.html");;
+    })
+    .catch((error)=>{
+        console.log("No pudimos registrar al usuario", error);
+    });
+  }

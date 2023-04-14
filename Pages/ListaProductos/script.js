@@ -506,8 +506,7 @@ let card = document.getElementById("tarjetas");
        <div class="card h-100  mb-3" style="max-width: 18rem; ">
         <img src="${x.img}" class="card-img-top"  alt="${x.name}"  ">
         <h5 class="card-title">${x.name}</h5>
-        <p class="card-text-start ocultarDescripcionLarga ">${x.description} </p>
-          <p class="card-text" categoria>${x.category}</p>        
+         <p class="card-text" categoria>${x.category}</p>        
           <p class="card-text precio">$ ${x. price}</p>
           <p class="card-text">Calificación: ${x.rating}</p> 
           <h5>⭐⭐⭐⭐⭐<h5>

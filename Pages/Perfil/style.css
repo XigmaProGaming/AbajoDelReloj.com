@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600;700&display=swap');
 
+
 #edit-table{
     padding: 0;
 }
+
 .container-form{
     width:100%;
     padding: 50px 20px 20px 20px;
@@ -12,6 +14,7 @@
     display: flex;
     justify-content: center;
 }
+
 .description{
     text-align: center;
     font-size: 1.8rem; 
@@ -19,6 +22,7 @@
 }
 .container-formulario{
     margin-top: -20px
+
 }
 
 .container-formulario .form-icon{
@@ -49,7 +53,9 @@
 }
 .input-text{
     padding: 14px 20px;
+
     border: 1px solid #FF861C;
+
    /*  //background: #C98474; */
     margin-bottom: 20px;
     border-radius: 4px;

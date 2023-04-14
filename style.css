@@ -7,9 +7,18 @@ header {
 }
 
 .articulos {
-  text-align: center;
-  font-size: 5rem;
-}
+  
+ 
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 1px solid #ccc;
+  }
+
 
 .container {
   background-color: #dddddd;
@@ -20,3 +29,100 @@ header {
   color: white;
   background-color: #000839;
 }
+.cardPrincipal {
+  width: 100%;
+  margin: 0 auto 50px auto;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: default;
+  transition: all 0.3s ease;
+}
+
+.cardPrincipal:hover {
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+}
+
+.cardPrincipal img {
+  width: 100%;
+  height: 200px;
+  object-fit: scale-down;
+  border-radius: 4px 4px 0 0;
+}
+
+.cardPrincipal .container {
+  padding: 10px;
+}
+
+.cardPrincipal h5.card-title1 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333333;
+}
+
+.cardPrincipal p.card-text-start.ocultarDescripcionLarga1 {
+  margin: 0;
+  font-size: 14px;
+  line-height: 20px;
+  color: #999999;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.cardPrincipal p.card-text1.categoria {
+  margin: 0;
+  font-size: 14px;
+  color: #3483fa;
+}
+
+.cardPrincipal p.card-text1.precio {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+  color: #333333;
+}
+
+.cardPrincipal p.card-text {
+  margin: 0;
+  font-size: 14px;
+  color: #999999;
+}
+
+.cardPrincipal h5.calificacion {
+  margin: 0;
+  font-size: 18px;
+  color: #3483fa;
+  text-align: center;
+}
+.boton {
+  display: inline-block;
+  padding: 8px 16px; /*ajusta el valor de padding para hacer más pequeño el botón*/
+  font-size: 14px; /*ajusta el valor de font-size para hacer más pequeño el botón*/
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  background-color: #3498db;
+  color: #ffffff;
+  border-radius: 4px; /*ajusta el valor de border-radius para hacer más pequeño el botón*/
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.boton:hover {
+  background-color: #2980b9;
+}
+
+    
+  
+  
+  
+
+
+
+
+/*************************************************************/

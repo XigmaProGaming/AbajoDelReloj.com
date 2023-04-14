@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedidos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../../navBarStyle.css">
+
+    <!-- Links necesarios para la fuente -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../font.css">
+</head>
+<body>
+    
+  <!-- Ubicacion para insertar barra de navegacion -->
+  <div id="navbarLocation"></div>
+ 
+ 
+  <!-- pedidos -->
+ 
+   <div class="container-fluid" id="cont1"><!-- apertura container fluid -->
+     <div class="card" style="width: 100%;"><!-- apertura card -->
+       <img src="./Assets/bolsas.jpg" class="card-img-top" alt="imagen del pedido" id="imgP1"><!-- imagen -->
+       <div class="card-body">
+         <h5 class="card-title">Pedido #</h5>
+         <p class="card-text">Nombre del pedido.</p>
+ 
+         <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" id="btn1">Reseña</button><!-- boton offcanvas -->
+ 
+         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"   aria-labelledby="offcanvasRightLabel">
+         <div class="offcanvas-header">
+         <h5 class="offcanvas-title" id="offcanvasRightLabel">Reseña</h5>
+         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+         </div><!-- cierre boton offcnvas -->
+         <div class="offcanvas-body">
+           <form>
+             <textarea name="reseña" id="textoCanvas" cols="30" rows="10"></textarea>
+           <button type="submit" class="btn btn-primary">Submit</button>
+           </form><!-- cierre texto reseña -->
+         </div><!-- cierre body offcanvas -->
+         </div><!-- ciere offcanvas -->
+ 
+         <div class="accordion accordion-flush" id="accordionFlushExample"><!-- abre cordion -->
+           <div class="accordion-item">
+             <h2 class="accordion-header">
+               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                 Detalles
+               </button>
+             </h2>
+             <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+               <div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos ea dolorum officiis, architecto id suscipit animi hic, vero minus, pariatur quia quam possimus! Repellendus, explicabo. Molestiae voluptates voluptas provident consequuntur.</div>
+             </div>
+           </div>
+         </div><!-- cierre acordeon -->
+ 
+       </div>
+     </div><!-- cierre card -->
+   </div><!-- cierre container fluid -->
+ 
+   <div class="container-fluid" id="cont2"><!-- apertura container fluid -->
+     <div class="card" style="width: 100%;"><!-- apertura card -->
+       <img src="./Assets/bolsas.jpg" class="card-img-top" alt="imagen del pedido" id="imgP2"><!-- imagen -->
+       <div class="card-body">
+         <h5 class="card-title">Pedido #</h5>
+         <p class="card-text">Nombre del pedido.</p>
+ 
+         <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" id="btn2">Reseña</button><!-- boton offcanvas -->
+ 
+         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"   aria-labelledby="offcanvasRightLabel">
+         <div class="offcanvas-header">
+         <h5 class="offcanvas-title" id="offcanvasRightLabel">Reseña</h5>
+         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+         </div><!-- cierre boton offcnvas -->
+         <div class="offcanvas-body">
+           <form>
+             <textarea name="reseña" id="textoCanvas" cols="30" rows="10"></textarea>
+           <button type="submit" class="btn btn-primary">Submit</button>
+           </form><!-- cierre texto reseña -->
+         </div><!-- cierre body offcanvas -->
+         </div><!-- ciere offcanvas -->
+ 
+         <div class="accordion accordion-flush" id="accordionFlushExample"><!-- abre cordion -->
+           <div class="accordion-item">
+             <h2 class="accordion-header">
+               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                 Detalles
+               </button>
+             </h2>
+             <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+               <div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos ea dolorum officiis, architecto id suscipit animi hic, vero minus, pariatur quia quam possimus! Repellendus, explicabo. Molestiae voluptates voluptas provident consequuntur.</div>
+             </div>
+           </div>
+         </div><!-- cierre acordeon -->
+ 
+       </div>
+     </div><!-- cierre card -->
+   </div><!-- cierre container fluid -->
+ 
+   <div class="container-fluid" id="cont3"><!-- apertura container fluid -->
+     <div class="card" style="width: 100%;"><!-- apertura card -->
+       <img src="./Assets/bolsas.jpg" class="card-img-top" alt="imagen del pedido" id="imgP3"><!-- imagen -->
+       <div class="card-body">
+         <h5 class="card-title">Pedido #</h5>
+         <p class="card-text">Nombre del pedido.</p>
+ 
+         <button class="btn btn-primary"  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" id="btn3">Reseña</button><!-- boton offcanvas -->
+ 
+         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"   aria-labelledby="offcanvasRightLabel">
+         <div class="offcanvas-header">
+         <h5 class="offcanvas-title" id="offcanvasRightLabel">Reseña</h5>
+         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+         </div><!-- cierre boton offcnvas -->
+         <div class="offcanvas-body">
+           <form>
+             <textarea name="reseña" id="textoCanvas" cols="30" rows="10"></textarea>
+           <button type="submit" class="btn btn-primary">Submit</button>
+           </form><!-- cierre texto reseña -->
+         </div><!-- cierre body offcanvas -->
+         </div><!-- ciere offcanvas -->
+ 
+         <div class="accordion accordion-flush" id="accordionFlushExample"><!-- abre cordion -->
+           <div class="accordion-item">
+             <h2 class="accordion-header">
+               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                 Detalles
+               </button>
+             </h2>
+             <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+               <div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos ea dolorum officiis, architecto id suscipit animi hic, vero minus, pariatur quia quam possimus! Repellendus, explicabo. Molestiae voluptates voluptas provident consequuntur.</div>
+             </div>
+           </div>
+         </div><!-- cierre acordeon -->
+ 
+       </div>
+     </div><!-- cierre card -->
+   </div><!-- cierre container fluid -->
+  
+ 
+   
+  <!-- Contenedor Footer -->
+  <div id="footer"></div>
+ 
+   <!-- script de bootstrap -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" 
+   integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+ 
+   <!-- Script para agregar currentPage a navbar  o script de index.js-->
+   <script src="../../navbar.js" defer></script> 
+ 
+ </body>
+ </html>

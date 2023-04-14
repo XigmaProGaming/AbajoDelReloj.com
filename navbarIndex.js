@@ -6,8 +6,8 @@ navbarLocation.innerHTML = `<!-- Barra de navegacion arriba y abajo -->
   <!-- Barra de navegacion arriba-->
   <nav class="navbar navbar-expand-lg navbarBackground">
     <div class="container-fluid">
-      <a class="navbar-brand collapse navbar-collapse" href="../../index.html" style="width: 150px;">
-        <img class="mx-auto" src="../../Assets/logoAbajodelReloj.png" alt="Logo Abajo del Reloj" width="150px">
+      <a class="navbar-brand collapse navbar-collapse" href="./index.html" style="width: 150px;">
+        <img class="mx-auto" src="./Assets/logoAbajodelReloj.png" alt="Logo Abajo del Reloj" width="150px">
       </a>
 
       <!-- Boton hamburguesa -->
@@ -23,14 +23,14 @@ navbarLocation.innerHTML = `<!-- Barra de navegacion arriba y abajo -->
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mx-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link navbarTextClass" href="../Login/login.html">Iniciar Sesión</a>
+            <a class="nav-link navbarTextClass" href="./Pages/Login/login.html">Iniciar Sesión</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link navbarTextClass" href="../Registrarse/registrarse.html">Registrarse</a>
+            <a class="nav-link navbarTextClass" href="./Pages/Registrarse/registrarse.html">Registrarse</a>
           </li>
         </ul>
       </div>
-      <a href="../CarritoCompras/CarritoCompras.html" style="color: black;">
+      <a href="./Pages/CarritoCompras/CarritoCompras.html" style="color: black;">
         <span class="material-symbols-outlined material-icons md-light">
         shopping_cart
         </span>
@@ -45,16 +45,16 @@ navbarLocation.innerHTML = `<!-- Barra de navegacion arriba y abajo -->
       <div class="collapse navbar-collapse mx-auto" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link navbarTextClass" href="../../index.html">Página Principal</a>
+            <a class="nav-link navbarTextClass" href="./index.html">Página Principal</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link navbarTextClass" href="../Contactanos/contactenos.html">Contáctenos</a>
+            <a class="nav-link navbarTextClass" href="./Pages/Contactanos/contactenos.html">Contáctenos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link navbarTextClass" href="../acercaDeNosotros/aboutUs.html">Acerca de Nosotros</a>
+            <a class="nav-link navbarTextClass" href="./Pages/acercaDeNosotros/aboutUs.html">Acerca de Nosotros</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link navbarTextClass" href="../pedidos/pedidos.html">Pedidos</a>
+            <a class="nav-link navbarTextClass" href="./Pages/pedidos/pedidos.html">Pedidos</a>
           </li>
         </ul>
       </div>
@@ -75,22 +75,22 @@ navbarLocation.innerHTML = `<!-- Barra de navegacion arriba y abajo -->
     <div class="offcanvas-body" id="offcanvas-body-container">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link navbarTextClass" href="../../index.html">Página Principal</a>
+          <a class="nav-link navbarTextClass" href="./index.html">Página Principal</a>
         </li>
         <!-- <li class="nav-item" data-bs-toggle="offcanvas" data-bs-target="#offcanvasShop"  por si quieremos cerrar el offcanvas al hacer click en cada link> -->
         <li class="nav-item">
-          <a class="nav-link navbarTextClass"  href="../Contactanos/contactenos.html">Contáctenos</a>
+          <a class="nav-link navbarTextClass"  href="./Pages/Contactanos/contactenos.html">Contáctenos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link navbarTextClass" href="../acercaDeNosotros/aboutUs.html">Acerca de Nosotros</a>
+          <a class="nav-link navbarTextClass" href="./Pages/acercaDeNosotros/aboutUs.html">Acerca de Nosotros</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link navbarTextClass" href="../pedidos/pedidos.html">Pedidos</a>
+          <a class="nav-link navbarTextClass" href="./Pages/pedidos/pedidos.html">Pedidos</a>
         </li>
       </ul>
       <ul class="navbar-nav" id="bottom-offcanvas">
-        <a class="nav-link navbarTextClass" href="../Login/login.html">Iniciar Sesión</a>
-        <a class="nav-link navbarTextClass" href="../Registrarse/registrarse.html">Registrarse</a>
+        <a class="nav-link navbarTextClass" href="./Pages/Login/login.html">Iniciar Sesión</a>
+        <a class="nav-link navbarTextClass" href="./Pages/Registrarse/registrarse.html">Registrarse</a>
     </ul>
     </div>
   </div>`;
@@ -99,16 +99,16 @@ footer.innerHTML = `
 <div class="footer">
       <div class="row noScroll">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3" id="logoLocation">
-          <a href="../../index.html" style="width: 200px;" >
-            <img class="mx-auto" src="../../Assets/logoAbajodelReloj.png" alt="Logo Abajo del Reloj" width="150px">
+          <a href="./index.html" style="width: 200px;" >
+            <img class="mx-auto" src="./Assets/logoAbajodelReloj.png" alt="Logo Abajo del Reloj" width="150px">
           </a>
         </div>
         <div class="col-xs-4 col-sm-4 col-md-4 col-lg-3">
           <h5>AbajoDelReloj.com</h5>
           <ul class="footerList">
-            <li><a href="../acercaDeNosotros/aboutUs.html">Acerca de Nosotros</a></li>
-            <li><a href="../Contactanos/contactenos.html">Contáctenos</a></li>
-            <li><a href="../ListaProductos/ListaProductos.html">Listado de Productos</a></li>
+            <li><a href="./Pages/acercaDeNosotros/aboutUs.html">Acerca de Nosotros</a></li>
+            <li><a href="./Pages/Contactanos/contactenos.html">Contáctenos</a></li>
+            <li><a href="./Pages/ListaProductos/ListaProductos.html">Listado de Productos</a></li>
           </ul>
         </div>
         <div class="col-xs-4 col-sm-4 col-md-4 col-lg-3">
@@ -122,9 +122,9 @@ footer.innerHTML = `
         <div class="col-xs-4 col-sm-4 col-md-4 col-lg-3">
           <h5>Mi Cuenta</h5>
           <ul class="footerList">
-            <li><a href="../Perfil/perfil.html">Mi perfil</a></li>
-            <li><a href="../pedidos/pedidos.html">Mis pedidos</a></li>
-            <li><a href="../AgregarProducto/agregarProducto.html">Agregar un producto</a></li>
+            <li><a href="./Pages/Perfil/perfil.html">Mi perfil</a></li>
+            <li><a href="./Pages/pedidos/pedidos.html">Mis pedidos</a></li>
+            <li><a href="./Pages/AgregarProducto/agregarProducto.html">Agregar un producto</a></li>
           </ul>
         </div>
       </div>

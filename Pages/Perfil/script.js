@@ -67,7 +67,8 @@ let productos = JSON.parse(localStorage.getItem('productos'));
 
 if(productos === null){// mando a llmar quiero saber que tiene
 
-    fetch('/Pages/template/templateProductos.json')
+
+    fetch('../template/templateProductos.json')
       .then(response => response.json())      
       .then(data=>{
         console.log(data);

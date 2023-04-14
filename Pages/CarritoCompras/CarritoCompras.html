@@ -7,10 +7,18 @@
     <title>Carrito de Compras</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" 
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link rel="stylesheet" href="/navBarStyle.css">
+    
+    <link rel="stylesheet" href="../../navBarStyle.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" type="/style.css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Links necesarios para la fuente -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-    <link rel="stylesheet" href="/Pages/CarritoCompras/style.css">
-<link rel="stylesheet" type="/style.css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../font.css">
+
   </head>
 <body>
 
@@ -18,82 +26,113 @@
 <!--   <div id="contenedorCart"> </div> -->
  <!-- Ubicacion para insertar barra de navegacion -->
   <div id="navbarLocation"></div>
+<!--   <div class="container">
+   
+    <div id="productos" class="row"></div>
+  </div>
+ -->
+ <div class="tittle2">
+    <div class="row">
+        <div class="text-center">
+            <h1> Carrito de Compras</h1>
+        </div>
+    </div>
+  </div>
+
+  
+
+   <div class="container2">
+    
+    <!-- Detalles del pedido -->
+ <!--    <div class="row sectionBody2">
+        <div class="col-12 text-center" id="checkoutItems2">
+        </div>
+        <div class="col-12 text-end" id="precioTotal2">
+            
+        </div>
+    </div>
+ -->
+
+    <h4 id="articuloPref" class="articulo">Artículos de tu Preferencia</h4>
+    
+
+<!-- Contenedor de Checkout -->
+<!-- <div class="container px-4">
+    <h6 id="orderUsername">Enviar a nombre-de-usuario</h6> -->
+    <!-- Detalles del pedido -->
+  <!--   <div class="row sectionBody">
+        <div class="col-12 text-center"> -->
+            <!-- Row para cada articulo del carrito -->
+         <!--    <div class="row d-flex align-items-center articulo">
+                <div class="col-2">
+                    <img src="https://img.prvstatic.com.mx/front/get/photo/308747_-_images_-_products_-_FTW4056-UNICO_-_templ1.jpg" class="img-thumbnail imgCheckout" alt="...">
+                </div>
+                <div class="col-6">
+                    <h4>Samsung Galaxy Watch Active2 (40 mm)</h4>
+                </div>
+                <div class="col-2 cantidad">
+                    <button class="btn btn-sm btn-secondary decrementar">-</button>
+                    <span class="mx-2 cantidad-numero">1</span>
+                    <button class="btn btn-sm btn-secondary incrementar">+</button>
+                </div>
+                <div class="col-2 precio">$10,000</div>
+              
+                <div class="col-12 eliminar">
+                    <button class="btn btn-sm btn-danger">Eliminar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
 
 
 
 <!-- Contenedor de Checkout -->
-<main class="container-fluid">
-  <div class="my-2" id="cart-items">
-      
+<!-- <div class="container px-4"> -->
+
+  <!-- Detalles del pedido -->
+ <!--  <div class="row sectionBody">
+      <div class="col-12 text-center"> -->
+          <!-- Row para cada articulo del carrito -->
+        <!--   <div class="row d-flex align-items-center articulo">
+              <div class="col-2">
+                  <img src="https://m.media-amazon.com/images/I/81H9JxMf2EL._AC_SY741_.jpg" class="img-thumbnail imgCheckout" alt="...">
+              </div>
+              <div class="col-6">
+                  <h4>Samsung Galaxy Watch Active2 (40 mm)</h4>
+              </div>
+              <div class="col-2 cantidad">
+                  <button class="btn btn-sm btn-secondary decrementar">-</button>
+                  <span class="mx-2 cantidad-numero">1</span>
+                  <button class="btn btn-sm btn-secondary incrementar">+</button>
+              </div>
+              <div class="col-2 precio">$10,000</div>
+              <div class="col-12 text-end">
+                <h4>Total: <span id="total">$20,000</span></h4>
+            </div>
+              <div class="col-12 eliminar">
+                  <button class="btn btn-sm btn-danger">Eliminar</button>
+                  <div class="col-12 text-center mt-4">
+                    <a href="#" class="btn btn-primary" id="continuarCompraBtn">Continuar Compra</a>
+                  </div>
+              </div>
+          </div>
+      </div>
   </div>
-  <div class="my-2 d-flex flex-row justify-content-between align-items-center">
-      <h4><b>Total:</b></h4>
-      <h4 id="cart-total"></h4>
-  </div>
-  <div class=" my-4 d-flex justify-content-center align-items-center">
-      <button class="px-2 py-2 main-btn twhite" id="buyIt">Terminar Compra</button>
-  </div>
-  
-</main>
-  
-   
+</div> -->
+
+
+          
          
 
 
-  
-
-
-
-  
-<!-- 
-
- <div class="col-lg-9 col-md-9 col-xs-12 contenedorCart  py-3">
-    <div class="row g-3" id="addCart">
-      <div class="containerShopping"> 
-        <h1>Carrito</h1>
-        <div class="cartShop">
-          <div class="products">
-            <div class="products">
-              <img src="/Assets/Products/audifonos.png">
-              <div class="products-info">
-                <h3 class="products-name">Audifonos inalámbricos  </h3>
-                <h2 class="products-price">$500</h2>
-                <p class="products-quantity">Cantidad:<input value="1"
-                  name="">
-                  <p class="remove"></p>
-                  <i class="fa-solid fa-trash"></i>
-                  <button class="deleteButtom">Eliminar</button>
-                <span class="remove">Eliminar</span> 
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="cart-total"></div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-   -->
-
  
-<!--      Shop content 
+<!-- Shop content -->
 <div  id="shopContent" class="shopContentCart col-lg-10 col-md-9 col-xs-12  py-1">
-<div class="row g-1" >
-
-  </div>
   
-</div>-->
+</div>
 
 
-<!-- Modal container
-
-<div id="modalaContainer" class="modal-container col-lg-12 col-md-9 col-xs-12  py-3">
-
-  <div class="row g-1" >
-
-  </div>
-</div> -->
 
 
 
@@ -111,13 +150,11 @@
 
 
 
-  
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" 
   integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-  <script src="./script.js" type="module"></script>
-  <script src="./products.js" type="module"></script>
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+ <script src="./script.js"></script>
+
   <!-- Script para agregar currentPage a navbar  o script de index.js-->
-  <script src="/navbar.js"></script>
+  <script src="../../navbar.js"></script>
 </body>
 </html>

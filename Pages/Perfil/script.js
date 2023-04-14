@@ -16,7 +16,7 @@ let valorOriginalContasenaC;
 btnEditar.addEventListener('click', (e) => {
   e.preventDefault();
   console.log("toy vivo");  
-  
+  mostrarMensaje();
   // console.log(inputContrasena.value);
   valorOriginalNombre = inputNombre.value; // guardamos los nuevos valores
   inputNombre.readOnly = false;
@@ -27,10 +27,16 @@ btnEditar.addEventListener('click', (e) => {
   originalValue = inputContrasena.value;
   inputContrasena.readOnly = false;
 
+  
 });
-
+function mostrarMensaje() {
+  var mensaje = document.getElementById("mensaje");
+  mensaje.innerHTML = "Editando información";
+  mensaje.style.display = "block";
+}
 btnGuardar.addEventListener('click', (e) => {
   e.preventDefault();
+  ocultarMensaje();
   inputNombre.readOnly = true;
   inputApellido.readOnly = true;
   inputTelefono.readOnly = true;
@@ -46,7 +52,12 @@ btnGuardar.addEventListener('click', (e) => {
   //   // Aquí podrías mostrar una confirmación al usuario de que los cambios se han guardado
   // }
 });
-
+function ocultarMensaje() {
+  setTimeout(function() {
+    mensaje.innerHTML = "";
+    mensaje.classList.remove("resaltado");
+  }, 1000); // Ocultar el mensaje después de 1 segundo (1000 ms)
+}
 /* ---------------- METODOS PARA VISIBILIDAD DE PRODUCTOS ---------*/
 let tabla = document.getElementById("tablaProductos");
 
@@ -56,6 +67,7 @@ let productos = JSON.parse(localStorage.getItem('productos'));
 
 if(productos === null){// mando a llmar quiero saber que tiene
 
+
     fetch('../template/templateProductos.json')
       .then(response => response.json())      
       .then(data=>{
@@ -64,7 +76,7 @@ if(productos === null){// mando a llmar quiero saber que tiene
         localStorage.setItem('productos', JSON.stringify(data));
         // mostrarProductos(productos);
         //Obtenemos los primeros 5 productos      
-        productos = data.slice(0,3);
+        productos = data.slice(0,5);
         // Mostramos los datos en la tabla
         mostrarProductos(productos);
        
@@ -93,11 +105,11 @@ function mostrarProductos(productos){
         <td class="td-js">$${producto.price} MXN</td>      
         <td class="td-js">
           <button class="btn btn-primary ic-Edit " type="reset" id="btn-editar-producto"  onclick="showModal('modalEditarProducto')">
-              <img class="iconos" id="iconoEditar" src="./Assets/editar.png" alt="">
+              <span class="material-symbols-outlined" id="iconoEditar">edit</span>
           </button>
         </td>      
         <td class="td-js red-column">
-          <input class="checked" type="checkbox" id="billing-checkbox" checked>
+          <input class="checked" type="checkbox" id="billing-checkbox checked">
         </td>
         <tbody id="tablaProductos"></tbody>                                                  
 

@@ -6,6 +6,7 @@
     <title>Mis datos</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" 
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">    
+
     <link rel="stylesheet" href="./style.css">    
     <link rel="stylesheet" href="../../navBarStyle.css">   
 
@@ -14,7 +15,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="../../font.css">
+
   </head>
 <body>
 
@@ -32,32 +35,49 @@
                      
         </div>
         <div class="col-xl-4 col-md-12 col-sm-12 container-datosVendedor">           
-            <h2 class="description">Datos de cuenta</h2> 
-            <form action="" method="POST" id="formRegistro" class="formulario">
-                <div class="error-text">
-
+            <!-- <h2 class="description">Datos de cuenta</h2>  -->
+            <div class="container-formulario">
+              <form>                
+                <div class="form-icon">
+                  <span class="material-symbols-outlined">person</span>
                 </div>
                 <!-- inyectar con datos de BD -->
-                <input type="text" placeholder="Nombre" id="inputNombre" class="form-control input-text" name="nombre" value="Diana" autocomplete="off" readonly>        
-                <input type="text" placeholder="Apellido" id="inputApellido" class="form-control input-text" name="apellido" value="Rodriguez" autocomplete="off" readonly>
-                <input type="text" placeholder="User name" id="inputUser" class="form-control input-text" name="username" value="DRR" autocomplete="off" readonly>
-                <input type="number" placeholder="Telefono" id="inputTel" class="form-control input-text" name="telefono" value="0000000" autocomplete="off" readonly> 
-                <!-- inyectar con datos de BD -->               
-                <input type="text" placeholder="Correo electronico" class="form-control input-text" id="inputEmail" name="correo" value="dianarey@gmail.com" autocomplete="off" readonly>                
-                <div class="grupo-input">
-                    <input type="password" placeholder="Contraseña" name="password" class="form-control input-text clave" value="Jacksonbebe12" id="inputContrasena" readonly>                     
+                <div class="form-group">  
+                  <label for="nombre" class="label">Nombre: </label>                
+                  <input type="text" placeholder="Nombre" id="inputNombre" class="form-control input-text item input" name="nombre" value="" autocomplete="off" readonly>
+                </div>    
+                <div class="form-group">
+                  <label for="apellido" class="label">Apellido: </label>
+                  <input type="text" placeholder="Apellido" id="inputApellido" class="form-control input-text item input" name="apellido" value="" autocomplete="off" readonly>
+                </div>  
+                <div class="form-group">
+                  <label for="username" class="label">Username: </label>
+                  <input type="text" placeholder="User name" id="inputUser" class="form-control input-text item input" name="username" value="" autocomplete="off" readonly>
+                </div>      
+                <div class="form-group">
+                  <label for="telefono" class="label">Teléfono: </label>
+                  <input type="number" placeholder="Telefono" id="inputTel" class="form-control input-text item input" name="telefono" value="" autocomplete="off" readonly> 
+                </div> 
+                <!-- inyectar con datos de BD --> 
+                <div class="form-group">
+                  <label for="correo" class="label">Email: </label>
+                  <input type="text" placeholder="Correo electronico" class="form-control input-text item input"  id="inputEmail" name="" value="" autocomplete="off" readonly>                
+                </div>                                         
+                <div class="form-group">
+                    <label for="password" class="label">Contraseña: </label>
+                    <input type="password" placeholder="Contraseña" name="password" class="form-control input-text item input" value="" id="inputContrasena" readonly>                     
                     <!-- <button type="button" class="icono fas fa-eye mostrarClave"></button>                      -->
-                </div>                                 
-          
-
+                </div>                                           
                 <!-----------------Botón editar---------->
                 <div class="col-4">
                     <div class="mb-3 buttons">
                         <button class="btn btn-primary ic-Edit " type="reset" id="btn-editar-contrasena" >
-                            <img class="iconos" id="iconoEditar" src="./Assets/editar.png" alt="">
+                          <span class="material-symbols-outlined" id="iconoEditar">edit</span>
+                          <div id="mensaje"></div>
                         </button>
+                        <div class="space"></div>
                         <button class="btn btn-primary ic-Edit " data-bs-toggle="modal" data-bs-target="#staticBackdrop" type="reset" id="btn-guardar">
-                            <img class="iconos" id="iconoGuardar" src="./Assets/save.png" alt="">                            
+                          <span class="material-symbols-outlined" id="iconoGuardar">save</span>                           
                         </button>
                     </div>
                 </div>
@@ -67,31 +87,33 @@
                     <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Informacion modificada con exito</h1>
+                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Información modificada con éxito</h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         
                         <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Entendido</button>
+                        <button type="button" class="btn btn-primary ic-Edit" data-bs-dismiss="modal">Entendido</button>
                         </div>
                     </div>
                     </div>
                 </div>
                 
-            </form>
+              </form>
+            </div>
+            
         </div>
         
         <div class="col-xl-1"></div>
 
         <!-- HISTORIAL DE PRODUCTOS DEL USUARIO -->
 
-        <div class="col-xl-7 col-md-12 col-sm-12 ">                        
-            <h2 id="tittle-HistorialCompras">Productos publicados</h2>
-            <div class="row container-sales">                 
+        <div class="col-xl-7 col-md-12 col-sm-12 table-container">                        
+            <h2 class="tittle-HistorialCompras">Productos publicados</h2>
+            <div class="row">                 
             <!-- Aqui comienza la tabla para visualizar productos -->
-              <div class="table-responsive">
-                  <table class="table table-striped text-successtable-border border-light">
-                    <thead>
+              <div class="table-responsive edit-table" id="edit-table">
+                  <table class="table-fluid table-striped text-successtable-border border-light">
+                    <thead class="head-edit">
                       <tr>
                         <th scope="col" hidden>ID</th>
                         <th scope="col" class="th-table">Imagen</th>
@@ -157,7 +179,7 @@
                       <div class="modal-body">
                         <form id="formularioNuevoProducto" method="post">
                           <div class="form-group">
-                            <label for="imagenProducto">Imagen del producto</label>
+                            <label for="imagenProducto">Imágen del producto</label>
                               <input
                                 class="form-control"
                                 type="file"
@@ -194,8 +216,6 @@
         </div>
     </div>
   </div>
-
-
    <!-- Contenedor Footer -->
   <div id="footer"></div>
 

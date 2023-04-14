@@ -33,6 +33,8 @@ const validar = () =>{
   let marca = document.getElementById("inputBrand").value;
   let precio = document.getElementById("inputPrecio").value;
   let cantidad = document.getElementById("inputInventario").value; 
+  let estado = document.getElementById("inputEstado").value; 
+  let sku = document.getElementById("inputSKU").value; 
   
   let div = document.getElementById('alert');
   
@@ -76,17 +78,53 @@ const validar = () =>{
       div.innerHTML = `La cantidad no puede ser menor a 1`;
     }
     else{
+      //Ya que se comprueben todos los campos, aqui se hace el fetch post
       alert("Completaste correctamente los campos");
+      
+      //Modificar date, y seller_idseller
       let nuevaPublicacion = {
-        nombre: nombre,
-        descripcion: descripcion,
-        categoria: categoria,
-        marca: marca,
-        precio: precio,
-        cantidad: cantidad
+        name: nombre,
+        description: descripcion,
+        brand: marca,
+        price: precio,
+        publicationDate: "2023-04-13",
+        inventory: cantidad,
+        state: estado,
+        sku: sku,
+        visibility: 1,
+        productcategories_idCategory: categoria,
+        seller_idseller: 4,
       };
       console.log(nuevaPublicacion); 
+      agregarProducto(nuevaPublicacion)
       articuloEnVenta.push(nuevaPublicacion);  
     }
   }
+  //Para obtener los nombres de las imagenes se tomara el valor del input,
+  //se separara por comas y se enviara cada uno por post a la tabla de imagenes
+  
+  let nombreImagenes = document.getElementById("inputImgNames").value;
+  let nombreImagenesArr = nombreImagenes.split(",");
+  for(let i=0; i<nombreImagenesArr.length ; i++){
+    console.log(nombreImagenesArr[i]);
+  }
+}
+
+function agregarProducto(nuevaPublicacion){
+  fetch("http://localhost:8080/abdr/productos/",{ //hago la conexion a la URL
+    
+  //Especifico el tipo de solicitud que manejare
+  method: "POST",
+  headers: {
+      "Content-Type" : "application/json",
+  },
+  body: JSON.stringify(nuevaPublicacion), //Pasamos la constante definida anteriormente como cuerpo de la solicitud
+  })
+  .then((response) => response.text())
+  .then((data)=>{
+      console.log("Producto registrado correctamente", data);
+  })
+  .catch((error)=>{
+      console.log("No pudimos registrar el producto", error);
+  });
 }

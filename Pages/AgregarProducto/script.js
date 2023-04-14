@@ -87,13 +87,13 @@ const validar = () =>{
         description: descripcion,
         brand: marca,
         price: precio,
-        publicationDate: "2023-04-13",
+        publication_Date: "2023-04-13",
         inventory: cantidad,
         state: estado,
         sku: sku,
         visibility: 1,
-        productcategories_idCategory: categoria,
-        seller_idseller: 4,
+        productcategories_id_category: categoria,
+        seller_id_seller: 4,
       };
       console.log(nuevaPublicacion); 
       agregarProducto(nuevaPublicacion)
@@ -104,9 +104,33 @@ const validar = () =>{
   //se separara por comas y se enviara cada uno por post a la tabla de imagenes
   
   let nombreImagenes = document.getElementById("inputImgNames").value;
-  let nombreImagenesArr = nombreImagenes.split(",");
+  let nombreImagenesArr = nombreImagenes.split(" ");
   for(let i=0; i<nombreImagenesArr.length ; i++){
+
+    //Aqui se toma el id del ultimo producto creado
+    let nuevaImagen = {
+      image_Name: nombreImagenesArr[i],
+      products_idproducts: 16
+    }
+
     console.log(nombreImagenesArr[i]);
+      fetch("http://localhost:8080/abdr/imagenes/",{ //hago la conexion a la URL
+      
+    //Especifico el tipo de solicitud que manejare
+    method: "POST",
+    headers: {
+        "Content-Type" : "application/json",
+    },
+    body: JSON.stringify(nuevaImagen), //Pasamos la constante definida anteriormente como cuerpo de la solicitud
+    })
+    .then((response) => response.text())
+    .then((data)=>{
+        console.log("Producto registrado correctamente", data);
+    })
+    .catch((error)=>{
+        console.log("No pudimos registrar el producto", error);
+    });
+
   }
 }
 

@@ -1,20 +1,47 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600;700&display=swap');
 
+
+#edit-table{
+    padding: 0;
+}
+
 .container-form{
     width:100%;
-    padding: 90px 20px 20px 20px;
+    padding: 50px 20px 20px 20px;
     margin-bottom: 20px; 
 }
 .container-tittle{
     display: flex;
     justify-content: center;
 }
-.container-sales{
-    background: #fff;
-    /* //margin-left: 30px; */
-    margin-bottom: 50px;
+
+.description{
+    text-align: center;
+    font-size: 1.8rem; 
+    font-weight: 700;
+}
+.container-formulario{
+    margin-top: -20px
+
 }
 
+.container-formulario .form-icon{
+	text-align: center;
+    background-color: #FF861C;
+    border-radius: 50%;
+    font-size: 30px;
+    color: white;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    margin-bottom: 20px;
+    line-height: 100px;
+}
+.container-formulario .item{
+	border-radius: 20px;
+    margin-bottom: 25px;
+    padding: 10px 20px;
+}
 .buttons{
     display: flex;
     justify-content: space-between;
@@ -26,7 +53,9 @@
 }
 .input-text{
     padding: 14px 20px;
-    border: 1px solid #4C75DF;
+
+    border: 1px solid #FF861C;
+
    /*  //background: #C98474; */
     margin-bottom: 20px;
     border-radius: 4px;
@@ -39,11 +68,61 @@
     border: 2px solid #320D6D;
     background-color: #fff;
 }
+.label {
+    //position: relative;
+    //top: 5px;
+    left: 15px;
+    padding: 0 4px;
+    color: #320D6D;
+    font-size: 19px;
+    transition: 0.5s;
+}
 
+.buttons{
+    
+    display: inline-flex;
+    justify-content: center;
+    margin-right: 80px;
+}
+.space{
+  width: 28px;
+  height: auto;
+  display: inline-block;
+}
 /* Estilos productos publicados */
-#product-container {
-    background-color: #ccc;
+.table-container{
+    margin-top: 80px;
+}
+.container-sales{    
+    text-align: center;
+    margin-top: 120px;
+}
+.head-edit{
+    background-color: #FF861C;
+}
+.ic-Edit{
+    background-color: #FF861C;
+    border: 0px;
+    box-shadow: 5px 2px rgb(245, 218, 186);
+}
+tbody{
+    border: 1px solid #FF861C;
+}
+.table-striped tbody tr:nth-of-type(even){
+    background-color: rgb(245, 214, 186);
+    text-shadow: 68px;
+}
+.table-striped tbody tr:nth-of-type(odd){
+    background-color: rgb(255, 255, 255);
+}
+
+th{
+    font-size: 1.2rem;
     color: #fff;
+    width: auto;
+}
+.edit-table{
+    box-shadow: -13px 8px 31px -16px #FF861C;
 }
 th{
     text-align: center;
@@ -63,6 +142,9 @@ th{
     width: 10em;
     height: auto;
     text-align: center;
+    font-weight: 400; 
+    font-size: 1.2rem;
+    color:#4C75DF   
 }
 a{
     text-decoration: none;

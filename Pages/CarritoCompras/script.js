@@ -483,7 +483,7 @@ let productsCard = [
         SÓLO LAVA TODAS LAS NOCHES TU ROSTRO DEJA ACTUAR LA ESPUMA POR UN PAR DE MINUTOS Y ENJUAGA.
         Ahora además del arroz, también contiene perejil, otro activo aclarador por excelencia, su función despigmentante ayuda a eliminar ese exceso superficial de melanina que oscurecen tu piel.
         ESTE PAQUETE CONTIENE 5 PIEZAS DE JABÓN TOTALMENTE NATURAL, NO UTILICES MAS QUÍMICOS QUE TE INTOXICAN.`,
-        category: ["artesania", "belleza y cuidado personal", "higiene personal", "jabon"],
+        category: ["artesania", "belleza y cuidado personal"],
         brand: "sin marca",
         price: 9654,
         img: ["https://http2.mlstatic.com/D_NQ_NP_2X_605805-MLM50726858983_072022-F.webp","img2", "img3"],
@@ -497,23 +497,31 @@ let productsCard = [
     }
   ];
 
-let contentCart = [];
+
+
+
+/* ***************************************************************************** */  
+
+
+let contentCart =  JSON.parse(localStorage.getItem("carrito")) ||[];
 // con forEach( jalamos los elementos del array
 let shoppingCart = [];
 productsCard.forEach((product) =>{
   let content = document.createElement("div")
   content.className = "Card"
   content.innerHTML = `
-  <div class="card h-80  mb-3 g-1" style="width: 17rem;">
+ 
+  <div class="card h-80  mb-3 g-1" style="width: 18rem;">
   <img src="${product.img}">
   <div class="card-body">
   <h5 class="name">${product.name}</h3>
-  <p class="ocultarDescripcionLarga">${product.description}</p>
+  
   <p class="price">$ ${product.price}</p>
   <p>${product.category}</p>
   <p class="brand">${product.brand}</p> 
   <h5>⭐⭐⭐⭐⭐<h5>
-  <button class="Buttom" id="boton-${product.id}">Comprar</button>
+
+  <a href="../productoEspecifico/productoEspecifico.html?id=${product.id}" class="btn btn-primary  Buttom"id="boton-${product.id}">Ver Artículo</a>
   </div>
   </div>
   `;
@@ -528,91 +536,15 @@ productsCard.forEach((product) =>{
       img : product.img,
       name : product.name,
       price : product.price,
+      quantity: 1
     });
-
+    
     console.log(product);
-  });
+
+      // almacenamos el contenido del carrito en localStorage
+  localStorage.setItem("carrito", JSON.stringify(contentCart));
 });
 
-// Obtener todos los botones incrementar y decrementar
-const incrementarBotones = document.querySelectorAll('.incrementar');
-const decrementarBotones = document.querySelectorAll('.decrementar');
 
-// Agregar un listener para el evento click en cada botón
-incrementarBotones.forEach((boton) => {
-  boton.addEventListener('click', () => {
-    // Obtener el elemento de la cantidad y el precio correspondiente al artículo
-    const cantidadElemento = boton.parentElement.querySelector('.cantidad-numero');
-    const precioElemento = boton.parentElement.parentElement.querySelector('.precio');
-
-    // Incrementar la cantidad y actualizar el valor en el elemento
-    let cantidad = parseInt(cantidadElemento.textContent);
-    cantidad++;
-    cantidadElemento.textContent = cantidad;
-
-    // Obtener el precio del artículo y actualizar el valor en el elemento
-    const precio = parseInt(precioElemento.textContent.replace('$', '').replace(',', ''));
-   
-    precioElemento.textContent = `$${(precio / (cantidad - 1) * cantidad).toLocaleString('en-US', {maximumFractionDigits: 2})}`;
-
-    // Actualizar el total
-    actualizarTotal();
   });
-});
-
-decrementarBotones.forEach((boton) => {
-  boton.addEventListener('click', () => {
-    // Obtener el elemento de la cantidad y el precio correspondiente al artículo
-    const cantidadElemento = boton.parentElement.querySelector('.cantidad-numero');
-    const precioElemento = boton.parentElement.parentElement.querySelector('.precio');
-
-    // Decrementar la cantidad y actualizar el valor en el elemento
-    let cantidad = parseInt(cantidadElemento.textContent);
-
-     /*  cantidad--;
-      cantidadElemento.textContent = cantidad; */
-     if (cantidad > 1) {
-      cantidad--;
-      cantidadElemento.textContent = cantidad;
-      const precio = parseInt(precioElemento.textContent.replace('$', '').replace(',', ''));
-      console.log(precio);
-      precioElemento.textContent = `$${(precio /(cantidad + 1) *  cantidad).toLocaleString('en-US', {maximumFractionDigits: 2})}`;
-    } 
-    // Obtener el precio del artículo y actualizar el valor en el elemento
-
-    // Actualizar el total
-    actualizarTotal();
-  });
-});
-
-// Función para actualizar el total
-function actualizarTotal() {
-  const precioElementos = document.querySelectorAll('.precio');
-  let total = 0;
-
-  precioElementos.forEach((precioElemento) => {
-    const precio = parseInt(precioElemento.textContent.replace('$', '').replace(',', ''));
-    total += precio;
-  });
-
-  // Actualizar el valor del total
-  const totalElemento = document.querySelector('#total');
-  totalElemento.textContent = `$${total.toLocaleString('en-US', {maximumFractionDigits: 2})}`;
-}
-
-// boton eliminar
-const botonesEliminar = document.querySelectorAll('.eliminar button');
-botonesEliminar.forEach((boton) => {
-  boton.addEventListener('click', () => {
-    // Obtener el elemento de la fila del artículo correspondiente al botón "Eliminar"
-    const filaArticulo = boton.closest('.articulo');
-    // Eliminar la fila del artículo del carrito
-    filaArticulo.remove();
-    // Actualizar el total
-    actualizarTotal();
-  });
-});
-
-/////boton continuar compra
-const continuarCompraBtn = document.querySelector('#continuarCompraBtn');
-continuarCompraBtn.addEventListener('click', () => {  window.location.href = '/Pages/checkout/checkout.html';});
+//Para mostrar los productos en el carrito de compras, 

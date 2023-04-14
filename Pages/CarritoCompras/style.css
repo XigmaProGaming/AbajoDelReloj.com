@@ -200,7 +200,7 @@ body {
  
  
  .eliminar button {
-   background-color: #3483fa;
+   /* background-color: #3483fa; */
    border: none;
    color: white;
    padding: 10px;
@@ -215,7 +215,7 @@ body {
  }
  
  .eliminar button:hover {
-   background-color: #0069d9;
+   background-color: #9b2632;
  }
  
  .sectionBody2{
@@ -234,7 +234,9 @@ body {
   margin-bottom: 10px;
 }
 
-
+.imgCheckout{
+  width: 70px;
+}
 
 
 .articulo{
@@ -246,9 +248,19 @@ body {
     margin-bottom: 10px;
     text-transform: uppercase;
     letter-spacing: 2px;
+    padding-bottom: 15px;
     border-bottom: 1px solid #ccc;
   }
   
   .tittle2{
     background-color: white;
+  }
+
+  .form{
+    margin-top: 2em;
+    margin-bottom: 2em;
+    padding: 2em;
+    padding-bottom: 2em;
+    background-color: white;
+    text-align: center;
   }

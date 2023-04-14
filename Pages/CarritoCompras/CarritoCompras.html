@@ -31,19 +31,13 @@
     <div id="productos" class="row"></div>
   </div>
  -->
- <div class="tittle2">
-    <div class="row">
-        <div class="text-center">
-            <h1> Carrito de Compras</h1>
-        </div>
-    </div>
-  </div>
+
 
   
-
-   <div class="container2">
-    
-    <!-- Detalles del pedido -->
+  
+  <!-- <div class="container2"> -->
+      
+      <!-- Detalles del pedido -->
  <!--    <div class="row sectionBody2">
         <div class="col-12 text-center" id="checkoutItems2">
         </div>
@@ -53,17 +47,17 @@
     </div>
  -->
 
-    <h4 id="articuloPref" class="articulo">Artículos de tu Preferencia</h4>
-    
-
-<!-- Contenedor de Checkout -->
-<!-- <div class="container px-4">
-    <h6 id="orderUsername">Enviar a nombre-de-usuario</h6> -->
-    <!-- Detalles del pedido -->
-  <!--   <div class="row sectionBody">
-        <div class="col-12 text-center"> -->
-            <!-- Row para cada articulo del carrito -->
-         <!--    <div class="row d-flex align-items-center articulo">
+ 
+ 
+ <!-- Contenedor de Checkout -->
+ <!-- Detalles del pedido -->
+ <!-- Row para cada articulo del carrito -->
+<!-- 
+ <div class="container px-4">
+     <h6 id="orderUsername">Enviar a nombre-de-usuario</h6> 
+        <div class="row sectionBody">
+        <div class="col-12 text-center"> 
+                <div class="row d-flex align-items-center articulo">
                 <div class="col-2">
                     <img src="https://img.prvstatic.com.mx/front/get/photo/308747_-_images_-_products_-_FTW4056-UNICO_-_templ1.jpg" class="img-thumbnail imgCheckout" alt="...">
                 </div>
@@ -76,54 +70,48 @@
                     <button class="btn btn-sm btn-secondary incrementar">+</button>
                 </div>
                 <div class="col-2 precio">$10,000</div>
-              
+                
                 <div class="col-12 eliminar">
                     <button class="btn btn-sm btn-danger">Eliminar</button>
                 </div>
             </div>
         </div>
     </div>
-</div> -->
-
-
-
-<!-- Contenedor de Checkout -->
-<!-- <div class="container px-4"> -->
-
-  <!-- Detalles del pedido -->
- <!--  <div class="row sectionBody">
-      <div class="col-12 text-center"> -->
-          <!-- Row para cada articulo del carrito -->
-        <!--   <div class="row d-flex align-items-center articulo">
-              <div class="col-2">
-                  <img src="https://m.media-amazon.com/images/I/81H9JxMf2EL._AC_SY741_.jpg" class="img-thumbnail imgCheckout" alt="...">
-              </div>
-              <div class="col-6">
-                  <h4>Samsung Galaxy Watch Active2 (40 mm)</h4>
-              </div>
-              <div class="col-2 cantidad">
-                  <button class="btn btn-sm btn-secondary decrementar">-</button>
-                  <span class="mx-2 cantidad-numero">1</span>
-                  <button class="btn btn-sm btn-secondary incrementar">+</button>
-              </div>
-              <div class="col-2 precio">$10,000</div>
-              <div class="col-12 text-end">
-                <h4>Total: <span id="total">$20,000</span></h4>
+</div> 
+ -->
+ 
+ 
+ <!-- Contenedor de Checkout -->
+ <div class="container px-4 form"> 
+    <div class="tittle2">
+        <div class="row">
+            <div class="text-center">
+                <h1>Carrito de Compras</h1>
             </div>
-              <div class="col-12 eliminar">
-                  <button class="btn btn-sm btn-danger">Eliminar</button>
-                  <div class="col-12 text-center mt-4">
-                    <a href="#" class="btn btn-primary" id="continuarCompraBtn">Continuar Compra</a>
-                  </div>
-              </div>
-          </div>
+        </div>
       </div>
-  </div>
-</div> -->
+     <!-- Detalles del pedido -->
+       <div class="row sectionBody" id="ubicacionParaEliminarTodo">
+         <div class="col-12 text-center" id="ubicacionCarritoDeCompras"> 
+            <div class="col-12 mx-auto"><h4>Carrito vacio :(</h4></div>
+
+        </div>
+            <div class="col-12 text-end">
+                <button class="btn btn-sm btn-danger" id="eliminarCarritoDeCompras">Eliminar todos los articulos</button>
+            </div>
+            <div class="col-12 text-end">
+                <h4>Total: <span id="precioTotal">$20,000</span></h4>
+            </div>
+            <div class="col-12 text-center mt-4">
+                <a href="../checkout/checkout.html" class="btn btn-primary" id="continuarCompraBtn">Continuar Compra</a>
+            </div>
+    </div>
+</div> 
 
 
-          
-         
+
+
+<h4 id="articuloPref" class="articulo">Artículos de tu Preferencia</h4>
 
 
  

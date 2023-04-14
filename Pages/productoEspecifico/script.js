@@ -619,3 +619,15 @@ function rating( stars ) {
 console.log("rating: " + productsCard[product_id-1].rating)
 rating(productsCard[product_id-1].rating);
 
+const toastTrigger = document.getElementById('liveToastBtn')
+const toastLiveExample = document.getElementById('liveToast')
+
+if (botonAgregarAlCarrito) {
+  const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample);
+  botonAgregarAlCarrito.addEventListener('click', () => {
+    const cantidad = document.querySelector("#cantidad").value;
+    let toastBody = document.querySelector("#toastBody");
+    toastBody.textContent= `"${productsCard[product_id-1].name}" x ${cantidad}`
+    toastBootstrap.show()
+  })
+}

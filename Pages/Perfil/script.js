@@ -67,13 +67,13 @@ let productos = JSON.parse(localStorage.getItem('productos'));
 
 if(productos === null){// mando a llmar quiero saber que tiene
 
-
+//Fetch get con un filtro articulos con el id del usuario
     fetch('../template/templateProductos.json')
       .then(response => response.json())      
       .then(data=>{
         console.log(data);
         // Guardamos los productos en el localStorage
-        localStorage.setItem('productos', JSON.stringify(data));
+        //localStorage.setItem('productos', JSON.stringify(data));
         // mostrarProductos(productos);
         //Obtenemos los primeros 5 productos      
         productos = data.slice(0,5);

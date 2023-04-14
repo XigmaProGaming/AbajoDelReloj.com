@@ -521,7 +521,7 @@ productsCard.forEach((product) =>{
   <p class="brand">${product.brand}</p> 
   <h5>⭐⭐⭐⭐⭐<h5>
 
-  <a href="/Pages/productoEspecifico/productoEspecifico.html" class="btn btn-primary  Buttom"id="boton-${product.id}">Comprar</a>
+  <a href="../productoEspecifico/productoEspecifico.html?id=${product.id}" class="btn btn-primary  Buttom"id="boton-${product.id}">Ver Artículo</a>
   </div>
   </div>
   `;

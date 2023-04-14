@@ -183,7 +183,8 @@ let cardPrincipal = document.getElementById("tarjetasPrincipal");
           <div class="card-body1">
             </div>
           
-          <a href="Pages/productoEspecifico/productoEspecifico.html" class="btn btn-primary  boton1">Comprar</a>
+            <a href="./Pages/productoEspecifico/productoEspecifico.html?id=${x.id}" class="btn btn-primary  Buttom"id="boton-${x.id}">Ver Artículo</a>
+  
           
   
          

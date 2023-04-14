@@ -24,7 +24,7 @@ const validar = () =>{
     var usuarioJSON = JSON.stringify(usuario);
 
     // almacenamos la cadena de texto en el almacenamiento local
-    localStorage.setItem("usuario",usuarioJSON);
+    //localStorage.setItem("usuario",usuarioJSON);
     //alert("Completaste correctamente los campos");// campos ready 
   }
   //console.log(usuario);
